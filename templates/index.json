@@ -106,6 +106,7 @@
     "disfruto_banner": {
       "type": "disfruto-banner",
       "settings": {
+        "image": "shopify://shop_images/disfruto-banner.png",
         "height": 340,
         "heading": "Starte deine Käse-Reise",
         "text": "Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.",
