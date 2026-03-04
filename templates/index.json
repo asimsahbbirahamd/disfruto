@@ -1,15 +1,17 @@
 {
   "sections": {
-    "disfruto_hero": {
-      "type": "disfruto-hero",
+    "disfruto_announcement": {
+      "type": "disfruto-announcement",
       "settings": {
-        "badge_text": "Neu in Berlin",
-        "heading": "Dein 1. Käse Genuss Set Gratis",
-        "subheading": "Kuratierte Käse-Spezialitäten direkt an deine Tür in Berlin geliefert. Handverlesen von den besten Käsemachern.",
-        "button_label": "Jetzt ausprobieren",
-        "button_label_2": "Mehr erfahren",
-        "float_badge_text": "Kostenlose Lieferung",
-        "float_badge_subtext": "In ganz Berlin"
+        "text": "Dein 1. Käse Genuss Set",
+        "link_text": "gratis"
+      }
+    },
+    "disfruto_header": {
+      "type": "disfruto-header",
+      "settings": {
+        "login_text": "Login",
+        "cta_text": "Genuss Set Wählen"
       }
     },
     "disfruto_trust": {
@@ -18,30 +20,36 @@
         "trust_1": {
           "type": "trust_item",
           "settings": {
-            "icon": "delivery",
-            "label": "Kostenfrei geliefert",
-            "sublabel": "In ganz Berlin"
+            "label": "Kostenfrei geliefert"
           }
         },
         "trust_2": {
           "type": "trust_item",
           "settings": {
-            "icon": "flexible",
-            "label": "Flexibel planbar",
-            "sublabel": "Alle 2 oder 4 Wochen"
+            "label": "Flexibel planbar"
           }
         },
         "trust_3": {
           "type": "trust_item",
           "settings": {
-            "icon": "pause",
-            "label": "Jederzeit pausierbar",
-            "sublabel": "Kein Vertrag, keine Bindung"
+            "label": "Jederzeit pausierbar"
           }
         }
       },
       "block_order": ["trust_1", "trust_2", "trust_3"],
       "settings": {}
+    },
+    "disfruto_hero": {
+      "type": "disfruto-hero",
+      "settings": {
+        "badge_text": "Neu in Berlin",
+        "heading": "Dein 1. Käse Genuss Set Gratis",
+        "subheading": "Kuratierte Käse-Spezialitäten direkt an deine Tür in Berlin geliefert. Handverlesen von den besten Käsemachern.",
+        "button_label": "Genuss Set Wählen",
+        "button_label_2": "Mehr erfahren",
+        "float_badge_text": "Kostenlose Lieferung",
+        "float_badge_subtext": "In ganz Berlin"
+      }
     },
     "disfruto_story": {
       "type": "disfruto-product-story",
@@ -115,8 +123,8 @@
         "heading": "Starte deine Käse-Reise",
         "text": "Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.",
         "button_label": "Jetzt abonnieren",
-        "height": 360,
-        "overlay_gradient": "linear-gradient(to right,rgba(44,44,44,0.7) 0%,rgba(44,44,44,0.3) 50%,transparent 100%)"
+        "height": 340,
+        "overlay_gradient": "linear-gradient(to right,rgba(44,44,44,0.75) 0%,rgba(44,44,44,0.35) 50%,transparent 100%)"
       }
     },
     "disfruto_why": {
@@ -210,8 +218,10 @@
     }
   },
   "order": [
-    "disfruto_hero",
+    "disfruto_announcement",
+    "disfruto_header",
     "disfruto_trust",
+    "disfruto_hero",
     "disfruto_story",
     "disfruto_cheeses",
     "disfruto_maker",

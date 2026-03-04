@@ -1,19 +1,22 @@
 # Disfruto — Shopify Theme (Cheese Subscription MVP)
 
 ## Project Overview
-Shopify Dawn-based theme customized for Disfruto, a curated cheese subscription brand launching in Berlin. This is a lean MVP with a premium, editorial design.
+Shopify Dawn-based theme customized for Disfruto, a curated cheese subscription brand launching in Berlin. This is a lean MVP with a premium, editorial design matching the Loveable reference.
 
 ## Architecture
 - **Theme Base**: Shopify Dawn theme
 - **Custom Sections**: All custom sections use the `disfruto-` prefix
 - **CSS**: Single custom stylesheet at `assets/disfruto.css` (loaded globally in `layout/theme.liquid`)
 - **Preview**: Node.js static preview server at `preview/server.js` (port 5000, serves images from assets/)
+- **Images**: All in `assets/` folder — uploaded to Shopify CDN via `shopify theme push`
 
 ## Custom Sections Created
 | Section File | Purpose |
 |---|---|
+| `sections/disfruto-announcement.liquid` | Dark navy announcement bar at top |
+| `sections/disfruto-header.liquid` | Branded nav with logo, menu, Login, gold CTA, German flag |
+| `sections/disfruto-trust-bar.liquid` | Dark green trust bar with checkmarks |
 | `sections/disfruto-hero.liquid` | Hero with headline, CTA, image, floating badge |
-| `sections/disfruto-trust-bar.liquid` | 3-column trust signals bar |
 | `sections/disfruto-product-story.liquid` | Two-column product story |
 | `sections/disfruto-cheese-grid.liquid` | 4-column cheese showcase grid |
 | `sections/disfruto-cheesemaker.liquid` | Cheesemaker of the week feature |
@@ -35,15 +38,20 @@ Shopify Dawn-based theme customized for Disfruto, a curated cheese subscription 
 | `assets/disfruto-banner.png` | Subscription unboxing banner (16:9) |
 
 ## Key Files
-- `templates/index.json` — Homepage template with all 9 sections configured
+- `templates/index.json` — Homepage template with all 11 sections configured
 - `assets/disfruto.css` — Complete custom design system
 - `layout/theme.liquid` — Global CSS import added
 - `preview/server.js` — HTML preview server (renders design outside Shopify)
 
 ## Brand Design
-- **Colors**: Cream (#FAF7F2), Dark (#2C2C2C), Warm brown (#8B6F47), Accent green (#5C7A3A), Gold (#D4A853)
-- **Fonts**: Playfair Display (headings), Inter (body)
+- **Colors**: Cream (#FAF7F2), Dark (#2C2C2C), Dark Green (#2D4A3E), Navy (#1E1B3A), Warm brown (#8B6F47), Accent green (#5C7A3A), Gold CTA (#C9A84C), Gold (#D4A853)
+- **Fonts**: Playfair Display 700 (headings), Inter 400-700 (body/nav)
+- **Logo**: Lowercase "disfruto" with Playfair Display, gold dot "o" icon
 - **Style**: Premium, editorial, minimal, large imagery, generous whitespace
+
+## Navigation Structure
+- Menu: Unser Käse | So funktioniert's | Käsemacher | FAQs
+- Right: Login icon | Gold CTA "GENUSS SET WÄHLEN" | German flag
 
 ## Business Requirements
 - 1 subscription product (Käse Genuss Set)

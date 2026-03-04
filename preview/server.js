@@ -24,28 +24,78 @@ const html = `<!DOCTYPE html>
   <title>Disfruto — Kuratierte Käse-Spezialitäten</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #3A3A3A; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #3A3A3A; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     img { max-width: 100%; display: block; }
+    a { color: inherit; }
     ${css}
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header style="position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #E5DFD6;">
-    <div class="disfruto-container" style="display:flex;align-items:center;justify-content:space-between;height:72px;">
-      <div style="font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;color:#2C2C2C;letter-spacing:-0.02em;">Disfruto</div>
-      <nav style="display:flex;gap:32px;align-items:center;">
-        <a href="#story" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">So funktioniert's</a>
-        <a href="#cheeses" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">Unsere Käse</a>
-        <a href="#why" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">FAQ</a>
-        <a href="#" class="disfruto-btn disfruto-btn--primary" style="padding:10px 24px;font-size:13px;">Jetzt starten</a>
-      </nav>
+  <!-- Announcement Bar -->
+  <div class="disfruto-announcement">
+    Dein 1. Käse Genuss Set <a href="#">gratis</a> — Nur für kurze Zeit!
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="disfruto-header">
+    <div class="disfruto-container">
+      <div class="disfruto-header__inner">
+        <div class="disfruto-header__left">
+          <a href="/" class="disfruto-header__logo">
+            disfrut<span class="disfruto-header__logo-dot"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+          </a>
+          <nav class="disfruto-header__nav">
+            <a href="#cheeses">Unser Käse</a>
+            <a href="#story">So funktioniert's</a>
+            <a href="#maker">Käsemacher</a>
+            <a href="#why">FAQs</a>
+          </nav>
+        </div>
+        <div class="disfruto-header__right">
+          <a href="#" class="disfruto-header__login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Login
+          </a>
+          <a href="#" class="disfruto-header__cta">Genuss Set Wählen</a>
+          <div class="disfruto-header__flag" title="Deutsch">
+            <div class="disfruto-header__flag-stripe" style="background:#000;"></div>
+            <div class="disfruto-header__flag-stripe" style="background:#DD0000;"></div>
+            <div class="disfruto-header__flag-stripe" style="background:#FFCC00;"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
+
+  <!-- Trust Bar -->
+  <section class="disfruto-section disfruto-trust">
+    <div class="disfruto-container">
+      <div class="disfruto-trust__grid">
+        <div class="disfruto-trust__item">
+          <div class="disfruto-trust__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="disfruto-trust__label">Kostenfrei geliefert</div>
+        </div>
+        <div class="disfruto-trust__item">
+          <div class="disfruto-trust__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="disfruto-trust__label">Flexibel planbar</div>
+        </div>
+        <div class="disfruto-trust__item">
+          <div class="disfruto-trust__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="disfruto-trust__label">Jederzeit pausierbar</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Section 1: Hero -->
   <section class="disfruto-section disfruto-hero">
@@ -56,7 +106,7 @@ const html = `<!DOCTYPE html>
           <h1 class="disfruto-hero__title">Dein 1. Käse Genuss&nbsp;Set Gratis</h1>
           <p class="disfruto-hero__subtitle">Kuratierte Käse-Spezialitäten direkt an deine Tür in Berlin geliefert. Handverlesen von den besten Käsemachern.</p>
           <div class="disfruto-hero__actions">
-            <a href="#" class="disfruto-btn disfruto-btn--primary">Jetzt ausprobieren</a>
+            <a href="#" class="disfruto-btn disfruto-btn--gold">Genuss Set Wählen</a>
             <a href="#story" class="disfruto-btn disfruto-btn--secondary">Mehr erfahren</a>
           </div>
         </div>
@@ -66,7 +116,7 @@ const html = `<!DOCTYPE html>
           </div>
           <div class="disfruto-hero__float-badge">
             <div class="disfruto-hero__float-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div>
               <div class="disfruto-hero__float-text">Kostenlose Lieferung</div>
@@ -78,42 +128,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 2: Trust Bar -->
-  <section class="disfruto-section disfruto-trust">
-    <div class="disfruto-container">
-      <div class="disfruto-trust__grid">
-        <div class="disfruto-trust__item">
-          <div class="disfruto-trust__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </div>
-          <div>
-            <div class="disfruto-trust__label">Kostenfrei geliefert</div>
-            <div class="disfruto-trust__sublabel">In ganz Berlin</div>
-          </div>
-        </div>
-        <div class="disfruto-trust__item">
-          <div class="disfruto-trust__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div>
-            <div class="disfruto-trust__label">Flexibel planbar</div>
-            <div class="disfruto-trust__sublabel">Alle 2 oder 4 Wochen</div>
-          </div>
-        </div>
-        <div class="disfruto-trust__item">
-          <div class="disfruto-trust__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="10" y1="15" x2="10" y2="9"/><line x1="14" y1="15" x2="14" y2="9"/></svg>
-          </div>
-          <div>
-            <div class="disfruto-trust__label">Jederzeit pausierbar</div>
-            <div class="disfruto-trust__sublabel">Kein Vertrag, keine Bindung</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Product Story -->
+  <!-- Section 2: Product Story -->
   <section id="story" class="disfruto-section disfruto-story">
     <div class="disfruto-container">
       <div class="disfruto-story__grid">
@@ -130,7 +145,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 4: Cheese Grid -->
+  <!-- Section 3: Cheese Grid -->
   <section id="cheeses" class="disfruto-section disfruto-cheeses">
     <div class="disfruto-container">
       <div class="disfruto-cheeses__header">
@@ -183,8 +198,8 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 5: Cheesemaker Feature -->
-  <section class="disfruto-section disfruto-maker">
+  <!-- Section 4: Cheesemaker Feature -->
+  <section id="maker" class="disfruto-section disfruto-maker">
     <div class="disfruto-container">
       <div class="disfruto-maker__grid">
         <div class="disfruto-maker__content">
@@ -195,8 +210,8 @@ const html = `<!DOCTYPE html>
         </div>
         <div class="disfruto-maker__visual">
           <div class="disfruto-maker__badge-card" style="padding:0;overflow:hidden;position:relative;">
-            <img src="/assets/disfruto-maker.png" alt="Käsemacher" style="width:100%;height:260px;object-fit:cover;">
-            <div style="padding:32px 32px 36px;text-align:center;">
+            <img src="/assets/disfruto-maker.png" alt="Käsemacher" style="width:100%;height:240px;object-fit:cover;">
+            <div style="padding:28px 28px 32px;text-align:center;">
               <div class="disfruto-maker__badge-title">Käsemacher der Woche</div>
               <div class="disfruto-maker__badge-sub">Handwerk trifft Leidenschaft</div>
               <div class="disfruto-maker__badge-name">Familie Schönberg</div>
@@ -210,21 +225,21 @@ const html = `<!DOCTYPE html>
 
   <!-- Banner Section -->
   <section class="disfruto-section" style="padding:0;">
-    <div style="width:100%;height:360px;overflow:hidden;position:relative;">
+    <div style="width:100%;height:340px;overflow:hidden;position:relative;">
       <img src="/assets/disfruto-banner.png" alt="Disfruto Subscription" style="width:100%;height:100%;object-fit:cover;">
-      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(44,44,44,0.7) 0%,rgba(44,44,44,0.3) 50%,transparent 100%);display:flex;align-items:center;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(44,44,44,0.75) 0%,rgba(44,44,44,0.35) 50%,transparent 100%);display:flex;align-items:center;">
         <div class="disfruto-container" style="width:100%;">
-          <div style="max-width:480px;">
-            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:600;color:#fff;margin:0 0 16px;line-height:1.2;">Starte deine Käse-Reise</h2>
-            <p style="font-size:17px;color:rgba(255,255,255,0.8);margin:0 0 28px;line-height:1.6;">Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.</p>
-            <a href="#" class="disfruto-btn disfruto-btn--warm">Jetzt abonnieren</a>
+          <div style="max-width:460px;">
+            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:700;color:#fff;margin:0 0 14px;line-height:1.15;">Starte deine Käse-Reise</h2>
+            <p style="font-size:16px;color:rgba(255,255,255,0.8);margin:0 0 24px;line-height:1.6;">Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.</p>
+            <a href="#" class="disfruto-btn disfruto-btn--gold">Jetzt abonnieren</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 6: Why Disfruto -->
+  <!-- Section 5: Why Disfruto -->
   <section id="why" class="disfruto-section disfruto-why">
     <div class="disfruto-container">
       <div class="disfruto-why__header">
@@ -235,28 +250,28 @@ const html = `<!DOCTYPE html>
       <div class="disfruto-why__grid">
         <div class="disfruto-why__item">
           <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
           <h3 class="disfruto-why__item-title">Verstehen, was du isst</h3>
           <p class="disfruto-why__item-text">Wir zeigen dir genau, woher dein Käse kommt, wer ihn herstellt und wie er gereift wird.</p>
         </div>
         <div class="disfruto-why__item">
           <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <h3 class="disfruto-why__item-title">Handwerkliche Kunst</h3>
           <p class="disfruto-why__item-text">Jeder Käse wird von erfahrenen Käsemachern nach traditionellen Methoden hergestellt.</p>
         </div>
         <div class="disfruto-why__item">
           <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
           </div>
           <h3 class="disfruto-why__item-title">Vielfalt und Balance</h3>
           <p class="disfruto-why__item-text">Unsere Boxen bieten eine perfekt abgestimmte Auswahl verschiedener Geschmacksrichtungen.</p>
         </div>
         <div class="disfruto-why__item">
           <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
           <h3 class="disfruto-why__item-title">Flexible Lieferung</h3>
           <p class="disfruto-why__item-text">Wähle deinen Liefertag und passe dein Abo jederzeit an — ganz ohne Bindung.</p>
@@ -265,12 +280,12 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 7: Newsletter -->
+  <!-- Section 6: Newsletter -->
   <section class="disfruto-section disfruto-newsletter">
     <div class="disfruto-container">
       <div class="disfruto-newsletter__inner">
         <div class="disfruto-newsletter__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
         <h2 class="disfruto-newsletter__title">Neue Sorten & Genuss-Tipps direkt ins Postfach</h2>
         <p class="disfruto-newsletter__text">Melde dich an und erfahre als Erstes von neuen Käsesorten, exklusiven Angeboten und Geschichten unserer Käsemacher.</p>
@@ -283,7 +298,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 8: Footer -->
+  <!-- Section 7: Footer -->
   <footer class="disfruto-section disfruto-footer">
     <div class="disfruto-container">
       <div class="disfruto-footer__grid">
@@ -292,13 +307,13 @@ const html = `<!DOCTYPE html>
           <p class="disfruto-footer__brand-text">Kuratierte Käse-Spezialitäten, direkt an deine Tür in Berlin geliefert.</p>
           <div class="disfruto-footer__social">
             <a href="#" class="disfruto-footer__social-link" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
             <a href="#" class="disfruto-footer__social-link" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
             <a href="#" class="disfruto-footer__social-link" aria-label="TikTok">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-1-.05A6.28 6.28 0 0 0 3 15.57 6.29 6.29 0 0 0 9.37 22a6.28 6.28 0 0 0 6.27-6.28V9.06a8.28 8.28 0 0 0 4.84 1.56v-3.5a4.84 4.84 0 0 1-.89-.43z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-1-.05A6.28 6.28 0 0 0 3 15.57 6.29 6.29 0 0 0 9.37 22a6.28 6.28 0 0 0 6.27-6.28V9.06a8.28 8.28 0 0 0 4.84 1.56v-3.5a4.84 4.84 0 0 1-.89-.43z"/></svg>
             </a>
           </div>
         </div>
