@@ -709,6 +709,18 @@
   background: var(--disfruto-dark);
   color: var(--disfruto-white);
   overflow: hidden;
+  position: relative;
+}
+
+.disfruto-why::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 15% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .disfruto-why__layout {
@@ -716,6 +728,7 @@
   grid-template-columns: 5fr 6fr;
   gap: 80px;
   align-items: start;
+  position: relative;
 }
 
 .disfruto-why__manifesto {
@@ -773,8 +786,8 @@
 .disfruto-why .disfruto-btn--outline {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 32px;
+  gap: 10px;
+  padding: 15px 32px;
   background: transparent;
   color: var(--disfruto-gold);
   border: 1px solid rgba(201,168,76,0.35);
@@ -784,7 +797,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: var(--disfruto-transition);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -792,6 +805,15 @@
   background: rgba(201,168,76,0.1);
   border-color: var(--disfruto-gold);
   color: var(--disfruto-gold);
+  transform: translateY(-2px);
+}
+
+.disfruto-why .disfruto-btn--outline:active {
+  transform: translateY(0);
+}
+
+.disfruto-why__divider {
+  display: none;
 }
 
 .disfruto-why__benefits {
@@ -821,15 +843,15 @@
 }
 
 .disfruto-why__item:nth-child(2).is-visible {
-  transition-delay: 0.1s;
+  transition-delay: 0.12s;
 }
 
 .disfruto-why__item:nth-child(3).is-visible {
-  transition-delay: 0.2s;
+  transition-delay: 0.24s;
 }
 
 .disfruto-why__item:nth-child(4).is-visible {
-  transition-delay: 0.3s;
+  transition-delay: 0.36s;
 }
 
 .disfruto-why__number {
@@ -837,19 +859,20 @@
   font-size: 48px;
   font-weight: 300;
   line-height: 1;
-  color: rgba(201,168,76,0.25);
+  color: rgba(201,168,76,0.2);
   flex-shrink: 0;
   min-width: 56px;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease;
+  user-select: none;
 }
 
 .disfruto-why__item:hover .disfruto-why__number {
-  color: rgba(201,168,76,0.5);
+  color: rgba(201,168,76,0.45);
 }
 
 .disfruto-why__item-content {
   flex: 1;
-  padding-top: 6px;
+  padding-top: 8px;
 }
 
 .disfruto-why__item-title {
@@ -867,23 +890,27 @@
 
 .disfruto-why__item-text {
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: rgba(255,255,255,0.5);
   margin: 0;
-  max-width: 400px;
+  max-width: 420px;
 }
 
 @media (max-width: 989px) {
   .disfruto-why {
     padding: 80px 0;
   }
+  .disfruto-why::before {
+    background: radial-gradient(ellipse at 50% 20%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  }
   .disfruto-why__layout {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 0;
   }
   .disfruto-why__manifesto {
     position: static;
     text-align: center;
+    padding-bottom: 48px;
   }
   .disfruto-why__eyebrow {
     padding-left: 0;
@@ -898,32 +925,90 @@
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 32px;
+  }
+  .disfruto-why .disfruto-btn--outline {
+    padding: 14px 28px;
+  }
+  .disfruto-why__divider {
+    display: block;
+    width: 48px;
+    height: 1px;
+    background: rgba(201,168,76,0.3);
+    margin: 0 auto 8px;
   }
   .disfruto-why__item-text {
     max-width: none;
   }
+  .disfruto-why__item-title {
+    font-size: 19px;
+  }
 }
 
-@media (max-width: 549px) {
+@media (max-width: 749px) {
   .disfruto-why {
-    padding: 60px 0;
+    padding: 64px 0;
+  }
+  .disfruto-why__manifesto {
+    padding-bottom: 40px;
   }
   .disfruto-why__title {
     font-size: 28px;
+    margin-bottom: 20px;
   }
   .disfruto-why__statement {
     font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: none;
+  }
+  .disfruto-why .disfruto-btn--outline {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 12px;
   }
   .disfruto-why__item {
-    gap: 20px;
-    padding: 28px 0;
+    gap: 18px;
+    padding: 24px 0;
   }
   .disfruto-why__number {
     font-size: 36px;
-    min-width: 44px;
+    min-width: 40px;
+  }
+  .disfruto-why__item-content {
+    padding-top: 4px;
   }
   .disfruto-why__item-title {
     font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .disfruto-why__item-text {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 374px) {
+  .disfruto-why {
+    padding: 48px 0;
+  }
+  .disfruto-why__title {
+    font-size: 24px;
+  }
+  .disfruto-why__item {
+    gap: 14px;
+    padding: 20px 0;
+  }
+  .disfruto-why__number {
+    font-size: 30px;
+    min-width: 34px;
+  }
+  .disfruto-why__item-title {
+    font-size: 16px;
+  }
+  .disfruto-why__item-text {
+    font-size: 12.5px;
   }
 }
 

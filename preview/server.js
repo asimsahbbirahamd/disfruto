@@ -282,33 +282,34 @@ const html = `<!DOCTYPE html>
           <p class="disfruto-why__statement">Wir glauben, dass großartiger Käse mehr ist als ein Lebensmittel. Er ist Ausdruck von Handwerk, Terroir und der Leidenschaft der Menschen, die ihn herstellen. Disfruto bringt diese Geschichten direkt zu dir nach Hause — kuratiert, authentisch und immer aus den besten Käsereien Europas.</p>
           <a href="#" class="disfruto-btn disfruto-btn--outline">Unsere Geschichte entdecken</a>
         </div>
+        <div class="disfruto-why__divider" aria-hidden="true"></div>
         <div class="disfruto-why__benefits">
           <div class="disfruto-why__item">
             <span class="disfruto-why__number">01</span>
             <div class="disfruto-why__item-content">
-              <h3 class="disfruto-why__item-title">Transparente Herkunft</h3>
-              <p class="disfruto-why__item-text">Jeder Käse kommt mit seiner Geschichte: Wer ihn gemacht hat, woher die Milch stammt und wie er gereift wurde. Keine anonyme Massenware.</p>
+              <h3 class="disfruto-why__item-title">Vom Hof auf deinen Tisch</h3>
+              <p class="disfruto-why__item-text">Jeder Käse erzählt seine Geschichte — vom Deichkäse Alt aus Nordfriesland bis zum cremigen Friesisch Blue. Du erfährst, wer ihn macht, woher die Milch stammt und wie er gereift wurde.</p>
             </div>
           </div>
           <div class="disfruto-why__item">
             <span class="disfruto-why__number">02</span>
             <div class="disfruto-why__item-content">
-              <h3 class="disfruto-why__item-title">Meisterliches Handwerk</h3>
-              <p class="disfruto-why__item-text">Wir arbeiten ausschließlich mit Käsereien, die ihr Handwerk über Generationen perfektioniert haben — von den Alpen bis an die Nordsee.</p>
+              <h3 class="disfruto-why__item-title">Generationen von Handwerk</h3>
+              <p class="disfruto-why__item-text">Wir arbeiten mit Käsereien, die ihr Handwerk über Generationen perfektioniert haben. Keine Massenproduktion — nur Tradition, Sorgfalt und echte Leidenschaft für Käse.</p>
             </div>
           </div>
           <div class="disfruto-why__item">
             <span class="disfruto-why__number">03</span>
             <div class="disfruto-why__item-content">
-              <h3 class="disfruto-why__item-title">Kuratierte Vielfalt</h3>
-              <p class="disfruto-why__item-text">Jede Box ist eine Komposition: Sorgfältig aufeinander abgestimmt in Geschmack, Textur und Reife — damit jeder Bissen überrascht.</p>
+              <h3 class="disfruto-why__item-title">Jede Box eine Entdeckung</h3>
+              <p class="disfruto-why__item-text">Von kräftigem Hartkäse über milden Weichkäse bis zu edlem Blauschimmel — jede Box ist eine sorgfältig komponierte Reise durch Geschmack, Textur und Reife.</p>
             </div>
           </div>
           <div class="disfruto-why__item">
             <span class="disfruto-why__number">04</span>
             <div class="disfruto-why__item-content">
-              <h3 class="disfruto-why__item-title">Berlin, flexibel geliefert</h3>
-              <p class="disfruto-why__item-text">Donnerstag bis Sonntag, alle 2 oder 4 Wochen — kostenlos an deine Tür. Pausiere oder kündige jederzeit, ganz ohne Bindung.</p>
+              <h3 class="disfruto-why__item-title">Berlin, kostenlos geliefert</h3>
+              <p class="disfruto-why__item-text">Donnerstag bis Sonntag direkt an deine Tür — alle 2 oder 4 Wochen, immer versandkostenfrei. Pausiere, überspringe oder kündige jederzeit.</p>
             </div>
           </div>
         </div>
