@@ -1,0 +1,212 @@
+{
+  "sections": {
+    "disfruto_hero": {
+      "type": "disfruto-hero",
+      "settings": {
+        "badge_text": "Neu in Berlin",
+        "heading": "Dein 1. Käse Genuss Set Gratis",
+        "subheading": "Kuratierte Käse-Spezialitäten direkt an deine Tür in Berlin geliefert. Handverlesen von den besten Käsemachern.",
+        "button_label": "Jetzt ausprobieren",
+        "button_label_2": "Mehr erfahren",
+        "float_badge_text": "Kostenlose Lieferung",
+        "float_badge_subtext": "In ganz Berlin"
+      }
+    },
+    "disfruto_trust": {
+      "type": "disfruto-trust-bar",
+      "blocks": {
+        "trust_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "delivery",
+            "label": "Kostenfrei geliefert",
+            "sublabel": "In ganz Berlin"
+          }
+        },
+        "trust_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "flexible",
+            "label": "Flexibel planbar",
+            "sublabel": "Alle 2 oder 4 Wochen"
+          }
+        },
+        "trust_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "pause",
+            "label": "Jederzeit pausierbar",
+            "sublabel": "Kein Vertrag, keine Bindung"
+          }
+        }
+      },
+      "block_order": ["trust_1", "trust_2", "trust_3"],
+      "settings": {}
+    },
+    "disfruto_story": {
+      "type": "disfruto-product-story",
+      "settings": {
+        "eyebrow": "Unser Konzept",
+        "heading": "Käse mit Charakter. Bewusst ausgewählt.",
+        "text": "Jede Box ist eine Reise durch die besten Käsereien Europas. Wir wählen handwerklich hergestellte Käsesorten aus, die du in keinem Supermarkt findest — direkt zu dir nach Hause in Berlin.",
+        "button_label": "Mehr erfahren"
+      }
+    },
+    "disfruto_cheeses": {
+      "type": "disfruto-cheese-grid",
+      "blocks": {
+        "cheese_1": {
+          "type": "cheese",
+          "settings": {
+            "name": "Deichkäse Alt",
+            "description": "Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.",
+            "tag": "Hartkäse"
+          }
+        },
+        "cheese_2": {
+          "type": "cheese",
+          "settings": {
+            "name": "Friesisch Blue",
+            "description": "Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.",
+            "tag": "Blauschimmel"
+          }
+        },
+        "cheese_3": {
+          "type": "cheese",
+          "settings": {
+            "name": "Grosser Husumer",
+            "description": "Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.",
+            "tag": "Schnittkäse"
+          }
+        },
+        "cheese_4": {
+          "type": "cheese",
+          "settings": {
+            "name": "Hofkäse",
+            "description": "Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.",
+            "tag": "Weichkäse"
+          }
+        }
+      },
+      "block_order": ["cheese_1", "cheese_2", "cheese_3", "cheese_4"],
+      "settings": {
+        "eyebrow": "Unsere Auswahl",
+        "heading": "Entdecke unsere Käse-Vielfalt",
+        "subheading": "Handverlesene Sorten von den besten Käsemachern Europas"
+      }
+    },
+    "disfruto_maker": {
+      "type": "disfruto-cheesemaker",
+      "settings": {
+        "eyebrow": "Jede Woche neu",
+        "heading": "Käsemacher im Fokus",
+        "text": "Jede Woche stellen wir einen besonderen Käsemacher vor — seine Geschichte, seine Philosophie und was seinen Käse einzigartig macht.",
+        "button_label": "Zum Porträt",
+        "show_badge": true,
+        "badge_title": "Käsemacher der Woche",
+        "badge_subtitle": "Handwerk trifft Leidenschaft",
+        "maker_name": "Familie Schönberg",
+        "maker_region": "Nordfriesland, Deutschland"
+      }
+    },
+    "disfruto_why": {
+      "type": "disfruto-why",
+      "blocks": {
+        "why_1": {
+          "type": "benefit",
+          "settings": {
+            "icon": "eye",
+            "title": "Verstehen, was du isst",
+            "description": "Wir zeigen dir genau, woher dein Käse kommt, wer ihn herstellt und wie er gereift wird."
+          }
+        },
+        "why_2": {
+          "type": "benefit",
+          "settings": {
+            "icon": "hand",
+            "title": "Handwerkliche Kunst",
+            "description": "Jeder Käse wird von erfahrenen Käsemachern nach traditionellen Methoden hergestellt."
+          }
+        },
+        "why_3": {
+          "type": "benefit",
+          "settings": {
+            "icon": "layers",
+            "title": "Vielfalt und Balance",
+            "description": "Unsere Boxen bieten eine perfekt abgestimmte Auswahl verschiedener Geschmacksrichtungen."
+          }
+        },
+        "why_4": {
+          "type": "benefit",
+          "settings": {
+            "icon": "truck",
+            "title": "Flexible Lieferung",
+            "description": "Wähle deinen Liefertag und passe dein Abo jederzeit an — ganz ohne Bindung."
+          }
+        }
+      },
+      "block_order": ["why_1", "why_2", "why_3", "why_4"],
+      "settings": {
+        "eyebrow": "Unsere Werte",
+        "heading": "Warum Disfruto",
+        "subheading": "Qualität, Handwerk und Genuss — das sind unsere Versprechen"
+      }
+    },
+    "disfruto_newsletter": {
+      "type": "disfruto-newsletter",
+      "settings": {
+        "heading": "Neue Sorten & Genuss-Tipps direkt ins Postfach",
+        "text": "Melde dich an und erfahre als Erstes von neuen Käsesorten, exklusiven Angeboten und Geschichten unserer Käsemacher.",
+        "placeholder": "Deine E-Mail-Adresse",
+        "button_label": "Anmelden",
+        "privacy_text": "Kein Spam, jederzeit abbestellbar. Datenschutz ist uns wichtig."
+      }
+    },
+    "disfruto_footer": {
+      "type": "disfruto-footer",
+      "blocks": {
+        "footer_col_1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Produkt",
+            "link_1_label": "So funktioniert's",
+            "link_2_label": "Unsere Käse",
+            "link_3_label": "Preise"
+          }
+        },
+        "footer_col_2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Unternehmen",
+            "link_1_label": "Über uns",
+            "link_2_label": "FAQ",
+            "link_3_label": "Kontakt"
+          }
+        },
+        "footer_col_3": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Kontakt",
+            "link_1_label": "hallo@disfruto.de",
+            "link_2_label": "Berlin, Deutschland"
+          }
+        }
+      },
+      "block_order": ["footer_col_1", "footer_col_2", "footer_col_3"],
+      "settings": {
+        "brand_name": "Disfruto",
+        "brand_description": "Kuratierte Käse-Spezialitäten, direkt an deine Tür in Berlin geliefert."
+      }
+    }
+  },
+  "order": [
+    "disfruto_hero",
+    "disfruto_trust",
+    "disfruto_story",
+    "disfruto_cheeses",
+    "disfruto_maker",
+    "disfruto_why",
+    "disfruto_newsletter",
+    "disfruto_footer"
+  ]
+}

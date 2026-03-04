@@ -1,0 +1,986 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --disfruto-cream: #FAF7F2;
+  --disfruto-dark: #2C2C2C;
+  --disfruto-warm: #8B6F47;
+  --disfruto-warm-light: #C4A882;
+  --disfruto-accent: #5C7A3A;
+  --disfruto-accent-light: #E8EFE0;
+  --disfruto-gold: #D4A853;
+  --disfruto-text: #3A3A3A;
+  --disfruto-text-light: #6B6B6B;
+  --disfruto-border: #E5DFD6;
+  --disfruto-white: #FFFFFF;
+  --disfruto-hero-bg: linear-gradient(135deg, #FAF7F2 0%, #F0EBE1 50%, #E8E0D4 100%);
+  --disfruto-section-bg: #F5F1EB;
+  --disfruto-radius: 8px;
+  --disfruto-radius-lg: 16px;
+  --disfruto-font-heading: 'Playfair Display', Georgia, serif;
+  --disfruto-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --disfruto-transition: all 0.3s ease;
+  --disfruto-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --disfruto-shadow-hover: 0 8px 40px rgba(0,0,0,0.10);
+}
+
+.disfruto-section {
+  font-family: var(--disfruto-font-body);
+  color: var(--disfruto-text);
+}
+
+.disfruto-section h1,
+.disfruto-section h2,
+.disfruto-section h3,
+.disfruto-section h4 {
+  font-family: var(--disfruto-font-heading);
+  color: var(--disfruto-dark);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.disfruto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 750px) {
+  .disfruto-container {
+    padding: 0 40px;
+  }
+}
+
+.disfruto-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-family: var(--disfruto-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--disfruto-transition);
+  border-radius: var(--disfruto-radius);
+  white-space: nowrap;
+}
+
+.disfruto-btn--primary {
+  background-color: var(--disfruto-dark);
+  color: var(--disfruto-white);
+}
+
+.disfruto-btn--primary:hover {
+  background-color: var(--disfruto-warm);
+  transform: translateY(-2px);
+  box-shadow: var(--disfruto-shadow-hover);
+}
+
+.disfruto-btn--secondary {
+  background-color: transparent;
+  color: var(--disfruto-dark);
+  border: 2px solid var(--disfruto-dark);
+}
+
+.disfruto-btn--secondary:hover {
+  background-color: var(--disfruto-dark);
+  color: var(--disfruto-white);
+  transform: translateY(-2px);
+}
+
+.disfruto-btn--warm {
+  background-color: var(--disfruto-warm);
+  color: var(--disfruto-white);
+}
+
+.disfruto-btn--warm:hover {
+  background-color: var(--disfruto-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--disfruto-shadow-hover);
+}
+
+/* Hero Section */
+.disfruto-hero {
+  background: var(--disfruto-hero-bg);
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.disfruto-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.disfruto-hero__content {
+  flex: 1;
+  max-width: 560px;
+}
+
+.disfruto-hero__badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--disfruto-accent-light);
+  color: var(--disfruto-accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+
+.disfruto-hero__title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 24px;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-hero__subtitle {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--disfruto-text-light);
+  margin: 0 0 40px;
+  font-weight: 400;
+}
+
+.disfruto-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.disfruto-hero__visual {
+  flex: 1;
+  max-width: 520px;
+  position: relative;
+}
+
+.disfruto-hero__image-wrapper {
+  position: relative;
+  border-radius: var(--disfruto-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: var(--disfruto-border);
+}
+
+.disfruto-hero__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.disfruto-hero__float-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: var(--disfruto-white);
+  padding: 16px 24px;
+  border-radius: var(--disfruto-radius);
+  box-shadow: var(--disfruto-shadow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.disfruto-hero__float-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--disfruto-accent-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disfruto-hero__float-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--disfruto-accent);
+}
+
+.disfruto-hero__float-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-hero__float-sub {
+  font-size: 12px;
+  color: var(--disfruto-text-light);
+  font-weight: 400;
+}
+
+@media (max-width: 989px) {
+  .disfruto-hero {
+    padding: 60px 0 40px;
+    min-height: auto;
+  }
+  .disfruto-hero__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .disfruto-hero__title {
+    font-size: 36px;
+  }
+  .disfruto-hero__subtitle {
+    font-size: 17px;
+  }
+  .disfruto-hero__actions {
+    justify-content: center;
+  }
+  .disfruto-hero__visual {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 549px) {
+  .disfruto-hero__title {
+    font-size: 30px;
+  }
+  .disfruto-hero__actions {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .disfruto-btn {
+    padding: 12px 24px;
+  }
+}
+
+/* Trust Bar */
+.disfruto-trust {
+  padding: 48px 0;
+  background: var(--disfruto-white);
+  border-top: 1px solid var(--disfruto-border);
+  border-bottom: 1px solid var(--disfruto-border);
+}
+
+.disfruto-trust__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.disfruto-trust__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.disfruto-trust__icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  background: var(--disfruto-cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disfruto-trust__icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--disfruto-warm);
+}
+
+.disfruto-trust__label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-trust__sublabel {
+  font-size: 13px;
+  color: var(--disfruto-text-light);
+  margin-top: 2px;
+}
+
+@media (max-width: 749px) {
+  .disfruto-trust__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .disfruto-trust__item {
+    justify-content: flex-start;
+    padding: 0 16px;
+  }
+}
+
+/* Product Story */
+.disfruto-story {
+  padding: 100px 0;
+  background: var(--disfruto-white);
+}
+
+.disfruto-story__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.disfruto-story__image {
+  border-radius: var(--disfruto-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--disfruto-cream);
+}
+
+.disfruto-story__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.disfruto-story__content {
+  max-width: 480px;
+}
+
+.disfruto-story__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--disfruto-warm);
+  margin-bottom: 20px;
+}
+
+.disfruto-story__title {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 24px;
+  line-height: 1.15;
+}
+
+.disfruto-story__text {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--disfruto-text-light);
+  margin: 0 0 36px;
+}
+
+@media (max-width: 989px) {
+  .disfruto-story {
+    padding: 60px 0;
+  }
+  .disfruto-story__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .disfruto-story__title {
+    font-size: 32px;
+  }
+}
+
+/* Cheese Grid */
+.disfruto-cheeses {
+  padding: 100px 0;
+  background: var(--disfruto-cream);
+}
+
+.disfruto-cheeses__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.disfruto-cheeses__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--disfruto-warm);
+  margin-bottom: 16px;
+}
+
+.disfruto-cheeses__title {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.disfruto-cheeses__subtitle {
+  font-size: 17px;
+  color: var(--disfruto-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.disfruto-cheeses__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.disfruto-cheese-card {
+  background: var(--disfruto-white);
+  border-radius: var(--disfruto-radius-lg);
+  overflow: hidden;
+  transition: var(--disfruto-transition);
+  border: 1px solid var(--disfruto-border);
+}
+
+.disfruto-cheese-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--disfruto-shadow-hover);
+}
+
+.disfruto-cheese-card__image {
+  aspect-ratio: 1;
+  background: var(--disfruto-cream);
+  overflow: hidden;
+}
+
+.disfruto-cheese-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.disfruto-cheese-card:hover .disfruto-cheese-card__image img {
+  transform: scale(1.05);
+}
+
+.disfruto-cheese-card__body {
+  padding: 24px;
+}
+
+.disfruto-cheese-card__name {
+  font-family: var(--disfruto-font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-cheese-card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--disfruto-text-light);
+  margin: 0;
+}
+
+.disfruto-cheese-card__tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 12px;
+  background: var(--disfruto-accent-light);
+  color: var(--disfruto-accent);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 989px) {
+  .disfruto-cheeses {
+    padding: 60px 0;
+  }
+  .disfruto-cheeses__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .disfruto-cheeses__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 549px) {
+  .disfruto-cheeses__grid {
+    gap: 16px;
+  }
+  .disfruto-cheese-card__body {
+    padding: 16px;
+  }
+  .disfruto-cheese-card__name {
+    font-size: 17px;
+  }
+}
+
+/* Cheesemaker Feature */
+.disfruto-maker {
+  padding: 100px 0;
+  background: var(--disfruto-white);
+}
+
+.disfruto-maker__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.disfruto-maker__content {
+  max-width: 480px;
+}
+
+.disfruto-maker__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--disfruto-warm);
+  margin-bottom: 20px;
+}
+
+.disfruto-maker__title {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 24px;
+  line-height: 1.15;
+}
+
+.disfruto-maker__text {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--disfruto-text-light);
+  margin: 0 0 36px;
+}
+
+.disfruto-maker__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disfruto-maker__badge-card {
+  background: var(--disfruto-cream);
+  border-radius: var(--disfruto-radius-lg);
+  padding: 48px;
+  text-align: center;
+  border: 1px solid var(--disfruto-border);
+  max-width: 360px;
+  width: 100%;
+}
+
+.disfruto-maker__badge-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--disfruto-warm);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disfruto-maker__badge-icon svg {
+  width: 36px;
+  height: 36px;
+  color: var(--disfruto-white);
+}
+
+.disfruto-maker__badge-title {
+  font-family: var(--disfruto-font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+  margin: 0 0 8px;
+}
+
+.disfruto-maker__badge-sub {
+  font-size: 15px;
+  color: var(--disfruto-text-light);
+  margin: 0 0 24px;
+}
+
+.disfruto-maker__badge-name {
+  font-family: var(--disfruto-font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--disfruto-warm);
+}
+
+.disfruto-maker__badge-region {
+  font-size: 13px;
+  color: var(--disfruto-text-light);
+  margin-top: 4px;
+}
+
+.disfruto-maker__image {
+  border-radius: var(--disfruto-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--disfruto-cream);
+}
+
+.disfruto-maker__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 989px) {
+  .disfruto-maker {
+    padding: 60px 0;
+  }
+  .disfruto-maker__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .disfruto-maker__title {
+    font-size: 32px;
+  }
+}
+
+/* Why Disfruto */
+.disfruto-why {
+  padding: 100px 0;
+  background: var(--disfruto-dark);
+  color: var(--disfruto-white);
+}
+
+.disfruto-why__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.disfruto-why__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--disfruto-gold);
+  margin-bottom: 16px;
+}
+
+.disfruto-why__title {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--disfruto-white);
+}
+
+.disfruto-why__subtitle {
+  font-size: 17px;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.disfruto-why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.disfruto-why__item {
+  text-align: center;
+  padding: 40px 24px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--disfruto-radius-lg);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: var(--disfruto-transition);
+}
+
+.disfruto-why__item:hover {
+  background: rgba(255,255,255,0.10);
+  transform: translateY(-4px);
+}
+
+.disfruto-why__icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(212,168,83,0.15);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disfruto-why__icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--disfruto-gold);
+}
+
+.disfruto-why__item-title {
+  font-family: var(--disfruto-font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--disfruto-white);
+}
+
+.disfruto-why__item-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+
+@media (max-width: 989px) {
+  .disfruto-why {
+    padding: 60px 0;
+  }
+  .disfruto-why__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .disfruto-why__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 549px) {
+  .disfruto-why__grid {
+    grid-template-columns: 1fr;
+  }
+  .disfruto-why__item {
+    padding: 32px 20px;
+  }
+}
+
+/* Newsletter */
+.disfruto-newsletter {
+  padding: 100px 0;
+  background: var(--disfruto-cream);
+}
+
+.disfruto-newsletter__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.disfruto-newsletter__icon {
+  width: 64px;
+  height: 64px;
+  background: var(--disfruto-warm);
+  border-radius: 50%;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disfruto-newsletter__icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--disfruto-white);
+}
+
+.disfruto-newsletter__title {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.disfruto-newsletter__text {
+  font-size: 17px;
+  color: var(--disfruto-text-light);
+  margin: 0 0 36px;
+  line-height: 1.6;
+}
+
+.disfruto-newsletter__form {
+  display: flex;
+  gap: 12px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.disfruto-newsletter__input {
+  flex: 1;
+  padding: 16px 20px;
+  border: 1px solid var(--disfruto-border);
+  border-radius: var(--disfruto-radius);
+  font-size: 15px;
+  font-family: var(--disfruto-font-body);
+  background: var(--disfruto-white);
+  color: var(--disfruto-text);
+  outline: none;
+  transition: var(--disfruto-transition);
+}
+
+.disfruto-newsletter__input:focus {
+  border-color: var(--disfruto-warm);
+  box-shadow: 0 0 0 3px rgba(139,111,71,0.1);
+}
+
+.disfruto-newsletter__input::placeholder {
+  color: var(--disfruto-text-light);
+}
+
+.disfruto-newsletter__privacy {
+  font-size: 13px;
+  color: var(--disfruto-text-light);
+  margin-top: 16px;
+}
+
+@media (max-width: 549px) {
+  .disfruto-newsletter {
+    padding: 60px 0;
+  }
+  .disfruto-newsletter__title {
+    font-size: 28px;
+  }
+  .disfruto-newsletter__form {
+    flex-direction: column;
+  }
+}
+
+/* Custom Footer Overrides */
+.disfruto-footer {
+  background: var(--disfruto-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 80px 0 40px;
+}
+
+.disfruto-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.disfruto-footer__brand-name {
+  font-family: var(--disfruto-font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--disfruto-white);
+  margin: 0 0 16px;
+}
+
+.disfruto-footer__brand-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.55);
+  margin: 0 0 24px;
+  max-width: 300px;
+}
+
+.disfruto-footer__social {
+  display: flex;
+  gap: 12px;
+}
+
+.disfruto-footer__social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--disfruto-transition);
+  text-decoration: none;
+}
+
+.disfruto-footer__social-link:hover {
+  background: var(--disfruto-warm);
+}
+
+.disfruto-footer__social-link svg {
+  width: 18px;
+  height: 18px;
+  color: rgba(255,255,255,0.7);
+}
+
+.disfruto-footer__heading {
+  font-family: var(--disfruto-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--disfruto-white);
+  margin: 0 0 20px;
+}
+
+.disfruto-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.disfruto-footer__links li {
+  margin-bottom: 12px;
+}
+
+.disfruto-footer__links a {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: var(--disfruto-transition);
+}
+
+.disfruto-footer__links a:hover {
+  color: var(--disfruto-white);
+}
+
+.disfruto-footer__bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.disfruto-footer__copyright {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+
+.disfruto-footer__bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.disfruto-footer__bottom-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: var(--disfruto-transition);
+}
+
+.disfruto-footer__bottom-links a:hover {
+  color: var(--disfruto-white);
+}
+
+@media (max-width: 989px) {
+  .disfruto-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 549px) {
+  .disfruto-footer {
+    padding: 60px 0 32px;
+  }
+  .disfruto-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .disfruto-footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

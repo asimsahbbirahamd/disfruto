@@ -1,0 +1,93 @@
+Shopify Developer for Subscription-Based Food Brand (MVP, Launch by March 22nd)
+Ecommerce Website Development Posted Feb 22, 2026
+Project Overview
+
+We are launching a curated cheese subscription brand in Berlin in April 2026.
+
+This is NOT a marketplace.
+This is NOT a complex ecommerce platform.
+
+We have:
+- 1 subscription product
+- 2 delivery intervals (every 2 weeks / every 4 weeks)
+- Fixed delivery days (Thu–Sun)
+- Berlin-only delivery
+- No product variants
+- No upsells
+- No referral system
+- We need a clean, lean MVP built on Shopify within 4 weeks.
+
+
+Scope of Work
+
+1. Shopify Setup
+- Theme setup (clean, editorial look – design direction provided)
+- Basic pages (Home, FAQ, Legal, Footer)
+- Payment integration (Shopify Payments / Stripe)
+
+2. Subscription Logic
+- Using an existing subscription app (e.g. Seal Subscriptions or similar):
+- 2-week & 4-week recurring options
+- Pause & cancel functionality
+- Changes allowed until Sunday before delivery week
+- No custom subscription engine
+- We want maximum use of existing Shopify ecosystem.
+
+3. Delivery Day Selection
+Customer selects delivery day:
+- Thursday
+- Friday
+- Saturday
+- Sunday
+
+Delivery times are fixed:
+- Thu–Sat: 17:00–20:00
+- Sun: 09:00–12:00
+
+Can be implemented via delivery date app or lightweight custom solution.
+
+No need for time slot selection.
+
+4. Account Area / Customer Portal
+Customers must be able to:
+- View next delivery date
+- Change delivery day
+- Pause subscription
+- Cancel subscription
+- Update payment details
+
+Keep it simple. No custom dashboards.
+
+
+Important
+
+We want:
+- Lean MVP
+- No over-engineering
+- Fast execution
+- Clean implementation
+- Clear communication
+
+We do NOT want:
+- Custom backend
+- Complex microservices
+- Overly engineered delivery logic
+- Unnecessary architecture
+
+Timeline:
+Go-live deadline: March 22 (hard deadline, including testing)
+
+
+Requirements
+- Proven Shopify subscription experience
+- At least 2 recurring revenue projects in portfolio
+- Experience with subscription apps
+- Strong English communication
+
+
+To Apply
+Please include:
+- 2 Shopify subscription projects you have built
+- Which subscription apps you recommend and why
+- Your estimated timeline
+- Confirmation that you can meet the March 22 deadline l

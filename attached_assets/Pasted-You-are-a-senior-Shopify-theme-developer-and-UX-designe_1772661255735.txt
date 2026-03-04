@@ -1,0 +1,317 @@
+You are a senior Shopify theme developer and UX designer.
+
+Your task is to build a clean, premium, editorial Shopify MVP for a subscription-based cheese brand.
+
+The brand name is: Disfruto.
+
+The store is a curated cheese subscription service launching in Berlin.
+
+IMPORTANT PROJECT REQUIREMENTS
+
+This is intentionally a lean MVP.
+
+DO NOT over engineer anything.
+
+DO NOT build custom backend logic.
+
+DO NOT add unnecessary features.
+
+Use Shopify native functionality and subscription apps.
+
+The store must feel premium and editorial like ButcherBox but much simpler.
+
+REFERENCE DESIGN STYLE
+
+Editorial food brand
+Minimal layout
+Large imagery
+Clean typography
+Natural earthy colors
+White space
+Modern grid layouts
+High-end food subscription feel
+
+TECHNICAL REQUIREMENTS
+
+Use Shopify Dawn theme structure.
+
+Build everything as Shopify sections using Liquid so they can be edited in the theme editor.
+
+Use clean semantic HTML.
+
+Use modern CSS.
+
+Use responsive layouts.
+
+Mobile must look perfect.
+
+Use section blocks where appropriate.
+
+Do NOT use heavy JavaScript.
+
+Maintain high performance.
+
+STRUCTURE OF THE HOMEPAGE
+
+The homepage must include the following sections in this order.
+
+
+SECTION 1 — HERO
+
+Large premium hero section.
+
+Content:
+
+Headline:
+"Dein 1. Käse Genuss Set Gratis"
+
+Subheading:
+Curated artisan cheeses delivered directly to your door in Berlin.
+
+Primary CTA Button:
+"Jetzt ausprobieren"
+
+Hero design requirements:
+
+Large illustrated cheeses
+Soft gradient background
+Clean editorial typography
+Centered layout
+Premium feel
+
+Below hero include a small trust bar.
+
+
+SECTION 2 — TRUST BAR
+
+Three trust signals horizontally:
+
+Kostenfrei geliefert
+Flexibel planbar
+Jederzeit pausierbar
+
+Each item must include an icon and short label.
+
+Use subtle divider or spacing.
+
+Clean minimal layout.
+
+
+SECTION 3 — PRODUCT STORY
+
+Two-column layout.
+
+Left side:
+
+Image of cheese box or curated cheese selection.
+
+Right side text:
+
+Heading:
+"Käse mit Charakter. Bewusst ausgewählt."
+
+Paragraph explaining the curated cheese concept.
+
+CTA Button:
+"Mehr erfahren"
+
+Use large spacing and premium layout.
+
+
+SECTION 4 — FEATURED CHEESE TYPES
+
+Grid layout with 4 cheeses.
+
+Each item includes:
+
+Cheese image
+Cheese name
+Short description
+
+Example cheeses:
+
+Deichkäse Alt
+Friesisch Blue
+Grosser Husumer
+Hofkäse
+
+Design:
+
+4-column grid desktop
+2-column mobile
+
+
+SECTION 5 — CHEESEMAKER FEATURE
+
+Split layout.
+
+Left side:
+
+Heading:
+"Käsemacher im Fokus"
+
+Text explaining weekly cheesemaker highlight.
+
+Button:
+"Zum Porträt"
+
+Right side:
+
+Badge or illustration for:
+
+"Käsemacher der Woche"
+
+
+SECTION 6 — WHY DISFRUTO
+
+Background color section.
+
+Heading:
+
+"Warum Disfruto"
+
+Include 4 benefits.
+
+Each benefit includes:
+
+Icon
+Title
+Description
+
+Benefits:
+
+Verstehen, was du isst
+Handwerkliche Kunst
+Vielfalt und Balance
+Flexible Lieferung
+
+Use modern icon grid layout.
+
+
+SECTION 7 — NEWSLETTER
+
+Simple signup section.
+
+Headline:
+
+"Neue Sorten & Genuss-Tipps direkt ins Postfach"
+
+Email field
+Subscribe button
+
+
+SECTION 8 — FOOTER
+
+Footer should include:
+
+Logo
+Newsletter signup
+Social icons
+Contact email
+Legal links:
+
+Datenschutz
+AGB
+Impressum
+Cookie Einstellungen
+
+
+PRODUCT SETUP (MVP)
+
+Create one product:
+
+Name:
+Disfruto Cheese Genuss Set
+
+This product will be sold via subscription.
+
+There are only two subscription intervals:
+
+Every 2 weeks
+Every 4 weeks
+
+Customers must be able to:
+
+Pause subscription
+Cancel subscription
+Update payment
+
+Use subscription app integration (example Seal Subscriptions).
+
+Do NOT build subscription engine manually.
+
+
+DELIVERY LOGIC
+
+Customers choose delivery day:
+
+Thursday
+Friday
+Saturday
+Sunday
+
+Delivery times:
+
+Thu–Sat: 17:00–20:00
+Sun: 09:00–12:00
+
+No time slot picker needed.
+
+Use simple delivery date selector compatible with Shopify apps.
+
+
+CUSTOMER ACCOUNT REQUIREMENTS
+
+Customers must be able to:
+
+View next delivery
+Change delivery day
+Pause subscription
+Cancel subscription
+Update payment
+
+Use app-based portal.
+
+
+DESIGN QUALITY
+
+The website must feel:
+
+Premium
+Editorial
+Minimal
+Modern
+Clean
+
+Focus on:
+
+large imagery
+generous white space
+high-end food branding
+
+
+CODE OUTPUT REQUIREMENTS
+
+Generate Shopify Dawn compatible files:
+
+sections/hero.liquid
+sections/trust-bar.liquid
+sections/product-story.liquid
+sections/cheese-grid.liquid
+sections/cheesemaker-feature.liquid
+sections/why-disfruto.liquid
+sections/newsletter.liquid
+sections/footer.liquid
+
+Also generate example homepage JSON template.
+
+Ensure everything works inside Shopify theme editor.
+
+Avoid unnecessary dependencies.
+
+Keep code clean and modular.
+
+
+GOAL
+
+Produce a clean, fast Shopify MVP homepage that can launch quickly and matches the vision of a premium curated cheese subscription brand.
