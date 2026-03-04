@@ -325,9 +325,29 @@
 }
 
 @media (max-width: 749px) {
+  .disfruto-trust {
+    padding: 12px 0;
+    overflow: hidden;
+  }
   .disfruto-trust__grid {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 24px;
+    white-space: nowrap;
+  }
+  .disfruto-trust__grid::-webkit-scrollbar {
+    display: none;
+  }
+  .disfruto-trust__item {
+    flex-shrink: 0;
+  }
+  .disfruto-trust__label {
+    font-size: 13px;
   }
 }
 
@@ -505,24 +525,57 @@
   .disfruto-cheeses {
     padding: 60px 0;
   }
-  .disfruto-cheeses__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
   .disfruto-cheeses__title {
     font-size: 30px;
   }
 }
 
-@media (max-width: 549px) {
+@media (max-width: 749px) {
+  .disfruto-cheeses {
+    padding: 48px 0;
+  }
+  .disfruto-cheeses__header {
+    margin: 0 auto 32px;
+    padding: 0 24px;
+  }
+  .disfruto-cheeses__title {
+    font-size: 26px;
+  }
+  .disfruto-cheeses__subtitle {
+    font-size: 14px;
+  }
+  .disfruto-cheeses__slider-wrap {
+    overflow: hidden;
+  }
+  .disfruto-cheeses__slider-wrap .disfruto-container {
+    padding: 0;
+  }
   .disfruto-cheeses__grid {
-    gap: 12px;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 16px;
+    padding: 0 24px 16px;
+  }
+  .disfruto-cheeses__grid::-webkit-scrollbar {
+    display: none;
+  }
+  .disfruto-cheese-card {
+    flex: 0 0 260px;
+    min-width: 260px;
+    scroll-snap-align: start;
   }
   .disfruto-cheese-card__body {
     padding: 16px;
   }
   .disfruto-cheese-card__name {
     font-size: 16px;
+  }
+  .disfruto-cheese-card__desc {
+    font-size: 12px;
   }
 }
 
@@ -1073,4 +1126,64 @@
 
 .footer .footer__copyright {
   font-size: 12px;
+}
+
+@media (max-width: 749px) {
+  .footer .footer__content-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+  }
+
+  .footer .footer-block--brand_information {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 4px;
+  }
+
+  .footer .footer-block--brand_information .footer-block__heading {
+    font-size: 22px;
+  }
+
+  .footer .footer-block--brand_information p {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+  }
+
+  .footer .footer-block--brand_information .list-social {
+    justify-content: center;
+  }
+
+  .footer .footer-block--menu,
+  .footer .footer-block--text {
+    padding: 0;
+  }
+
+  .footer .footer-block__heading {
+    font-size: 12px !important;
+    margin-bottom: 12px;
+  }
+
+  .footer .list-menu--disclosure .list-menu__item {
+    padding: 4px 0;
+  }
+
+  .footer .list-menu__item--link {
+    font-size: 13px;
+  }
+
+  .footer .footer__content-bottom {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .footer .footer__content-bottom-wrapper {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
 }

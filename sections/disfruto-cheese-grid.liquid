@@ -9,32 +9,36 @@
         <p class="disfruto-cheeses__subtitle">{{ section.settings.subheading }}</p>
       {% endif %}
     </div>
-    <div class="disfruto-cheeses__grid">
-      {% for block in section.blocks %}
-        <div class="disfruto-cheese-card" {{ block.shopify_attributes }}>
-          <div class="disfruto-cheese-card__image">
-            {% if block.settings.image != blank %}
-              {{ block.settings.image | image_url: width: 500 | image_tag: loading: 'lazy' }}
-            {% else %}
-              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="30" cy="30" r="25" fill="#C4A882" opacity="0.3"/>
-                  <circle cx="22" cy="25" r="3" fill="#C4A882" opacity="0.4"/>
-                  <circle cx="35" cy="32" r="4" fill="#C4A882" opacity="0.4"/>
-                  <circle cx="28" cy="38" r="2" fill="#C4A882" opacity="0.4"/>
-                </svg>
-              </div>
-            {% endif %}
+  </div>
+  <div class="disfruto-cheeses__slider-wrap">
+    <div class="disfruto-container">
+      <div class="disfruto-cheeses__grid">
+        {% for block in section.blocks %}
+          <div class="disfruto-cheese-card" {{ block.shopify_attributes }}>
+            <div class="disfruto-cheese-card__image">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 500 | image_tag: loading: 'lazy' }}
+              {% else %}
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="25" fill="#C4A882" opacity="0.3"/>
+                    <circle cx="22" cy="25" r="3" fill="#C4A882" opacity="0.4"/>
+                    <circle cx="35" cy="32" r="4" fill="#C4A882" opacity="0.4"/>
+                    <circle cx="28" cy="38" r="2" fill="#C4A882" opacity="0.4"/>
+                  </svg>
+                </div>
+              {% endif %}
+            </div>
+            <div class="disfruto-cheese-card__body">
+              <h3 class="disfruto-cheese-card__name">{{ block.settings.name }}</h3>
+              <p class="disfruto-cheese-card__desc">{{ block.settings.description }}</p>
+              {% if block.settings.tag != blank %}
+                <span class="disfruto-cheese-card__tag">{{ block.settings.tag }}</span>
+              {% endif %}
+            </div>
           </div>
-          <div class="disfruto-cheese-card__body">
-            <h3 class="disfruto-cheese-card__name">{{ block.settings.name }}</h3>
-            <p class="disfruto-cheese-card__desc">{{ block.settings.description }}</p>
-            {% if block.settings.tag != blank %}
-              <span class="disfruto-cheese-card__tag">{{ block.settings.tag }}</span>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>

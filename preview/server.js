@@ -190,37 +190,41 @@ const html = `<!DOCTYPE html>
         <h2 class="disfruto-cheeses__title">Entdecke unsere Käse-Vielfalt</h2>
         <p class="disfruto-cheeses__subtitle">Handverlesene Sorten von den besten Käsemachern Europas</p>
       </div>
-      <div class="disfruto-cheeses__grid">
-        <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-1.png" alt="Deichkäse Alt" loading="lazy"></div>
-          <div class="disfruto-cheese-card__body">
-            <h3 class="disfruto-cheese-card__name">Deichkäse Alt</h3>
-            <p class="disfruto-cheese-card__desc">Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.</p>
-            <span class="disfruto-cheese-card__tag">Hartkäse</span>
+    </div>
+    <div class="disfruto-cheeses__slider-wrap">
+      <div class="disfruto-container">
+        <div class="disfruto-cheeses__grid">
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-1.png" alt="Deichkäse Alt" loading="lazy"></div>
+            <div class="disfruto-cheese-card__body">
+              <h3 class="disfruto-cheese-card__name">Deichkäse Alt</h3>
+              <p class="disfruto-cheese-card__desc">Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.</p>
+              <span class="disfruto-cheese-card__tag">Hartkäse</span>
+            </div>
           </div>
-        </div>
-        <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-2.png" alt="Friesisch Blue" loading="lazy"></div>
-          <div class="disfruto-cheese-card__body">
-            <h3 class="disfruto-cheese-card__name">Friesisch Blue</h3>
-            <p class="disfruto-cheese-card__desc">Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.</p>
-            <span class="disfruto-cheese-card__tag">Blauschimmel</span>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-2.png" alt="Friesisch Blue" loading="lazy"></div>
+            <div class="disfruto-cheese-card__body">
+              <h3 class="disfruto-cheese-card__name">Friesisch Blue</h3>
+              <p class="disfruto-cheese-card__desc">Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.</p>
+              <span class="disfruto-cheese-card__tag">Blauschimmel</span>
+            </div>
           </div>
-        </div>
-        <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-3.png" alt="Grosser Husumer" loading="lazy"></div>
-          <div class="disfruto-cheese-card__body">
-            <h3 class="disfruto-cheese-card__name">Grosser Husumer</h3>
-            <p class="disfruto-cheese-card__desc">Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.</p>
-            <span class="disfruto-cheese-card__tag">Schnittkäse</span>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-3.png" alt="Grosser Husumer" loading="lazy"></div>
+            <div class="disfruto-cheese-card__body">
+              <h3 class="disfruto-cheese-card__name">Grosser Husumer</h3>
+              <p class="disfruto-cheese-card__desc">Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.</p>
+              <span class="disfruto-cheese-card__tag">Schnittkäse</span>
+            </div>
           </div>
-        </div>
-        <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-4.png" alt="Hofkäse" loading="lazy"></div>
-          <div class="disfruto-cheese-card__body">
-            <h3 class="disfruto-cheese-card__name">Hofkäse</h3>
-            <p class="disfruto-cheese-card__desc">Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.</p>
-            <span class="disfruto-cheese-card__tag">Weichkäse</span>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-4.png" alt="Hofkäse" loading="lazy"></div>
+            <div class="disfruto-cheese-card__body">
+              <h3 class="disfruto-cheese-card__name">Hofkäse</h3>
+              <p class="disfruto-cheese-card__desc">Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.</p>
+              <span class="disfruto-cheese-card__tag">Weichkäse</span>
+            </div>
           </div>
         </div>
       </div>
