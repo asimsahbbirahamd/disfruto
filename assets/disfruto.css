@@ -276,10 +276,10 @@
   }
 }
 
-/* Trust Bar — dark green stripe matching Lovable design */
+/* Trust Bar */
 .disfruto-trust {
   padding: 16px 0;
-  background: var(--disfruto-dark-green);
+  background: var(--disfruto-dark);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -1124,24 +1124,30 @@
 }
 
 @media (max-width: 749px) {
-  .footer .footer__content-top {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 24px 16px !important;
+  .footer .footer__content-top,
+  .footer .footer-block__newsletter,
+  .section-footer .grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
   }
 
+  .footer .footer-block--brand_information,
   .footer .footer__content-top > *:first-child {
-    grid-column: 1 / -1;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
     text-align: center;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
+  .footer .footer-block--brand_information .footer-block__heading,
   .footer .footer__content-top > *:first-child .footer-block__heading {
     font-size: 22px;
   }
 
+  .footer .footer-block--brand_information p,
   .footer .footer__content-top > *:first-child p {
     max-width: 280px;
     margin-left: auto;
@@ -1149,14 +1155,28 @@
     font-size: 13px;
   }
 
+  .footer .footer-block--brand_information .list-social,
   .footer .footer__content-top > *:first-child .list-social {
     justify-content: center;
   }
 
-  .footer .footer-block {
-    padding: 0;
+  .footer .footer-block--menu {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .footer .footer-block--text {
     width: 100% !important;
     max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 0;
+    text-align: center;
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
   }
 
   .footer .footer-block__heading {
@@ -1181,9 +1201,5 @@
     flex-direction: column;
     gap: 8px;
     align-items: center;
-  }
-
-  .footer .footer__content-top .footer-block:not(:first-child) {
-    grid-column: auto;
   }
 }
