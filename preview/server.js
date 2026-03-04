@@ -31,40 +31,77 @@ const html = `<!DOCTYPE html>
     img { max-width: 100%; display: block; }
     a { color: inherit; }
     ${css}
+
+    /* Preview-only header/footer styles (Dawn handles these in Shopify) */
+    .preview-announcement { background: #1E1B3A; color: #fff; text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+    .preview-announcement a { color: #D4A853; text-decoration: underline; text-underline-offset: 2px; }
+    .preview-header { background: #fff; border-bottom: 3px solid #2D4A3E; position: sticky; top: 0; z-index: 100; }
+    .preview-header__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .preview-header__left { display: flex; align-items: center; gap: 40px; }
+    .preview-header__logo { text-decoration: none; display: flex; align-items: center; }
+    .preview-header__logo img { height: 28px; width: auto; }
+    .preview-header__nav { display: flex; align-items: center; gap: 28px; }
+    .preview-header__nav a { font-size: 14px; font-weight: 600; color: #2C2C2C; text-decoration: none; }
+    .preview-header__nav a:hover { color: #8B6F47; }
+    .preview-header__right { display: flex; align-items: center; gap: 20px; }
+    .preview-header__login { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: #2C2C2C; text-decoration: none; }
+    .preview-header__cta { display: inline-flex; align-items: center; padding: 10px 22px; background: #C9A84C; color: #2C2C2C; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border-radius: 6px; }
+    .preview-header__cta:hover { background: #B8963F; }
+    .preview-header__flag { width: 24px; height: 16px; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; }
+    .preview-header__flag span { flex: 1; }
+    .preview-footer { background: #2C2C2C; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
+    .preview-footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .preview-footer__brand { font-family: 'Playfair Display',serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
+    .preview-footer__text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.5); margin: 0 0 20px; max-width: 280px; }
+    .preview-footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; margin: 0 0 18px; }
+    .preview-footer ul { list-style: none; padding: 0; margin: 0; }
+    .preview-footer li { margin-bottom: 10px; }
+    .preview-footer a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; }
+    .preview-footer a:hover { color: #fff; }
+    .preview-footer__bottom { padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: rgba(255,255,255,0.35); }
+    .preview-footer__bottom a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; margin-left: 20px; }
+
+    @media (max-width: 989px) {
+      .preview-header__nav, .preview-header__flag { display: none; }
+      .preview-footer__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 549px) {
+      .preview-footer__grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Announcement Bar -->
-  <div class="disfruto-announcement">
+  <!-- Announcement Bar (Dawn built-in, styled via color scheme-3) -->
+  <div class="preview-announcement">
     Dein 1. Käse Genuss Set <a href="#">gratis</a> — Nur für kurze Zeit!
   </div>
 
-  <!-- Header / Navigation -->
-  <header class="disfruto-header">
+  <!-- Header (Dawn built-in, enhanced via CSS overrides + logo image) -->
+  <header class="preview-header">
     <div class="disfruto-container">
-      <div class="disfruto-header__inner">
-        <div class="disfruto-header__left">
-          <a href="/" class="disfruto-header__logo">
-            disfrut<span class="disfruto-header__logo-dot"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+      <div class="preview-header__inner">
+        <div class="preview-header__left">
+          <a href="/" class="preview-header__logo">
+            <img src="/assets/disfruto-logo.png" alt="Disfruto">
           </a>
-          <nav class="disfruto-header__nav">
+          <nav class="preview-header__nav">
             <a href="#cheeses">Unser Käse</a>
             <a href="#story">So funktioniert's</a>
             <a href="#maker">Käsemacher</a>
             <a href="#why">FAQs</a>
           </nav>
         </div>
-        <div class="disfruto-header__right">
-          <a href="#" class="disfruto-header__login">
+        <div class="preview-header__right">
+          <a href="#" class="preview-header__login">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             Login
           </a>
-          <a href="#" class="disfruto-header__cta">Genuss Set Wählen</a>
-          <div class="disfruto-header__flag" title="Deutsch">
-            <div class="disfruto-header__flag-stripe" style="background:#000;"></div>
-            <div class="disfruto-header__flag-stripe" style="background:#DD0000;"></div>
-            <div class="disfruto-header__flag-stripe" style="background:#FFCC00;"></div>
+          <a href="#" class="preview-header__cta">Genuss Set Wählen</a>
+          <div class="preview-header__flag" title="Deutsch">
+            <span style="background:#000;"></span>
+            <span style="background:#DD0000;"></span>
+            <span style="background:#FFCC00;"></span>
           </div>
         </div>
       </div>
@@ -97,7 +134,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 1: Hero -->
+  <!-- Hero -->
   <section class="disfruto-section disfruto-hero">
     <div class="disfruto-container">
       <div class="disfruto-hero__inner">
@@ -128,7 +165,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 2: Product Story -->
+  <!-- Product Story -->
   <section id="story" class="disfruto-section disfruto-story">
     <div class="disfruto-container">
       <div class="disfruto-story__grid">
@@ -145,7 +182,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 3: Cheese Grid -->
+  <!-- Cheese Grid -->
   <section id="cheeses" class="disfruto-section disfruto-cheeses">
     <div class="disfruto-container">
       <div class="disfruto-cheeses__header">
@@ -155,9 +192,7 @@ const html = `<!DOCTYPE html>
       </div>
       <div class="disfruto-cheeses__grid">
         <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image">
-            <img src="/assets/disfruto-cheese-1.png" alt="Deichkäse Alt" loading="lazy">
-          </div>
+          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-1.png" alt="Deichkäse Alt" loading="lazy"></div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Deichkäse Alt</h3>
             <p class="disfruto-cheese-card__desc">Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.</p>
@@ -165,9 +200,7 @@ const html = `<!DOCTYPE html>
           </div>
         </div>
         <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image">
-            <img src="/assets/disfruto-cheese-2.png" alt="Friesisch Blue" loading="lazy">
-          </div>
+          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-2.png" alt="Friesisch Blue" loading="lazy"></div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Friesisch Blue</h3>
             <p class="disfruto-cheese-card__desc">Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.</p>
@@ -175,9 +208,7 @@ const html = `<!DOCTYPE html>
           </div>
         </div>
         <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image">
-            <img src="/assets/disfruto-cheese-3.png" alt="Grosser Husumer" loading="lazy">
-          </div>
+          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-3.png" alt="Grosser Husumer" loading="lazy"></div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Grosser Husumer</h3>
             <p class="disfruto-cheese-card__desc">Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.</p>
@@ -185,9 +216,7 @@ const html = `<!DOCTYPE html>
           </div>
         </div>
         <div class="disfruto-cheese-card">
-          <div class="disfruto-cheese-card__image">
-            <img src="/assets/disfruto-cheese-4.png" alt="Hofkäse" loading="lazy">
-          </div>
+          <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-4.png" alt="Hofkäse" loading="lazy"></div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Hofkäse</h3>
             <p class="disfruto-cheese-card__desc">Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.</p>
@@ -198,7 +227,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 4: Cheesemaker Feature -->
+  <!-- Cheesemaker Feature -->
   <section id="maker" class="disfruto-section disfruto-maker">
     <div class="disfruto-container">
       <div class="disfruto-maker__grid">
@@ -223,7 +252,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Banner Section -->
+  <!-- Banner -->
   <section class="disfruto-section" style="padding:0;">
     <div style="width:100%;height:340px;overflow:hidden;position:relative;">
       <img src="/assets/disfruto-banner.png" alt="Disfruto Subscription" style="width:100%;height:100%;object-fit:cover;">
@@ -239,7 +268,7 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 5: Why Disfruto -->
+  <!-- Why Disfruto -->
   <section id="why" class="disfruto-section disfruto-why">
     <div class="disfruto-container">
       <div class="disfruto-why__header">
@@ -280,70 +309,56 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Section 6: Newsletter -->
-  <section class="disfruto-section disfruto-newsletter">
+  <!-- Newsletter (Dawn built-in, enhanced via CSS) -->
+  <section class="disfruto-section" style="padding:80px 0;background:#F5F1EB;">
     <div class="disfruto-container">
-      <div class="disfruto-newsletter__inner">
-        <div class="disfruto-newsletter__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h2 class="disfruto-newsletter__title">Neue Sorten & Genuss-Tipps direkt ins Postfach</h2>
-        <p class="disfruto-newsletter__text">Melde dich an und erfahre als Erstes von neuen Käsesorten, exklusiven Angeboten und Geschichten unserer Käsemacher.</p>
-        <form class="disfruto-newsletter__form" onsubmit="event.preventDefault();">
-          <input type="email" class="disfruto-newsletter__input" placeholder="Deine E-Mail-Adresse" required>
+      <div style="max-width:560px;margin:0 auto;text-align:center;">
+        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#2C2C2C;margin:0 0 14px;">Neue Sorten & Genuss-Tipps direkt ins Postfach</h2>
+        <p style="font-size:16px;color:#6B6B6B;margin:0 0 32px;line-height:1.6;">Melde dich an und erfahre als Erstes von neuen Käsesorten, exklusiven Angeboten und Geschichten unserer Käsemacher.</p>
+        <form style="display:flex;gap:10px;max-width:460px;margin:0 auto;" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="Deine E-Mail-Adresse" required style="flex:1;padding:14px 18px;border:1px solid #E5DFD6;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;background:#fff;color:#3A3A3A;outline:none;">
           <button type="submit" class="disfruto-btn disfruto-btn--primary">Anmelden</button>
         </form>
-        <p class="disfruto-newsletter__privacy">Kein Spam, jederzeit abbestellbar. Datenschutz ist uns wichtig.</p>
+        <p style="font-size:12px;color:#6B6B6B;margin-top:14px;">Kein Spam, jederzeit abbestellbar. Datenschutz ist uns wichtig.</p>
       </div>
     </div>
   </section>
 
-  <!-- Section 7: Footer -->
-  <footer class="disfruto-section disfruto-footer">
+  <!-- Footer (Dawn built-in, enhanced via CSS + color scheme-4) -->
+  <footer class="preview-footer">
     <div class="disfruto-container">
-      <div class="disfruto-footer__grid">
+      <div class="preview-footer__grid">
         <div>
-          <div class="disfruto-footer__brand-name">Disfruto</div>
-          <p class="disfruto-footer__brand-text">Kuratierte Käse-Spezialitäten, direkt an deine Tür in Berlin geliefert.</p>
-          <div class="disfruto-footer__social">
-            <a href="#" class="disfruto-footer__social-link" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="disfruto-footer__social-link" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" class="disfruto-footer__social-link" aria-label="TikTok">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-1-.05A6.28 6.28 0 0 0 3 15.57 6.29 6.29 0 0 0 9.37 22a6.28 6.28 0 0 0 6.27-6.28V9.06a8.28 8.28 0 0 0 4.84 1.56v-3.5a4.84 4.84 0 0 1-.89-.43z"/></svg>
-            </a>
-          </div>
+          <div class="preview-footer__brand">Disfruto</div>
+          <p class="preview-footer__text">Kuratierte Käse-Spezialitäten, direkt an deine Tür in Berlin geliefert.</p>
         </div>
         <div>
-          <h4 class="disfruto-footer__heading">Produkt</h4>
-          <ul class="disfruto-footer__links">
+          <h4>Produkt</h4>
+          <ul>
             <li><a href="#">So funktioniert's</a></li>
             <li><a href="#">Unsere Käse</a></li>
             <li><a href="#">Preise</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="disfruto-footer__heading">Unternehmen</h4>
-          <ul class="disfruto-footer__links">
+          <h4>Unternehmen</h4>
+          <ul>
             <li><a href="#">Über uns</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Kontakt</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="disfruto-footer__heading">Kontakt</h4>
-          <ul class="disfruto-footer__links">
+          <h4>Kontakt</h4>
+          <ul>
             <li><a href="mailto:hallo@disfruto.de">hallo@disfruto.de</a></li>
             <li><a href="#">Berlin, Deutschland</a></li>
           </ul>
         </div>
       </div>
-      <div class="disfruto-footer__bottom">
-        <div class="disfruto-footer__copyright">&copy; 2026 Disfruto. Alle Rechte vorbehalten.</div>
-        <div class="disfruto-footer__bottom-links">
+      <div class="preview-footer__bottom">
+        <span>&copy; 2026 Disfruto. Alle Rechte vorbehalten.</span>
+        <div>
           <a href="#">Datenschutz</a>
           <a href="#">AGB</a>
           <a href="#">Impressum</a>

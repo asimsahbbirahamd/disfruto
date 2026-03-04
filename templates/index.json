@@ -1,44 +1,5 @@
 {
   "sections": {
-    "disfruto_announcement": {
-      "type": "disfruto-announcement",
-      "settings": {
-        "text": "Dein 1. Käse Genuss Set",
-        "link_text": "gratis"
-      }
-    },
-    "disfruto_header": {
-      "type": "disfruto-header",
-      "settings": {
-        "login_text": "Login",
-        "cta_text": "Genuss Set Wählen"
-      }
-    },
-    "disfruto_trust": {
-      "type": "disfruto-trust-bar",
-      "blocks": {
-        "trust_1": {
-          "type": "trust_item",
-          "settings": {
-            "label": "Kostenfrei geliefert"
-          }
-        },
-        "trust_2": {
-          "type": "trust_item",
-          "settings": {
-            "label": "Flexibel planbar"
-          }
-        },
-        "trust_3": {
-          "type": "trust_item",
-          "settings": {
-            "label": "Jederzeit pausierbar"
-          }
-        }
-      },
-      "block_order": ["trust_1", "trust_2", "trust_3"],
-      "settings": {}
-    },
     "disfruto_hero": {
       "type": "disfruto-hero",
       "settings": {
@@ -170,64 +131,42 @@
         "subheading": "Qualität, Handwerk und Genuss — das sind unsere Versprechen"
       }
     },
-    "disfruto_newsletter": {
-      "type": "disfruto-newsletter",
-      "settings": {
-        "heading": "Neue Sorten & Genuss-Tipps direkt ins Postfach",
-        "text": "Melde dich an und erfahre als Erstes von neuen Käsesorten, exklusiven Angeboten und Geschichten unserer Käsemacher.",
-        "placeholder": "Deine E-Mail-Adresse",
-        "button_label": "Anmelden",
-        "privacy_text": "Kein Spam, jederzeit abbestellbar. Datenschutz ist uns wichtig."
-      }
-    },
-    "disfruto_footer": {
-      "type": "disfruto-footer",
+    "newsletter": {
+      "type": "newsletter",
       "blocks": {
-        "footer_col_1": {
-          "type": "link_list",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "heading": "Produkt",
-            "link_1_label": "So funktioniert's",
-            "link_2_label": "Unsere Käse",
-            "link_3_label": "Preise"
+            "heading": "Neue Sorten & Genuss-Tipps direkt ins Postfach",
+            "heading_size": "h1"
           }
         },
-        "footer_col_2": {
-          "type": "link_list",
+        "paragraph": {
+          "type": "paragraph",
           "settings": {
-            "heading": "Unternehmen",
-            "link_1_label": "Über uns",
-            "link_2_label": "FAQ",
-            "link_3_label": "Kontakt"
+            "text": "<p>Melde dich an und erfahre als Erstes von neuen Käsesorten, exklusiven Angeboten und Geschichten unserer Käsemacher.</p>"
           }
         },
-        "footer_col_3": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Kontakt",
-            "link_1_label": "hallo@disfruto.de",
-            "link_2_label": "Berlin, Deutschland"
-          }
+        "email_form": {
+          "type": "email_form"
         }
       },
-      "block_order": ["footer_col_1", "footer_col_2", "footer_col_3"],
+      "block_order": ["heading", "paragraph", "email_form"],
       "settings": {
-        "brand_name": "Disfruto",
-        "brand_description": "Kuratierte Käse-Spezialitäten, direkt an deine Tür in Berlin geliefert."
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
-    "disfruto_announcement",
-    "disfruto_header",
-    "disfruto_trust",
     "disfruto_hero",
     "disfruto_story",
     "disfruto_cheeses",
     "disfruto_maker",
     "disfruto_banner",
     "disfruto_why",
-    "disfruto_newsletter",
-    "disfruto_footer"
+    "newsletter"
   ]
 }
