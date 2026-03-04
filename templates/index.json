@@ -41,6 +41,7 @@
         "cheese_1": {
           "type": "cheese",
           "settings": {
+            "image": "shopify://shop_images/disfruto-cheese-1.png",
             "name": "Deichkäse Alt",
             "description": "Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.",
             "tag": "Hartkäse"
@@ -49,6 +50,7 @@
         "cheese_2": {
           "type": "cheese",
           "settings": {
+            "image": "shopify://shop_images/disfruto-cheese-2.png",
             "name": "Friesisch Blue",
             "description": "Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.",
             "tag": "Blauschimmel"
@@ -57,6 +59,7 @@
         "cheese_3": {
           "type": "cheese",
           "settings": {
+            "image": "shopify://shop_images/disfruto-cheese-3.png",
             "name": "Grosser Husumer",
             "description": "Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.",
             "tag": "Schnittkäse"
@@ -65,6 +68,7 @@
         "cheese_4": {
           "type": "cheese",
           "settings": {
+            "image": "shopify://shop_images/disfruto-cheese-4.png",
             "name": "Hofkäse",
             "description": "Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.",
             "tag": "Weichkäse"
@@ -95,7 +99,8 @@
         "badge_title": "Käsemacher der Woche",
         "badge_subtitle": "Handwerk trifft Leidenschaft",
         "maker_name": "Familie Schönberg",
-        "maker_region": "Nordfriesland, Deutschland"
+        "maker_region": "Nordfriesland, Deutschland",
+        "image": "shopify://shop_images/disfruto-maker.png"
       }
     },
     "disfruto_banner": {
