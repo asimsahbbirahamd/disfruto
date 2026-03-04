@@ -36,7 +36,7 @@ Shopify Dawn-based theme customized for Disfruto, a curated artisan cheese subsc
 | Section | Config File | Color Scheme |
 |---|---|---|
 | Announcement Bar | `sections/header-group.json` | scheme-3 (navy) |
-| Header | `sections/header-group.json` | scheme-1 (cream) |
+| Header | `sections/header-group.json` | scheme-1 (cream) — custom settings: show_search toggle, account label, CTA button, German flag |
 | Newsletter | `templates/index.json` | scheme-2 (light) |
 | Footer | `sections/footer-group.json` | scheme-4 (dark) |
 

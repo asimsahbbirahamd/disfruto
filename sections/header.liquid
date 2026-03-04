@@ -143,7 +143,9 @@
       endif
 
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
+        if section.settings.show_search
+          render 'header-search', input_id: 'Search-In-Modal-1'
+        endif
       endif
     -%}
 
@@ -247,7 +249,9 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {%- if section.settings.show_search -%}
+        {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {%- endif -%}
 
       {%- if shop.customer_accounts_enabled -%}
         <a
@@ -266,6 +270,15 @@
           {%- else -%}
             <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
           {%- endif -%}
+          {%- if section.settings.show_account_label -%}
+            <span class="header__account-label small-hide">
+              {%- if customer -%}
+                {{ customer.first_name | default: 'Konto' }}
+              {%- else -%}
+                Login
+              {%- endif -%}
+            </span>
+          {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
               if customer
@@ -276,6 +289,22 @@
             -%}
           </span>
         </a>
+      {%- endif -%}
+
+      {%- if section.settings.cta_label != blank -%}
+        <a href="{{ section.settings.cta_link }}" class="header__cta-button small-hide">
+          {{ section.settings.cta_label }}
+        </a>
+      {%- endif -%}
+
+      {%- if section.settings.show_flag -%}
+        <span class="header__flag small-hide" aria-label="Deutschland">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="20" rx="2" fill="#000"/>
+            <rect y="6.667" width="28" height="6.667" fill="#DD0000"/>
+            <rect y="13.333" width="28" height="6.667" rx="0 0 2 2" fill="#FFCC00"/>
+          </svg>
+        </span>
       {%- endif -%}
 
       {%- for block in section.blocks -%}
@@ -591,6 +620,12 @@
     },
     {
       "type": "checkbox",
+      "id": "show_search",
+      "default": true,
+      "label": "Show search icon"
+    },
+    {
+      "type": "checkbox",
       "id": "enable_country_selector",
       "default": true,
       "label": "t:sections.header.settings.enable_country_selector.label",
@@ -609,6 +644,38 @@
       "default": true,
       "label": "t:sections.header.settings.enable_customer_avatar.label",
       "info": "t:sections.header.settings.enable_customer_avatar.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_account_label",
+      "default": true,
+      "label": "Show account label text",
+      "info": "Displays 'Login' or customer name next to account icon"
+    },
+    {
+      "type": "header",
+      "content": "CTA Button"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA button label",
+      "default": "GENUSS SET WÄHLEN"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA button link"
+    },
+    {
+      "type": "header",
+      "content": "Flag"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_flag",
+      "default": true,
+      "label": "Show German flag"
     },
     {
       "type": "header",
