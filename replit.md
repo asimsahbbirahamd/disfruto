@@ -6,8 +6,8 @@ Shopify Dawn-based theme customized for Disfruto, a curated cheese subscription 
 ## Architecture
 - **Theme Base**: Shopify Dawn theme
 - **Custom Sections**: All custom sections use the `disfruto-` prefix
-- **CSS**: Single custom stylesheet at `assets/disfruto.css`
-- **Preview**: Node.js static preview server at `preview/server.js` (port 5000)
+- **CSS**: Single custom stylesheet at `assets/disfruto.css` (loaded globally in `layout/theme.liquid`)
+- **Preview**: Node.js static preview server at `preview/server.js` (port 5000, serves images from assets/)
 
 ## Custom Sections Created
 | Section File | Purpose |
@@ -17,13 +17,27 @@ Shopify Dawn-based theme customized for Disfruto, a curated cheese subscription 
 | `sections/disfruto-product-story.liquid` | Two-column product story |
 | `sections/disfruto-cheese-grid.liquid` | 4-column cheese showcase grid |
 | `sections/disfruto-cheesemaker.liquid` | Cheesemaker of the week feature |
+| `sections/disfruto-banner.liquid` | Full-width CTA banner with background image overlay |
 | `sections/disfruto-why.liquid` | 4-column benefits grid (dark bg) |
 | `sections/disfruto-newsletter.liquid` | Newsletter signup |
 | `sections/disfruto-footer.liquid` | Custom branded footer |
 
+## Generated Images (Placeholder — Replace with real product photos)
+| Image | Purpose |
+|---|---|
+| `assets/disfruto-hero.png` | Hero section — cheese board arrangement (3:4) |
+| `assets/disfruto-story.png` | Product story — curated selection overhead (4:3) |
+| `assets/disfruto-cheese-1.png` | Deichkäse Alt — aged hard cheese (1:1) |
+| `assets/disfruto-cheese-2.png` | Friesisch Blue — blue cheese wedge (1:1) |
+| `assets/disfruto-cheese-3.png` | Grosser Husumer — semi-hard cheese (1:1) |
+| `assets/disfruto-cheese-4.png` | Hofkäse — soft farmhouse cheese (1:1) |
+| `assets/disfruto-maker.png` | Cheesemaker portrait (4:3) |
+| `assets/disfruto-banner.png` | Subscription unboxing banner (16:9) |
+
 ## Key Files
-- `templates/index.json` — Homepage template with all sections configured
+- `templates/index.json` — Homepage template with all 9 sections configured
 - `assets/disfruto.css` — Complete custom design system
+- `layout/theme.liquid` — Global CSS import added
 - `preview/server.js` — HTML preview server (renders design outside Shopify)
 
 ## Brand Design

@@ -109,6 +109,16 @@
         "maker_region": "Nordfriesland, Deutschland"
       }
     },
+    "disfruto_banner": {
+      "type": "disfruto-banner",
+      "settings": {
+        "heading": "Starte deine Käse-Reise",
+        "text": "Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.",
+        "button_label": "Jetzt abonnieren",
+        "height": 360,
+        "overlay_gradient": "linear-gradient(to right,rgba(44,44,44,0.7) 0%,rgba(44,44,44,0.3) 50%,transparent 100%)"
+      }
+    },
     "disfruto_why": {
       "type": "disfruto-why",
       "blocks": {
@@ -205,6 +215,7 @@
     "disfruto_story",
     "disfruto_cheeses",
     "disfruto_maker",
+    "disfruto_banner",
     "disfruto_why",
     "disfruto_newsletter",
     "disfruto_footer"

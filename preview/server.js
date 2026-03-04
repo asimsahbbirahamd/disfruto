@@ -7,6 +7,15 @@ const PORT = 5000;
 const cssPath = path.join(__dirname, '..', 'assets', 'disfruto.css');
 const css = fs.readFileSync(cssPath, 'utf8');
 
+const MIME_TYPES = {
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.svg': 'image/svg+xml',
+  '.css': 'text/css',
+  '.js': 'application/javascript',
+};
+
 const html = `<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -30,9 +39,9 @@ const html = `<!DOCTYPE html>
     <div class="disfruto-container" style="display:flex;align-items:center;justify-content:space-between;height:72px;">
       <div style="font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;color:#2C2C2C;letter-spacing:-0.02em;">Disfruto</div>
       <nav style="display:flex;gap:32px;align-items:center;">
-        <a href="#" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">So funktioniert's</a>
-        <a href="#" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">Unsere Käse</a>
-        <a href="#" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">FAQ</a>
+        <a href="#story" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">So funktioniert's</a>
+        <a href="#cheeses" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">Unsere Käse</a>
+        <a href="#why" style="font-size:15px;color:#3A3A3A;text-decoration:none;font-weight:500;">FAQ</a>
         <a href="#" class="disfruto-btn disfruto-btn--primary" style="padding:10px 24px;font-size:13px;">Jetzt starten</a>
       </nav>
     </div>
@@ -48,22 +57,12 @@ const html = `<!DOCTYPE html>
           <p class="disfruto-hero__subtitle">Kuratierte Käse-Spezialitäten direkt an deine Tür in Berlin geliefert. Handverlesen von den besten Käsemachern.</p>
           <div class="disfruto-hero__actions">
             <a href="#" class="disfruto-btn disfruto-btn--primary">Jetzt ausprobieren</a>
-            <a href="#" class="disfruto-btn disfruto-btn--secondary">Mehr erfahren</a>
+            <a href="#story" class="disfruto-btn disfruto-btn--secondary">Mehr erfahren</a>
           </div>
         </div>
         <div class="disfruto-hero__visual">
           <div class="disfruto-hero__image-wrapper">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E8E0D4 0%,#D4C8B8 50%,#C4B8A4 100%);min-height:500px;flex-direction:column;gap:16px;">
-              <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="70" cy="70" r="60" fill="#C4A882" opacity="0.25"/>
-                <circle cx="70" cy="70" r="40" fill="#C4A882" opacity="0.35"/>
-                <circle cx="70" cy="70" r="20" fill="#C4A882" opacity="0.45"/>
-                <circle cx="55" cy="60" r="5" fill="#A08060" opacity="0.3"/>
-                <circle cx="80" cy="65" r="7" fill="#A08060" opacity="0.3"/>
-                <circle cx="65" cy="80" r="4" fill="#A08060" opacity="0.3"/>
-              </svg>
-              <span style="font-family:'Playfair Display',Georgia,serif;font-size:18px;color:#8B6F47;font-style:italic;opacity:0.7;">Käse Genuss Set</span>
-            </div>
+            <img src="/assets/disfruto-hero.png" alt="Disfruto Käse Genuss Set" loading="eager">
           </div>
           <div class="disfruto-hero__float-badge">
             <div class="disfruto-hero__float-icon">
@@ -115,19 +114,11 @@ const html = `<!DOCTYPE html>
   </section>
 
   <!-- Section 3: Product Story -->
-  <section class="disfruto-section disfruto-story">
+  <section id="story" class="disfruto-section disfruto-story">
     <div class="disfruto-container">
       <div class="disfruto-story__grid">
         <div class="disfruto-story__image">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:400px;flex-direction:column;gap:12px;">
-            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="15" y="25" width="70" height="50" rx="8" fill="#C4A882" opacity="0.25"/>
-              <rect x="22" y="32" width="56" height="36" rx="4" fill="#C4A882" opacity="0.2"/>
-              <circle cx="38" cy="50" r="10" fill="#C4A882" opacity="0.3"/>
-              <circle cx="62" cy="50" r="10" fill="#C4A882" opacity="0.3"/>
-            </svg>
-            <span style="font-family:'Playfair Display',Georgia,serif;font-size:14px;color:#8B6F47;font-style:italic;opacity:0.6;">Käse Auswahl</span>
-          </div>
+          <img src="/assets/disfruto-story.png" alt="Kuratierte Käse-Auswahl" loading="lazy">
         </div>
         <div class="disfruto-story__content">
           <span class="disfruto-story__eyebrow">Unser Konzept</span>
@@ -140,7 +131,7 @@ const html = `<!DOCTYPE html>
   </section>
 
   <!-- Section 4: Cheese Grid -->
-  <section class="disfruto-section disfruto-cheeses">
+  <section id="cheeses" class="disfruto-section disfruto-cheeses">
     <div class="disfruto-container">
       <div class="disfruto-cheeses__header">
         <span class="disfruto-cheeses__eyebrow">Unsere Auswahl</span>
@@ -150,9 +141,7 @@ const html = `<!DOCTYPE html>
       <div class="disfruto-cheeses__grid">
         <div class="disfruto-cheese-card">
           <div class="disfruto-cheese-card__image">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F5EFE6,#EDE5D8);aspect-ratio:1;">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" fill="#C4A882" opacity="0.25"/><circle cx="32" cy="35" r="4" fill="#B09470" opacity="0.3"/><circle cx="48" cy="42" r="5" fill="#B09470" opacity="0.3"/><circle cx="38" cy="50" r="3" fill="#B09470" opacity="0.3"/></svg>
-            </div>
+            <img src="/assets/disfruto-cheese-1.png" alt="Deichkäse Alt" loading="lazy">
           </div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Deichkäse Alt</h3>
@@ -162,9 +151,7 @@ const html = `<!DOCTYPE html>
         </div>
         <div class="disfruto-cheese-card">
           <div class="disfruto-cheese-card__image">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDE8F0,#E0D8E8);aspect-ratio:1;">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" fill="#8B7BA8" opacity="0.2"/><circle cx="34" cy="36" r="5" fill="#7B6B98" opacity="0.25"/><circle cx="48" cy="44" r="4" fill="#7B6B98" opacity="0.25"/><circle cx="40" cy="52" r="3" fill="#7B6B98" opacity="0.25"/></svg>
-            </div>
+            <img src="/assets/disfruto-cheese-2.png" alt="Friesisch Blue" loading="lazy">
           </div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Friesisch Blue</h3>
@@ -174,9 +161,7 @@ const html = `<!DOCTYPE html>
         </div>
         <div class="disfruto-cheese-card">
           <div class="disfruto-cheese-card__image">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F5EFE6,#EDE5D8);aspect-ratio:1;">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="15" y="30" width="50" height="20" rx="10" fill="#C4A882" opacity="0.25"/><rect x="20" y="34" width="40" height="12" rx="6" fill="#C4A882" opacity="0.2"/></svg>
-            </div>
+            <img src="/assets/disfruto-cheese-3.png" alt="Grosser Husumer" loading="lazy">
           </div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Grosser Husumer</h3>
@@ -186,9 +171,7 @@ const html = `<!DOCTYPE html>
         </div>
         <div class="disfruto-cheese-card">
           <div class="disfruto-cheese-card__image">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FFF8F0,#F5EBE0);aspect-ratio:1;">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="28" fill="#D4B896" opacity="0.2"/><circle cx="40" cy="40" r="18" fill="#D4B896" opacity="0.15"/></svg>
-            </div>
+            <img src="/assets/disfruto-cheese-4.png" alt="Hofkäse" loading="lazy">
           </div>
           <div class="disfruto-cheese-card__body">
             <h3 class="disfruto-cheese-card__name">Hofkäse</h3>
@@ -211,14 +194,30 @@ const html = `<!DOCTYPE html>
           <a href="#" class="disfruto-btn disfruto-btn--secondary">Zum Porträt</a>
         </div>
         <div class="disfruto-maker__visual">
-          <div class="disfruto-maker__badge-card">
-            <div class="disfruto-maker__badge-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div class="disfruto-maker__badge-card" style="padding:0;overflow:hidden;position:relative;">
+            <img src="/assets/disfruto-maker.png" alt="Käsemacher" style="width:100%;height:260px;object-fit:cover;">
+            <div style="padding:32px 32px 36px;text-align:center;">
+              <div class="disfruto-maker__badge-title">Käsemacher der Woche</div>
+              <div class="disfruto-maker__badge-sub">Handwerk trifft Leidenschaft</div>
+              <div class="disfruto-maker__badge-name">Familie Schönberg</div>
+              <div class="disfruto-maker__badge-region">Nordfriesland, Deutschland</div>
             </div>
-            <div class="disfruto-maker__badge-title">Käsemacher der Woche</div>
-            <div class="disfruto-maker__badge-sub">Handwerk trifft Leidenschaft</div>
-            <div class="disfruto-maker__badge-name">Familie Schönberg</div>
-            <div class="disfruto-maker__badge-region">Nordfriesland, Deutschland</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section class="disfruto-section" style="padding:0;">
+    <div style="width:100%;height:360px;overflow:hidden;position:relative;">
+      <img src="/assets/disfruto-banner.png" alt="Disfruto Subscription" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(44,44,44,0.7) 0%,rgba(44,44,44,0.3) 50%,transparent 100%);display:flex;align-items:center;">
+        <div class="disfruto-container" style="width:100%;">
+          <div style="max-width:480px;">
+            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:600;color:#fff;margin:0 0 16px;line-height:1.2;">Starte deine Käse-Reise</h2>
+            <p style="font-size:17px;color:rgba(255,255,255,0.8);margin:0 0 28px;line-height:1.6;">Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.</p>
+            <a href="#" class="disfruto-btn disfruto-btn--warm">Jetzt abonnieren</a>
           </div>
         </div>
       </div>
@@ -226,7 +225,7 @@ const html = `<!DOCTYPE html>
   </section>
 
   <!-- Section 6: Why Disfruto -->
-  <section class="disfruto-section disfruto-why">
+  <section id="why" class="disfruto-section disfruto-why">
     <div class="disfruto-container">
       <div class="disfruto-why__header">
         <span class="disfruto-why__eyebrow">Unsere Werte</span>
@@ -342,6 +341,17 @@ const html = `<!DOCTYPE html>
 </html>`;
 
 const server = http.createServer((req, res) => {
+  if (req.url.startsWith('/assets/')) {
+    const filePath = path.join(__dirname, '..', req.url);
+    if (fs.existsSync(filePath)) {
+      const ext = path.extname(filePath);
+      const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+      const file = fs.readFileSync(filePath);
+      res.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': 'public, max-age=3600' });
+      res.end(file);
+      return;
+    }
+  }
   res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
   res.end(html);
 });
