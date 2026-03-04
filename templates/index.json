@@ -163,6 +163,59 @@
         "subheading": "Qualität, Handwerk und Genuss — das sind unsere Versprechen"
       }
     },
+    "disfruto_faq": {
+      "type": "disfruto-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Was ist Disfruto?",
+            "answer": "<p>Disfruto ist ein Käse-Abonnement, das dir kuratierte Käse-Spezialitäten direkt an die Tür in Berlin liefert. Jede Box enthält handverlesene Sorten von den besten Käsemachern Europas.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Wie oft wird geliefert?",
+            "answer": "<p>Du kannst zwischen zwei Lieferintervallen wählen: alle 2 Wochen oder alle 4 Wochen. Dein Abo kannst du jederzeit anpassen.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "An welchen Tagen wird geliefert?",
+            "answer": "<p>Wir liefern donnerstags bis sonntags in ganz Berlin. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Kann ich mein Abo pausieren oder kündigen?",
+            "answer": "<p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Liefert ihr auch außerhalb von Berlin?",
+            "answer": "<p>Aktuell liefern wir nur innerhalb Berlins, um die Frische und Qualität unserer Käse-Spezialitäten zu garantieren. Eine Expansion ist geplant.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Ist die Lieferung kostenlos?",
+            "answer": "<p>Ja, die Lieferung ist für alle Abonnenten in Berlin komplett kostenlos — egal ob du alle 2 oder alle 4 Wochen bestellst.</p>"
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "settings": {
+        "eyebrow": "Häufige Fragen",
+        "heading": "Alles, was du wissen musst",
+        "subheading": "Hier findest du Antworten auf die häufigsten Fragen rund um Disfruto"
+      }
+    },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
@@ -235,6 +288,7 @@
     "disfruto_maker",
     "disfruto_banner",
     "disfruto_why",
+    "disfruto_faq",
     "newsletter"
   ]
 }

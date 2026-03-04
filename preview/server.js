@@ -313,6 +313,61 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section id="faq" class="disfruto-section disfruto-faq">
+    <div class="disfruto-container">
+      <div class="disfruto-faq__header">
+        <span class="disfruto-faq__eyebrow">Häufige Fragen</span>
+        <h2 class="disfruto-faq__title">Alles, was du wissen musst</h2>
+        <p class="disfruto-faq__subtitle">Hier findest du Antworten auf die häufigsten Fragen rund um Disfruto</p>
+      </div>
+      <div class="disfruto-faq__list">
+        <details class="disfruto-faq__item">
+          <summary class="disfruto-faq__question">
+            <span class="disfruto-faq__question-text">Was ist Disfruto?</span>
+            <span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="disfruto-faq__answer"><p>Disfruto ist ein Käse-Abonnement, das dir kuratierte Käse-Spezialitäten direkt an die Tür in Berlin liefert. Jede Box enthält handverlesene Sorten von den besten Käsemachern Europas.</p></div>
+        </details>
+        <details class="disfruto-faq__item">
+          <summary class="disfruto-faq__question">
+            <span class="disfruto-faq__question-text">Wie oft wird geliefert?</span>
+            <span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="disfruto-faq__answer"><p>Du kannst zwischen zwei Lieferintervallen wählen: alle 2 Wochen oder alle 4 Wochen. Dein Abo kannst du jederzeit anpassen.</p></div>
+        </details>
+        <details class="disfruto-faq__item">
+          <summary class="disfruto-faq__question">
+            <span class="disfruto-faq__question-text">An welchen Tagen wird geliefert?</span>
+            <span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="disfruto-faq__answer"><p>Wir liefern donnerstags bis sonntags in ganz Berlin. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p></div>
+        </details>
+        <details class="disfruto-faq__item">
+          <summary class="disfruto-faq__question">
+            <span class="disfruto-faq__question-text">Kann ich mein Abo pausieren oder kündigen?</span>
+            <span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="disfruto-faq__answer"><p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten.</p></div>
+        </details>
+        <details class="disfruto-faq__item">
+          <summary class="disfruto-faq__question">
+            <span class="disfruto-faq__question-text">Liefert ihr auch außerhalb von Berlin?</span>
+            <span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="disfruto-faq__answer"><p>Aktuell liefern wir nur innerhalb Berlins, um die Frische und Qualität unserer Käse-Spezialitäten zu garantieren. Eine Expansion ist geplant.</p></div>
+        </details>
+        <details class="disfruto-faq__item">
+          <summary class="disfruto-faq__question">
+            <span class="disfruto-faq__question-text">Ist die Lieferung kostenlos?</span>
+            <span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="disfruto-faq__answer"><p>Ja, die Lieferung ist für alle Abonnenten in Berlin komplett kostenlos — egal ob du alle 2 oder alle 4 Wochen bestellst.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Newsletter (Dawn built-in, enhanced via CSS) -->
   <section class="disfruto-section" style="padding:80px 0;background:#F5F1EB;">
     <div class="disfruto-container">

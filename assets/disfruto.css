@@ -814,6 +814,165 @@
   }
 }
 
+/* FAQ Section */
+.disfruto-faq {
+  padding: 100px 0;
+  background: var(--disfruto-cream);
+}
+
+.disfruto-faq__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.disfruto-faq__eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--disfruto-warm);
+  margin-bottom: 16px;
+}
+
+.disfruto-faq__title {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.disfruto-faq__subtitle {
+  font-size: 16px;
+  color: var(--disfruto-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.disfruto-faq__list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.disfruto-faq__item {
+  border-bottom: 1px solid var(--disfruto-border);
+}
+
+.disfruto-faq__item:first-child {
+  border-top: 1px solid var(--disfruto-border);
+}
+
+.disfruto-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 0;
+  cursor: pointer;
+  list-style: none;
+  -webkit-appearance: none;
+}
+
+.disfruto-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.disfruto-faq__question-text {
+  font-family: var(--disfruto-font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+  line-height: 1.4;
+}
+
+.disfruto-faq__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--disfruto-accent-light);
+  color: var(--disfruto-warm);
+  transition: var(--disfruto-transition);
+}
+
+.disfruto-faq__icon svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.disfruto-faq__item[open] .disfruto-faq__icon {
+  background: var(--disfruto-warm);
+  color: var(--disfruto-white);
+}
+
+.disfruto-faq__item[open] .disfruto-faq__icon svg {
+  transform: rotate(45deg);
+}
+
+.disfruto-faq__answer {
+  padding: 0 0 24px;
+  animation: disfrutoFaqFadeIn 0.3s ease;
+}
+
+.disfruto-faq__answer p,
+.disfruto-faq__answer {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--disfruto-text-light);
+}
+
+.disfruto-faq__answer p {
+  margin: 0;
+  max-width: 640px;
+}
+
+@keyframes disfrutoFaqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 749px) {
+  .disfruto-faq {
+    padding: 48px 0;
+  }
+  .disfruto-faq__header {
+    margin: 0 auto 36px;
+  }
+  .disfruto-faq__title {
+    font-size: 26px;
+  }
+  .disfruto-faq__subtitle {
+    font-size: 14px;
+  }
+  .disfruto-faq__question {
+    padding: 18px 0;
+  }
+  .disfruto-faq__question-text {
+    font-size: 16px;
+  }
+  .disfruto-faq__icon {
+    width: 28px;
+    height: 28px;
+  }
+  .disfruto-faq__icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  .disfruto-faq__answer p {
+    font-size: 14px;
+  }
+}
+
 /* ========================================
    Dawn Built-in Section Overrides
    Enhances header, footer, announcement bar,
