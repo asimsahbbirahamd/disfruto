@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "disfruto_hero": {
@@ -6,8 +15,11 @@
         "badge_text": "Neu in Berlin",
         "heading": "Dein 1. Käse Genuss Set Gratis",
         "subheading": "Kuratierte Käse-Spezialitäten direkt an deine Tür in Berlin geliefert. Handverlesen von den besten Käsemachern.",
+        "image": "shopify://shop_images/disfruto-hero.png",
         "button_label": "Genuss Set Wählen",
+        "button_link": "",
         "button_label_2": "Mehr erfahren",
+        "button_link_2": "",
         "float_badge_text": "Kostenlose Lieferung",
         "float_badge_subtext": "In ganz Berlin"
       }
@@ -18,7 +30,8 @@
         "eyebrow": "Unser Konzept",
         "heading": "Käse mit Charakter. Bewusst ausgewählt.",
         "text": "Jede Box ist eine Reise durch die besten Käsereien Europas. Wir wählen handwerklich hergestellte Käsesorten aus, die du in keinem Supermarkt findest — direkt zu dir nach Hause in Berlin.",
-        "button_label": "Mehr erfahren"
+        "button_label": "Mehr erfahren",
+        "button_link": ""
       }
     },
     "disfruto_cheeses": {
@@ -57,7 +70,12 @@
           }
         }
       },
-      "block_order": ["cheese_1", "cheese_2", "cheese_3", "cheese_4"],
+      "block_order": [
+        "cheese_1",
+        "cheese_2",
+        "cheese_3",
+        "cheese_4"
+      ],
       "settings": {
         "eyebrow": "Unsere Auswahl",
         "heading": "Entdecke unsere Käse-Vielfalt",
@@ -71,6 +89,7 @@
         "heading": "Käsemacher im Fokus",
         "text": "Jede Woche stellen wir einen besonderen Käsemacher vor — seine Geschichte, seine Philosophie und was seinen Käse einzigartig macht.",
         "button_label": "Zum Porträt",
+        "button_link": "",
         "show_badge": true,
         "badge_title": "Käsemacher der Woche",
         "badge_subtitle": "Handwerk trifft Leidenschaft",
@@ -81,10 +100,11 @@
     "disfruto_banner": {
       "type": "disfruto-banner",
       "settings": {
+        "height": 340,
         "heading": "Starte deine Käse-Reise",
         "text": "Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.",
         "button_label": "Jetzt abonnieren",
-        "height": 340,
+        "button_link": "",
         "overlay_gradient": "linear-gradient(to right,rgba(44,44,44,0.75) 0%,rgba(44,44,44,0.35) 50%,transparent 100%)"
       }
     },
@@ -124,7 +144,12 @@
           }
         }
       },
-      "block_order": ["why_1", "why_2", "why_3", "why_4"],
+      "block_order": [
+        "why_1",
+        "why_2",
+        "why_3",
+        "why_4"
+      ],
       "settings": {
         "eyebrow": "Unsere Werte",
         "heading": "Warum Disfruto",
@@ -148,10 +173,15 @@
           }
         },
         "email_form": {
-          "type": "email_form"
+          "type": "email_form",
+          "settings": {}
         }
       },
-      "block_order": ["heading", "paragraph", "email_form"],
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "full_width": true,
