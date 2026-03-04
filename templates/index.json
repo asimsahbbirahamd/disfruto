@@ -27,6 +27,7 @@
     "disfruto_story": {
       "type": "disfruto-product-story",
       "settings": {
+        "image": "shopify://shop_images/disfruto-story.png",
         "eyebrow": "Unser Konzept",
         "heading": "Käse mit Charakter. Bewusst ausgewählt.",
         "text": "Jede Box ist eine Reise durch die besten Käsereien Europas. Wir wählen handwerklich hergestellte Käsesorten aus, die du in keinem Supermarkt findest — direkt zu dir nach Hause in Berlin.",
