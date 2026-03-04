@@ -272,42 +272,45 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Why Disfruto -->
+  <!-- Why Disfruto — Editorial Layout -->
   <section id="why" class="disfruto-section disfruto-why">
     <div class="disfruto-container">
-      <div class="disfruto-why__header">
-        <span class="disfruto-why__eyebrow">Unsere Werte</span>
-        <h2 class="disfruto-why__title">Warum Disfruto</h2>
-        <p class="disfruto-why__subtitle">Qualität, Handwerk und Genuss — das sind unsere Versprechen</p>
-      </div>
-      <div class="disfruto-why__grid">
-        <div class="disfruto-why__item">
-          <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-          </div>
-          <h3 class="disfruto-why__item-title">Verstehen, was du isst</h3>
-          <p class="disfruto-why__item-text">Wir zeigen dir genau, woher dein Käse kommt, wer ihn herstellt und wie er gereift wird.</p>
+      <div class="disfruto-why__layout">
+        <div class="disfruto-why__manifesto">
+          <span class="disfruto-why__eyebrow">Warum Disfruto</span>
+          <h2 class="disfruto-why__title">Käse, der Geschichten erzählt</h2>
+          <p class="disfruto-why__statement">Wir glauben, dass großartiger Käse mehr ist als ein Lebensmittel. Er ist Ausdruck von Handwerk, Terroir und der Leidenschaft der Menschen, die ihn herstellen. Disfruto bringt diese Geschichten direkt zu dir nach Hause — kuratiert, authentisch und immer aus den besten Käsereien Europas.</p>
+          <a href="#" class="disfruto-btn disfruto-btn--outline">Unsere Geschichte entdecken</a>
         </div>
-        <div class="disfruto-why__item">
-          <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div class="disfruto-why__benefits">
+          <div class="disfruto-why__item">
+            <span class="disfruto-why__number">01</span>
+            <div class="disfruto-why__item-content">
+              <h3 class="disfruto-why__item-title">Transparente Herkunft</h3>
+              <p class="disfruto-why__item-text">Jeder Käse kommt mit seiner Geschichte: Wer ihn gemacht hat, woher die Milch stammt und wie er gereift wurde. Keine anonyme Massenware.</p>
+            </div>
           </div>
-          <h3 class="disfruto-why__item-title">Handwerkliche Kunst</h3>
-          <p class="disfruto-why__item-text">Jeder Käse wird von erfahrenen Käsemachern nach traditionellen Methoden hergestellt.</p>
-        </div>
-        <div class="disfruto-why__item">
-          <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <div class="disfruto-why__item">
+            <span class="disfruto-why__number">02</span>
+            <div class="disfruto-why__item-content">
+              <h3 class="disfruto-why__item-title">Meisterliches Handwerk</h3>
+              <p class="disfruto-why__item-text">Wir arbeiten ausschließlich mit Käsereien, die ihr Handwerk über Generationen perfektioniert haben — von den Alpen bis an die Nordsee.</p>
+            </div>
           </div>
-          <h3 class="disfruto-why__item-title">Vielfalt und Balance</h3>
-          <p class="disfruto-why__item-text">Unsere Boxen bieten eine perfekt abgestimmte Auswahl verschiedener Geschmacksrichtungen.</p>
-        </div>
-        <div class="disfruto-why__item">
-          <div class="disfruto-why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div class="disfruto-why__item">
+            <span class="disfruto-why__number">03</span>
+            <div class="disfruto-why__item-content">
+              <h3 class="disfruto-why__item-title">Kuratierte Vielfalt</h3>
+              <p class="disfruto-why__item-text">Jede Box ist eine Komposition: Sorgfältig aufeinander abgestimmt in Geschmack, Textur und Reife — damit jeder Bissen überrascht.</p>
+            </div>
           </div>
-          <h3 class="disfruto-why__item-title">Flexible Lieferung</h3>
-          <p class="disfruto-why__item-text">Wähle deinen Liefertag und passe dein Abo jederzeit an — ganz ohne Bindung.</p>
+          <div class="disfruto-why__item">
+            <span class="disfruto-why__number">04</span>
+            <div class="disfruto-why__item-content">
+              <h3 class="disfruto-why__item-title">Berlin, flexibel geliefert</h3>
+              <p class="disfruto-why__item-text">Donnerstag bis Sonntag, alle 2 oder 4 Wochen — kostenlos an deine Tür. Pausiere oder kündige jederzeit, ganz ohne Bindung.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -426,6 +429,24 @@ const html = `<!DOCTYPE html>
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var items = document.querySelectorAll('.disfruto-why__item, .disfruto-why__manifesto');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        items.forEach(function(item) { observer.observe(item); });
+      } else {
+        items.forEach(function(item) { item.classList.add('is-visible'); });
+      }
+    });
+  </script>
 </body>
 </html>`;
 

@@ -29,7 +29,7 @@ Shopify Dawn-based theme customized for Disfruto, a curated artisan cheese subsc
 | `sections/disfruto-cheese-grid.liquid` | 4-column cheese showcase grid |
 | `sections/disfruto-cheesemaker.liquid` | Cheesemaker of the week feature |
 | `sections/disfruto-banner.liquid` | Full-width CTA banner with background image overlay |
-| `sections/disfruto-why.liquid` | 4-column benefits grid (dark bg) |
+| `sections/disfruto-why.liquid` | Editorial split layout: manifesto left (sticky) + numbered benefits right, IntersectionObserver animations |
 | `sections/disfruto-faq.liquid` | Collapsible FAQ accordion (uses native `<details>` element) |
 
 ## Dawn Built-in Sections (NOT custom)

@@ -121,33 +121,29 @@
         "why_1": {
           "type": "benefit",
           "settings": {
-            "icon": "eye",
-            "title": "Verstehen, was du isst",
-            "description": "Wir zeigen dir genau, woher dein Käse kommt, wer ihn herstellt und wie er gereift wird."
+            "title": "Transparente Herkunft",
+            "description": "Jeder Käse kommt mit seiner Geschichte: Wer ihn gemacht hat, woher die Milch stammt und wie er gereift wurde. Keine anonyme Massenware."
           }
         },
         "why_2": {
           "type": "benefit",
           "settings": {
-            "icon": "hand",
-            "title": "Handwerkliche Kunst",
-            "description": "Jeder Käse wird von erfahrenen Käsemachern nach traditionellen Methoden hergestellt."
+            "title": "Meisterliches Handwerk",
+            "description": "Wir arbeiten ausschließlich mit Käsereien, die ihr Handwerk über Generationen perfektioniert haben — von den Alpen bis an die Nordsee."
           }
         },
         "why_3": {
           "type": "benefit",
           "settings": {
-            "icon": "layers",
-            "title": "Vielfalt und Balance",
-            "description": "Unsere Boxen bieten eine perfekt abgestimmte Auswahl verschiedener Geschmacksrichtungen."
+            "title": "Kuratierte Vielfalt",
+            "description": "Jede Box ist eine Komposition: Sorgfältig aufeinander abgestimmt in Geschmack, Textur und Reife — damit jeder Bissen überrascht."
           }
         },
         "why_4": {
           "type": "benefit",
           "settings": {
-            "icon": "truck",
-            "title": "Flexible Lieferung",
-            "description": "Wähle deinen Liefertag und passe dein Abo jederzeit an — ganz ohne Bindung."
+            "title": "Berlin, flexibel geliefert",
+            "description": "Donnerstag bis Sonntag, alle 2 oder 4 Wochen — kostenlos an deine Tür. Pausiere oder kündige jederzeit, ganz ohne Bindung."
           }
         }
       },
@@ -158,9 +154,11 @@
         "why_4"
       ],
       "settings": {
-        "eyebrow": "Unsere Werte",
-        "heading": "Warum Disfruto",
-        "subheading": "Qualität, Handwerk und Genuss — das sind unsere Versprechen"
+        "eyebrow": "Warum Disfruto",
+        "heading": "Käse, der Geschichten erzählt",
+        "statement": "Wir glauben, dass großartiger Käse mehr ist als ein Lebensmittel. Er ist Ausdruck von Handwerk, Terroir und der Leidenschaft der Menschen, die ihn herstellen. Disfruto bringt diese Geschichten direkt zu dir nach Hause — kuratiert, authentisch und immer aus den besten Käsereien Europas.",
+        "cta_label": "Unsere Geschichte entdecken",
+        "cta_link": ""
       }
     },
     "disfruto_faq": {
