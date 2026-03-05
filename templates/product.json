@@ -1,1 +1,184 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","mobile_thumbnails":"hide","media_position":"left","image_zoom":"lightbox","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"columns_mobile":"2","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"padding_top":36,"padding_bottom":28}}},"order":["main","related-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "cheese_badges": {
+          "type": "cheese_badges",
+          "settings": {
+            "badge_1": "100% Natürlich",
+            "badge_2": "Handwerklich hergestellt",
+            "badge_3": "Regionale Höfe",
+            "badge_4": "Kleine Chargen"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "subscription_info": {
+          "type": "subscription_info",
+          "settings": {
+            "heading": "Dein Käse-Abo",
+            "item_1_label": "Alle 2 oder 4 Wochen",
+            "item_1_sublabel": "Du wählst deinen Rhythmus",
+            "item_2_label": "Jederzeit pausieren",
+            "item_2_sublabel": "Flexibel & ohne Bindung",
+            "item_3_label": "Berlin-Lieferung Do–So",
+            "item_3_sublabel": "Frisch & gekühlt an deine Tür"
+          }
+        },
+        "delivery_info": {
+          "type": "delivery_info",
+          "settings": {
+            "eyebrow": "LIEFERGEBIET",
+            "text": "Nur Berlin • Zustellung Do–So",
+            "note": "Frisch verpackt, gekühlt geliefert"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "tasting_profile": {
+          "type": "tasting_profile",
+          "settings": {
+            "heading": "Geschmacksprofil",
+            "milk_type": "Kuhmilch",
+            "texture": "Cremig & geschmeidig",
+            "intensity": 3,
+            "aging": "8–12 Wochen gereift",
+            "notes": "Nussig, leicht salzig, lange Finish",
+            "pairing": "Riesling, Sauerteig, Feigensenf"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_zutaten": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Zutaten & Allergene",
+            "icon": "leaf",
+            "content": "<p>Pasteurisierte Kuhmilch, Salz, Lab, Milchsäurekulturen.</p><p><strong>Allergene:</strong> Enthält Milch und Milcherzeugnisse.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_herkunft": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Herkunft & Produzent",
+            "icon": "map_pin",
+            "content": "<p>Unsere Käsesorten stammen von ausgewählten Hofkäsereien in Norddeutschland. Jede Charge wird in kleinen Mengen von Hand gefertigt – mit Milch von freilaufenden Kühen aus der Region.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_lagerung": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Lagerung & Haltbarkeit",
+            "icon": "snowflake",
+            "content": "<p>Kühl lagern bei 2–6 °C. Nach dem Öffnen innerhalb von 5–7 Tagen verbrauchen. Für besten Geschmack 30 Minuten vor dem Servieren aus dem Kühlschrank nehmen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_versand": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand & Lieferung",
+            "icon": "truck",
+            "content": "<p>Lieferung nur in Berlin, Donnerstag bis Sonntag. Versand in isolierter Verpackung mit Kühlakkus. Kostenloser Versand ab 40 €.</p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "cheese_badges",
+        "price",
+        "subscription_info",
+        "delivery_info",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "tasting_profile",
+        "description",
+        "collapsible_tab_zutaten",
+        "collapsible_tab_herkunft",
+        "collapsible_tab_lagerung",
+        "collapsible_tab_versand",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

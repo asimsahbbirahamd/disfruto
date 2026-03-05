@@ -485,6 +485,140 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+              {%- when 'cheese_badges' -%}
+                <div class="disfruto-product__badges" {{ block.shopify_attributes }}>
+                  {%- if block.settings.badge_1 != blank -%}
+                    <div class="disfruto-product__badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13.5 2.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
+                      <span>{{ block.settings.badge_1 }}</span>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.badge_2 != blank -%}
+                    <div class="disfruto-product__badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <span>{{ block.settings.badge_2 }}</span>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.badge_3 != blank -%}
+                    <div class="disfruto-product__badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      <span>{{ block.settings.badge_3 }}</span>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.badge_4 != blank -%}
+                    <div class="disfruto-product__badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>{{ block.settings.badge_4 }}</span>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- when 'tasting_profile' -%}
+                <div class="disfruto-product__tasting" {{ block.shopify_attributes }}>
+                  {%- if block.settings.heading != blank -%}
+                    <h3 class="disfruto-product__tasting-title">{{ block.settings.heading }}</h3>
+                  {%- endif -%}
+                  <div class="disfruto-product__tasting-grid">
+                    {%- if block.settings.milk_type != blank -%}
+                      <div class="disfruto-product__tasting-row">
+                        <span class="disfruto-product__tasting-label">Milch</span>
+                        <span class="disfruto-product__tasting-value">{{ block.settings.milk_type }}</span>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.texture != blank -%}
+                      <div class="disfruto-product__tasting-row">
+                        <span class="disfruto-product__tasting-label">Textur</span>
+                        <span class="disfruto-product__tasting-value">{{ block.settings.texture }}</span>
+                      </div>
+                    {%- endif -%}
+                    <div class="disfruto-product__tasting-row">
+                      <span class="disfruto-product__tasting-label">Intensität</span>
+                      <span class="disfruto-product__tasting-value">
+                        <span class="disfruto-product__intensity">
+                          {%- for i in (1..5) -%}
+                            <span class="disfruto-product__intensity-dot{% if i <= block.settings.intensity %} disfruto-product__intensity-dot--active{% endif %}"></span>
+                          {%- endfor -%}
+                        </span>
+                      </span>
+                    </div>
+                    {%- if block.settings.aging != blank -%}
+                      <div class="disfruto-product__tasting-row">
+                        <span class="disfruto-product__tasting-label">Reifung</span>
+                        <span class="disfruto-product__tasting-value">{{ block.settings.aging }}</span>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.notes != blank -%}
+                      <div class="disfruto-product__tasting-row">
+                        <span class="disfruto-product__tasting-label">Aromen</span>
+                        <span class="disfruto-product__tasting-value">{{ block.settings.notes }}</span>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.pairing != blank -%}
+                      <div class="disfruto-product__tasting-row">
+                        <span class="disfruto-product__tasting-label">Passt zu</span>
+                        <span class="disfruto-product__tasting-value">{{ block.settings.pairing }}</span>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- when 'subscription_info' -%}
+                <div class="disfruto-product__subscription" {{ block.shopify_attributes }}>
+                  {%- if block.settings.heading != blank -%}
+                    <div class="disfruto-product__sub-heading">{{ block.settings.heading }}</div>
+                  {%- endif -%}
+                  <div class="disfruto-product__sub-items">
+                    {%- if block.settings.item_1_label != blank -%}
+                      <div class="disfruto-product__sub-item">
+                        <div class="disfruto-product__sub-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="disfruto-product__sub-text">
+                          <span class="disfruto-product__sub-label">{{ block.settings.item_1_label }}</span>
+                          {%- if block.settings.item_1_sublabel != blank -%}
+                            <span class="disfruto-product__sub-sublabel">{{ block.settings.item_1_sublabel }}</span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.item_2_label != blank -%}
+                      <div class="disfruto-product__sub-item">
+                        <div class="disfruto-product__sub-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                        </div>
+                        <div class="disfruto-product__sub-text">
+                          <span class="disfruto-product__sub-label">{{ block.settings.item_2_label }}</span>
+                          {%- if block.settings.item_2_sublabel != blank -%}
+                            <span class="disfruto-product__sub-sublabel">{{ block.settings.item_2_sublabel }}</span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.item_3_label != blank -%}
+                      <div class="disfruto-product__sub-item">
+                        <div class="disfruto-product__sub-icon">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <div class="disfruto-product__sub-text">
+                          <span class="disfruto-product__sub-label">{{ block.settings.item_3_label }}</span>
+                          {%- if block.settings.item_3_sublabel != blank -%}
+                            <span class="disfruto-product__sub-sublabel">{{ block.settings.item_3_sublabel }}</span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- when 'delivery_info' -%}
+                <div class="disfruto-product__delivery" {{ block.shopify_attributes }}>
+                  {%- if block.settings.eyebrow != blank -%}
+                    <div class="disfruto-product__delivery-eyebrow">{{ block.settings.eyebrow }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="disfruto-product__delivery-text">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.note != blank -%}
+                    <div class="disfruto-product__delivery-note">{{ block.settings.note }}</div>
+                  {%- endif -%}
+                </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -2084,6 +2218,159 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "cheese_badges",
+      "name": "Qualitätsbadges",
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge_1",
+          "default": "100% Natürlich",
+          "label": "Badge 1"
+        },
+        {
+          "type": "text",
+          "id": "badge_2",
+          "default": "Handwerklich hergestellt",
+          "label": "Badge 2"
+        },
+        {
+          "type": "text",
+          "id": "badge_3",
+          "default": "Regionale Höfe",
+          "label": "Badge 3"
+        },
+        {
+          "type": "text",
+          "id": "badge_4",
+          "default": "Kleine Chargen",
+          "label": "Badge 4"
+        }
+      ]
+    },
+    {
+      "type": "tasting_profile",
+      "name": "Geschmacksprofil",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Geschmacksprofil",
+          "label": "Überschrift"
+        },
+        {
+          "type": "text",
+          "id": "milk_type",
+          "default": "Kuhmilch",
+          "label": "Milchart"
+        },
+        {
+          "type": "text",
+          "id": "texture",
+          "default": "Cremig & geschmeidig",
+          "label": "Textur"
+        },
+        {
+          "type": "range",
+          "id": "intensity",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3,
+          "label": "Intensität"
+        },
+        {
+          "type": "text",
+          "id": "aging",
+          "default": "8–12 Wochen gereift",
+          "label": "Reifung"
+        },
+        {
+          "type": "textarea",
+          "id": "notes",
+          "default": "Nussig, leicht salzig, lange Finish",
+          "label": "Geschmacksnoten"
+        },
+        {
+          "type": "text",
+          "id": "pairing",
+          "default": "Riesling, Sauerteig, Feigensenf",
+          "label": "Passt zu"
+        }
+      ]
+    },
+    {
+      "type": "subscription_info",
+      "name": "Abo-Vorteile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Dein Käse-Abo",
+          "label": "Überschrift"
+        },
+        {
+          "type": "text",
+          "id": "item_1_label",
+          "default": "Alle 2 oder 4 Wochen",
+          "label": "Vorteil 1 — Titel"
+        },
+        {
+          "type": "text",
+          "id": "item_1_sublabel",
+          "default": "Du wählst deinen Rhythmus",
+          "label": "Vorteil 1 — Beschreibung"
+        },
+        {
+          "type": "text",
+          "id": "item_2_label",
+          "default": "Jederzeit pausieren",
+          "label": "Vorteil 2 — Titel"
+        },
+        {
+          "type": "text",
+          "id": "item_2_sublabel",
+          "default": "Flexibel & ohne Bindung",
+          "label": "Vorteil 2 — Beschreibung"
+        },
+        {
+          "type": "text",
+          "id": "item_3_label",
+          "default": "Berlin-Lieferung Do–So",
+          "label": "Vorteil 3 — Titel"
+        },
+        {
+          "type": "text",
+          "id": "item_3_sublabel",
+          "default": "Frisch & gekühlt an deine Tür",
+          "label": "Vorteil 3 — Beschreibung"
+        }
+      ]
+    },
+    {
+      "type": "delivery_info",
+      "name": "Lieferinfo",
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "default": "LIEFERGEBIET",
+          "label": "Eyebrow-Text"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Nur Berlin • Zustellung Do–So",
+          "label": "Haupttext"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "default": "Frisch verpackt, gekühlt geliefert",
+          "label": "Hinweis"
         }
       ]
     }

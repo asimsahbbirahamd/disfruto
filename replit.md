@@ -32,6 +32,23 @@ Shopify Dawn-based theme customized for Disfruto, a curated artisan cheese subsc
 | `sections/disfruto-why.liquid` | Editorial split layout: manifesto left (sticky) + numbered benefits right, IntersectionObserver animations |
 | `sections/disfruto-faq.liquid` | Collapsible FAQ accordion (uses native `<details>` element) |
 
+## Product Page (main-product.liquid enhancements)
+4 custom block types added to Dawn's `sections/main-product.liquid`:
+
+| Block Type | Name | Purpose |
+|---|---|---|
+| `cheese_badges` | Qualitätsbadges | Row of 4 editable trust badges with SVG icons (leaf, star, map-pin, checkmark) |
+| `tasting_profile` | Geschmacksprofil | Flavor profile card: milk type, texture, intensity (1-5 dot scale), aging, notes, pairing |
+| `subscription_info` | Abo-Vorteile | 3-item subscription highlights with icons (clock, refresh, truck) |
+| `delivery_info` | Lieferinfo | Compact gold-bordered banner: eyebrow, main text, note |
+
+All block settings are fully editable in Shopify theme editor with German defaults.
+
+Product page block order (templates/product.json):
+vendor → title → cheese_badges → price → subscription_info → delivery_info → variant_picker → quantity_selector → buy_buttons → tasting_profile → description → 4 collapsible tabs (Zutaten, Herkunft, Lagerung, Versand) → share
+
+Preview: `/product` route in preview server
+
 ## Dawn Built-in Sections (NOT custom)
 | Section | Config File | Color Scheme |
 |---|---|---|

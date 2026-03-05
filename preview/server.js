@@ -451,6 +451,324 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
+const productHtml = `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Käse Genuss Set — Klassik | Disfruto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #3A3A3A; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #FAF7F2; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    ${css}
+
+    .preview-announcement { background: #1E1B3A; color: #fff; text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+    .preview-announcement a { color: #D4A853; text-decoration: underline; text-underline-offset: 2px; }
+    .preview-header { background: #fff; border-bottom: 3px solid #2D4A3E; position: sticky; top: 0; z-index: 100; }
+    .preview-header__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .preview-header__left { display: flex; align-items: center; gap: 40px; }
+    .preview-header__logo { text-decoration: none; display: flex; align-items: center; }
+    .preview-header__logo img { height: 28px; width: auto; }
+    .preview-header__nav { display: flex; align-items: center; gap: 28px; }
+    .preview-header__nav a { font-size: 14px; font-weight: 600; color: #2C2C2C; text-decoration: none; }
+    .preview-header__nav a:hover { color: #8B6F47; }
+    .preview-header__right { display: flex; align-items: center; gap: 10px; }
+    .preview-header__login { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: #2C2C2C; text-decoration: none; }
+    .preview-header__cta { display: inline-flex; align-items: center; padding: 10px 24px; height: 40px; box-sizing: border-box; background: #C9A84C; color: #2C2C2C; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: 1px solid #C9A84C; }
+    .preview-header__cta:hover { background: #B8963F; border-color: #B8963F; }
+    .preview-header__flag { width: 26px; height: 18px; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+    .preview-header__flag span { flex: 1; }
+
+    .preview-product { max-width: 1200px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .preview-product__media { position: sticky; top: 100px; }
+    .preview-product__media-main { background: #fff; border-radius: 16px; overflow: hidden; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #E5DFD6; }
+    .preview-product__media-main img { width: 100%; height: 100%; object-fit: cover; }
+    .preview-product__media-thumbs { display: flex; gap: 12px; margin-top: 16px; }
+    .preview-product__media-thumb { width: 80px; height: 80px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; cursor: pointer; background: #fff; }
+    .preview-product__media-thumb--active { border-color: #C9A84C; }
+    .preview-product__media-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .preview-product__info { display: flex; flex-direction: column; gap: 0; }
+    .preview-product__vendor { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8B6F47; margin-bottom: 8px; }
+    .preview-product__title { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #2C2C2C; line-height: 1.2; margin-bottom: 12px; }
+    .preview-product__price { font-size: 24px; font-weight: 700; color: #2C2C2C; margin-bottom: 4px; }
+    .preview-product__price-note { font-size: 13px; color: #6B6B6B; margin-bottom: 20px; }
+    .preview-product__buy-row { display: flex; gap: 12px; margin: 20px 0; }
+    .preview-product__buy-btn { flex: 1; padding: 14px 28px; background: #C9A84C; color: #2C2C2C; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 8px; cursor: pointer; text-align: center; }
+    .preview-product__buy-btn:hover { background: #B8963F; }
+    .preview-product__buy-btn--secondary { background: transparent; border: 2px solid #2C2C2C; color: #2C2C2C; }
+    .preview-product__buy-btn--secondary:hover { background: #2C2C2C; color: #fff; }
+    .preview-product__description { font-size: 15px; line-height: 1.7; color: #3A3A3A; margin: 16px 0; }
+    .preview-product__accordion { border-top: 1px solid #E5DFD6; }
+    .preview-product__accordion details { border-bottom: 1px solid #E5DFD6; }
+    .preview-product__accordion summary { padding: 16px 0; font-size: 14px; font-weight: 600; color: #2C2C2C; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+    .preview-product__accordion summary::-webkit-details-marker { display: none; }
+    .preview-product__accordion summary::after { content: '+'; font-size: 18px; color: #8B6F47; transition: transform 0.2s; }
+    .preview-product__accordion details[open] summary::after { content: '−'; }
+    .preview-product__accordion .accordion-content { padding: 0 0 16px; font-size: 14px; line-height: 1.7; color: #6B6B6B; }
+
+    .preview-footer { background: #2C2C2C; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
+    .preview-footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 24px; }
+    .preview-footer__brand { font-family: 'Playfair Display',serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
+    .preview-footer__text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.5); margin: 0 0 20px; max-width: 280px; }
+    .preview-footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; margin: 0 0 18px; }
+    .preview-footer ul { list-style: none; padding: 0; margin: 0; }
+    .preview-footer li { margin-bottom: 10px; }
+    .preview-footer a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; }
+    .preview-footer a:hover { color: #fff; }
+    .preview-footer__bottom { padding: 28px 24px 0; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: rgba(255,255,255,0.35); max-width: 1200px; margin: 0 auto; }
+
+    @media (max-width: 989px) {
+      .preview-product { grid-template-columns: 1fr; gap: 32px; padding: 24px 16px 60px; }
+      .preview-product__media { position: static; }
+      .preview-product__title { font-size: 26px; }
+      .preview-header__nav { display: none; }
+      .preview-footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 599px) {
+      .preview-footer__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-announcement">
+    Dein 1. Käse Genuss Set <a href="#">gratis</a> — Nur für kurze Zeit!
+  </div>
+
+  <header class="preview-header">
+    <div class="disfruto-container">
+      <div class="preview-header__inner">
+        <div class="preview-header__left">
+          <a href="/" class="preview-header__logo"><img src="/assets/disfruto-logo.png" alt="Disfruto" width="120" height="28"></a>
+          <nav class="preview-header__nav">
+            <a href="/#cheeses">Unser Käse</a>
+            <a href="/#story">So funktioniert's</a>
+            <a href="/#maker">Käsemacher</a>
+            <a href="/#faq">FAQs</a>
+          </nav>
+        </div>
+        <div class="preview-header__right">
+          <a href="#" class="preview-header__login">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Login
+          </a>
+          <a href="#" class="preview-header__cta">GENUSS SET WÄHLEN</a>
+          <div class="preview-header__flag">
+            <span style="background:#000"></span>
+            <span style="background:#DD0000"></span>
+            <span style="background:#FFCC00"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="preview-product">
+    <div class="preview-product__media">
+      <div class="preview-product__media-main">
+        <img src="/assets/disfruto-hero.png" alt="Käse Genuss Set — Klassik">
+      </div>
+      <div class="preview-product__media-thumbs">
+        <div class="preview-product__media-thumb preview-product__media-thumb--active">
+          <img src="/assets/disfruto-hero.png" alt="Thumbnail 1">
+        </div>
+        <div class="preview-product__media-thumb" style="background: #F5F1EB; display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <div class="preview-product__media-thumb" style="background: #F5F1EB; display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-product__info">
+      <div class="preview-product__vendor">DISFRUTO</div>
+      <h1 class="preview-product__title">Käse Genuss Set — Klassik</h1>
+
+      <div class="disfruto-product__badges">
+        <div class="disfruto-product__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13.5 2.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
+          <span>100% Natürlich</span>
+        </div>
+        <div class="disfruto-product__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Handwerklich hergestellt</span>
+        </div>
+        <div class="disfruto-product__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Regionale Höfe</span>
+        </div>
+        <div class="disfruto-product__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Kleine Chargen</span>
+        </div>
+      </div>
+
+      <div class="preview-product__price">€29,90 <span style="font-size: 16px; font-weight: 400; color: #6B6B6B;">/ Lieferung</span></div>
+      <div class="preview-product__price-note">inkl. MwSt. • Kostenloser Versand in Berlin</div>
+
+      <div class="disfruto-product__subscription">
+        <div class="disfruto-product__sub-heading">Dein Käse-Abo</div>
+        <div class="disfruto-product__sub-items">
+          <div class="disfruto-product__sub-item">
+            <div class="disfruto-product__sub-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="disfruto-product__sub-text">
+              <span class="disfruto-product__sub-label">Alle 2 oder 4 Wochen</span>
+              <span class="disfruto-product__sub-sublabel">Du wählst deinen Rhythmus</span>
+            </div>
+          </div>
+          <div class="disfruto-product__sub-item">
+            <div class="disfruto-product__sub-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            </div>
+            <div class="disfruto-product__sub-text">
+              <span class="disfruto-product__sub-label">Jederzeit pausieren</span>
+              <span class="disfruto-product__sub-sublabel">Flexibel & ohne Bindung</span>
+            </div>
+          </div>
+          <div class="disfruto-product__sub-item">
+            <div class="disfruto-product__sub-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="disfruto-product__sub-text">
+              <span class="disfruto-product__sub-label">Berlin-Lieferung Do–So</span>
+              <span class="disfruto-product__sub-sublabel">Frisch & gekühlt an deine Tür</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="disfruto-product__delivery">
+        <div class="disfruto-product__delivery-eyebrow">LIEFERGEBIET</div>
+        <div class="disfruto-product__delivery-text">Nur Berlin • Zustellung Do–So</div>
+        <div class="disfruto-product__delivery-note">Frisch verpackt, gekühlt geliefert</div>
+      </div>
+
+      <div class="preview-product__buy-row">
+        <button class="preview-product__buy-btn">ABO STARTEN</button>
+      </div>
+
+      <div class="disfruto-product__tasting">
+        <h3 class="disfruto-product__tasting-title">Geschmacksprofil</h3>
+        <div class="disfruto-product__tasting-grid">
+          <div class="disfruto-product__tasting-row">
+            <span class="disfruto-product__tasting-label">Milch</span>
+            <span class="disfruto-product__tasting-value">Kuhmilch</span>
+          </div>
+          <div class="disfruto-product__tasting-row">
+            <span class="disfruto-product__tasting-label">Textur</span>
+            <span class="disfruto-product__tasting-value">Cremig & geschmeidig</span>
+          </div>
+          <div class="disfruto-product__tasting-row">
+            <span class="disfruto-product__tasting-label">Intensität</span>
+            <span class="disfruto-product__tasting-value">
+              <span class="disfruto-product__intensity">
+                <span class="disfruto-product__intensity-dot disfruto-product__intensity-dot--active"></span>
+                <span class="disfruto-product__intensity-dot disfruto-product__intensity-dot--active"></span>
+                <span class="disfruto-product__intensity-dot disfruto-product__intensity-dot--active"></span>
+                <span class="disfruto-product__intensity-dot"></span>
+                <span class="disfruto-product__intensity-dot"></span>
+              </span>
+            </span>
+          </div>
+          <div class="disfruto-product__tasting-row">
+            <span class="disfruto-product__tasting-label">Reifung</span>
+            <span class="disfruto-product__tasting-value">8–12 Wochen gereift</span>
+          </div>
+          <div class="disfruto-product__tasting-row">
+            <span class="disfruto-product__tasting-label">Aromen</span>
+            <span class="disfruto-product__tasting-value">Nussig, leicht salzig, lange Finish</span>
+          </div>
+          <div class="disfruto-product__tasting-row">
+            <span class="disfruto-product__tasting-label">Passt zu</span>
+            <span class="disfruto-product__tasting-value">Riesling, Sauerteig, Feigensenf</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="preview-product__description">
+        Unser Klassik-Set bringt dir jeden Monat eine handverlesene Auswahl aus 4–5 Käsesorten von kleinen Hofkäsereien aus Norddeutschland. Jede Lieferung erzählt eine Geschichte — von den Weiden Nordfrieslands bis auf deinen Tisch in Berlin.
+      </p>
+
+      <div class="preview-product__accordion">
+        <details>
+          <summary>Zutaten & Allergene</summary>
+          <div class="accordion-content">
+            <p>Pasteurisierte Kuhmilch, Salz, mikrobielle Labaustauschstoffe, Milchsäurekulturen. Kann Spuren von Nüssen enthalten.</p>
+            <p style="margin-top: 8px;"><strong>Allergene:</strong> Milch, Laktose</p>
+          </div>
+        </details>
+        <details>
+          <summary>Herkunft & Produzent</summary>
+          <div class="accordion-content">
+            <p>Unsere Käse stammen von ausgewählten Hofkäsereien aus Schleswig-Holstein und Niedersachsen. Jeder Produzent arbeitet nach traditionellen Methoden mit Milch von freilaufenden Kühen.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Lagerung & Haltbarkeit</summary>
+          <div class="accordion-content">
+            <p>Kühl lagern bei 2–6°C. Nach Erhalt innerhalb von 14 Tagen verzehren. Vor dem Servieren ca. 30 Minuten bei Raumtemperatur ruhen lassen — so entfaltet sich das volle Aroma.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Versand & Lieferung</summary>
+          <div class="accordion-content">
+            <p>Lieferung ausschließlich innerhalb Berlins. Zustellung Donnerstag bis Sonntag. Alle Sendungen werden gekühlt und nachhaltig verpackt. Kostenloser Versand ab der ersten Bestellung.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="preview-footer">
+    <div class="preview-footer__grid">
+      <div>
+        <h3 class="preview-footer__brand">disfruto</h3>
+        <p class="preview-footer__text">Kuratierte Käse-Spezialitäten aus handwerklichen Hofkäsereien — direkt an deine Tür in Berlin.</p>
+      </div>
+      <div>
+        <h4>Produkte</h4>
+        <ul>
+          <li><a href="#">Genuss Set — Klassik</a></li>
+          <li><a href="#">Genuss Set — Premium</a></li>
+          <li><a href="#">Geschenkabo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="#">Über uns</a></li>
+          <li><a href="#">Käsemacher</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="#">hallo@disfruto.de</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Hilfe</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="preview-footer__bottom">
+      <span>&copy; 2026 Disfruto. Alle Rechte vorbehalten.</span>
+      <div>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+        <a href="#">Impressum</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>`;
+
 const server = http.createServer((req, res) => {
   if (req.url.startsWith('/assets/')) {
     const filePath = path.join(__dirname, '..', req.url);
@@ -462,6 +780,11 @@ const server = http.createServer((req, res) => {
       res.end(file);
       return;
     }
+  }
+  if (req.url === '/product' || req.url.startsWith('/product?') || req.url.startsWith('/products/')) {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.end(productHtml);
+    return;
   }
   res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
   res.end(html);

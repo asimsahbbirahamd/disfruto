@@ -1651,3 +1651,288 @@ a.header__icon--account:focus {
     align-items: center;
   }
 }
+
+/* ========================================
+   Product Page — Custom Block Styles
+   ======================================== */
+
+/* Cheese Badges */
+.disfruto-product__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.disfruto-product__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #F5F1EB;
+  border-radius: 20px;
+  font-family: var(--disfruto-font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-product__badge svg {
+  width: 14px;
+  height: 14px;
+  color: var(--disfruto-warm);
+  flex-shrink: 0;
+}
+
+/* Tasting Profile */
+.disfruto-product__tasting {
+  border: 1px solid var(--disfruto-border);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.disfruto-product__tasting-title {
+  font-family: var(--disfruto-font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-product__tasting-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.disfruto-product__tasting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.disfruto-product__tasting-label {
+  font-family: var(--disfruto-font-body);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--disfruto-text-light);
+}
+
+.disfruto-product__tasting-value {
+  font-family: var(--disfruto-font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-product__intensity-dots,
+.disfruto-product__intensity {
+  display: flex;
+  gap: 4px;
+}
+
+.disfruto-product__intensity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--disfruto-border);
+}
+
+.disfruto-product__intensity-dot--filled,
+.disfruto-product__intensity-dot--active {
+  background: var(--disfruto-cta-gold);
+}
+
+/* Subscription Info */
+.disfruto-product__subscription {
+  background: var(--disfruto-cream);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.disfruto-product__sub-heading {
+  font-family: var(--disfruto-font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--disfruto-warm);
+  margin-bottom: 16px;
+}
+
+.disfruto-product__sub-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.disfruto-product__sub-item {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.disfruto-product__sub-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: var(--disfruto-white);
+  border: 1px solid var(--disfruto-border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disfruto-product__sub-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--disfruto-cta-gold);
+}
+
+.disfruto-product__sub-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.disfruto-product__sub-label {
+  font-family: var(--disfruto-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-product__sub-sublabel {
+  font-family: var(--disfruto-font-body);
+  font-size: 12px;
+  color: var(--disfruto-text-light);
+}
+
+/* Delivery Info */
+.disfruto-product__delivery {
+  border-left: 3px solid var(--disfruto-cta-gold);
+  padding: 12px 16px;
+  margin: 16px 0;
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.disfruto-product__delivery-eyebrow {
+  font-family: var(--disfruto-font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--disfruto-warm);
+  margin-bottom: 4px;
+}
+
+.disfruto-product__delivery-text {
+  font-family: var(--disfruto-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-product__delivery-note {
+  font-family: var(--disfruto-font-body);
+  font-size: 12px;
+  color: var(--disfruto-text-light);
+  margin-top: 4px;
+}
+
+/* Mobile responsive — product blocks */
+@media (max-width: 749px) {
+  .disfruto-product__badges {
+    gap: 6px;
+    margin: 12px 0;
+  }
+
+  .disfruto-product__badge {
+    padding: 5px 10px;
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .disfruto-product__badge svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .disfruto-product__tasting {
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .disfruto-product__tasting-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .disfruto-product__tasting-grid {
+    gap: 10px;
+  }
+
+  .disfruto-product__tasting-label {
+    font-size: 11px;
+  }
+
+  .disfruto-product__tasting-value {
+    font-size: 13px;
+  }
+
+  .disfruto-product__subscription {
+    padding: 16px;
+    margin: 12px 0;
+  }
+
+  .disfruto-product__sub-heading {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .disfruto-product__sub-items {
+    gap: 12px;
+  }
+
+  .disfruto-product__sub-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
+
+  .disfruto-product__sub-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .disfruto-product__sub-label {
+    font-size: 13px;
+  }
+
+  .disfruto-product__sub-sublabel {
+    font-size: 11px;
+  }
+
+  .disfruto-product__delivery {
+    padding: 10px 14px;
+    margin: 12px 0;
+  }
+
+  .disfruto-product__delivery-eyebrow {
+    font-size: 9px;
+  }
+
+  .disfruto-product__delivery-text {
+    font-size: 13px;
+  }
+
+  .disfruto-product__delivery-note {
+    font-size: 11px;
+  }
+}
