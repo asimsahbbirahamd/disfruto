@@ -1,8 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
+        "cheese_badges_cVJJ9E": {
+          "type": "cheese_badges",
+          "settings": {
+            "badge_1": "100% Natürlich",
+            "badge_2": "Handwerklich hergestellt",
+            "badge_3": "Regionale Höfe",
+            "badge_4": "Kleine Chargen"
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -14,20 +32,11 @@
           "type": "title",
           "settings": {}
         },
-        "cheese_badges": {
-          "type": "cheese_badges",
-          "settings": {
-            "badge_1": "100% Natürlich",
-            "badge_2": "Handwerklich hergestellt",
-            "badge_3": "Regionale Höfe",
-            "badge_4": "Kleine Chargen"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {}
         },
-        "subscription_info": {
+        "subscription_info_xczqjP": {
           "type": "subscription_info",
           "settings": {
             "heading": "Dein Käse-Abo",
@@ -39,7 +48,7 @@
             "item_3_sublabel": "Frisch & gekühlt an deine Tür"
           }
         },
-        "delivery_info": {
+        "delivery_info_8wQAFf": {
           "type": "delivery_info",
           "settings": {
             "eyebrow": "LIEFERGEBIET",
@@ -65,7 +74,11 @@
             "show_gift_card_recipient": true
           }
         },
-        "tasting_profile": {
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "tasting_profile_qhTKVp": {
           "type": "tasting_profile",
           "settings": {
             "heading": "Geschmacksprofil",
@@ -77,46 +90,6 @@
             "pairing": "Riesling, Sauerteig, Feigensenf"
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "collapsible_tab_zutaten": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Zutaten & Allergene",
-            "icon": "leaf",
-            "content": "<p>Pasteurisierte Kuhmilch, Salz, Lab, Milchsäurekulturen.</p><p><strong>Allergene:</strong> Enthält Milch und Milcherzeugnisse.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_tab_herkunft": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Herkunft & Produzent",
-            "icon": "map_pin",
-            "content": "<p>Unsere Käsesorten stammen von ausgewählten Hofkäsereien in Norddeutschland. Jede Charge wird in kleinen Mengen von Hand gefertigt – mit Milch von freilaufenden Kühen aus der Region.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_tab_lagerung": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Lagerung & Haltbarkeit",
-            "icon": "snowflake",
-            "content": "<p>Kühl lagern bei 2–6 °C. Nach dem Öffnen innerhalb von 5–7 Tagen verbrauchen. Für besten Geschmack 30 Minuten vor dem Servieren aus dem Kühlschrank nehmen.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_tab_versand": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Versand & Lieferung",
-            "icon": "truck",
-            "content": "<p>Lieferung nur in Berlin, Donnerstag bis Sonntag. Versand in isolierter Verpackung mit Kühlakkus. Kostenloser Versand ab 40 €.</p>",
-            "page": ""
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -125,21 +98,17 @@
         }
       },
       "block_order": [
+        "cheese_badges_cVJJ9E",
         "vendor",
         "title",
-        "cheese_badges",
         "price",
-        "subscription_info",
-        "delivery_info",
+        "subscription_info_xczqjP",
+        "delivery_info_8wQAFf",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "tasting_profile",
         "description",
-        "collapsible_tab_zutaten",
-        "collapsible_tab_herkunft",
-        "collapsible_tab_lagerung",
-        "collapsible_tab_versand",
+        "tasting_profile_qhTKVp",
         "share"
       ],
       "settings": {
