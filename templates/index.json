@@ -24,6 +24,36 @@
         "float_badge_subtext": "In ganz Berlin"
       }
     },
+    "disfruto_trust_bar_84YB3G": {
+      "type": "disfruto-trust-bar",
+      "blocks": {
+        "trust_item_RmEtYR": {
+          "type": "trust_item",
+          "settings": {
+            "label": "Kostenfrei geliefert"
+          }
+        },
+        "trust_item_fFyg9H": {
+          "type": "trust_item",
+          "settings": {
+            "label": "Flexibel planbar"
+          }
+        },
+        "trust_item_rhLDA6": {
+          "type": "trust_item",
+          "settings": {
+            "label": "Jederzeit pausierbar"
+          }
+        }
+      },
+      "block_order": [
+        "trust_item_RmEtYR",
+        "trust_item_fFyg9H",
+        "trust_item_rhLDA6"
+      ],
+      "name": "Disfruto Trust Bar",
+      "settings": {}
+    },
     "disfruto_story": {
       "type": "disfruto-product-story",
       "settings": {
@@ -155,7 +185,10 @@
       ],
       "settings": {
         "eyebrow": "Warum Disfruto",
-        "heading": "Käse, der Geschichten erzählt"
+        "heading": "Käse, der Geschichten erzählt",
+        "statement": "Wir glauben, dass großartiger Käse mehr ist als ein Lebensmittel. Er ist Ausdruck von Handwerk, Terroir und der Leidenschaft der Menschen, die ihn herstellen. Disfruto bringt diese Geschichten direkt zu dir nach Hause — kuratiert, authentisch und immer aus den besten Käsereien Europas.",
+        "cta_label": "Unsere Geschichte entdecken",
+        "cta_link": ""
       }
     },
     "disfruto_faq": {
@@ -250,36 +283,6 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
-    },
-    "disfruto_trust_bar_84YB3G": {
-      "type": "disfruto-trust-bar",
-      "blocks": {
-        "trust_item_RmEtYR": {
-          "type": "trust_item",
-          "settings": {
-            "label": "Kostenfrei geliefert"
-          }
-        },
-        "trust_item_fFyg9H": {
-          "type": "trust_item",
-          "settings": {
-            "label": "Flexibel planbar"
-          }
-        },
-        "trust_item_rhLDA6": {
-          "type": "trust_item",
-          "settings": {
-            "label": "Jederzeit pausierbar"
-          }
-        }
-      },
-      "block_order": [
-        "trust_item_RmEtYR",
-        "trust_item_fFyg9H",
-        "trust_item_rhLDA6"
-      ],
-      "name": "Disfruto Trust Bar",
-      "settings": {}
     }
   },
   "order": [
