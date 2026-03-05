@@ -49,6 +49,7 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "show_search": false,
+        "show_cart": false,
         "enable_customer_avatar": true,
         "show_account_label": true,
         "cta_label": "GENUSS SET WÄHLEN",
