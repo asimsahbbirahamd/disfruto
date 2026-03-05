@@ -64,6 +64,7 @@ const html = `<!DOCTYPE html>
     @media (max-width: 989px) {
       .preview-header__nav, .preview-header__flag { display: none; }
       .preview-footer__grid { grid-template-columns: 1fr 1fr; }
+      .preview-featured-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
     }
     @media (max-width: 549px) {
       .preview-footer__grid { grid-template-columns: 1fr; }
@@ -267,6 +268,132 @@ const html = `<!DOCTYPE html>
             <p style="font-size:16px;color:rgba(255,255,255,0.8);margin:0 0 24px;line-height:1.6;">Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.</p>
             <a href="#" class="disfruto-btn disfruto-btn--gold">Jetzt abonnieren</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Product -->
+  <section class="disfruto-section" style="padding:80px 0;background:#fff;">
+    <div class="disfruto-container">
+      <div style="text-align:center;margin-bottom:48px;">
+        <span style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8B6F47;">Unser Bestseller</span>
+        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:700;color:#2C2C2C;margin:12px 0 0;line-height:1.15;">Käse Genuss Set — Klassik</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;" class="preview-featured-grid">
+        <div style="border-radius:16px;overflow:hidden;border:1px solid #E5DFD6;">
+          <img src="/assets/disfruto-hero.png" alt="Käse Genuss Set — Klassik" style="width:100%;aspect-ratio:1;object-fit:cover;">
+        </div>
+        <div>
+          <div class="disfruto-product__badges">
+            <div class="disfruto-product__badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13.5 2.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
+              <span>100% Natürlich</span>
+            </div>
+            <div class="disfruto-product__badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Handwerklich hergestellt</span>
+            </div>
+            <div class="disfruto-product__badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Regionale Höfe</span>
+            </div>
+            <div class="disfruto-product__badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Kleine Chargen</span>
+            </div>
+          </div>
+
+          <div style="margin:20px 0 4px;">
+            <span style="font-size:28px;font-weight:700;color:#2C2C2C;">€29,90</span>
+            <span style="font-size:16px;font-weight:400;color:#6B6B6B;"> / Lieferung</span>
+          </div>
+          <p style="font-size:13px;color:#6B6B6B;margin:0 0 20px;">inkl. MwSt. • Kostenloser Versand in Berlin</p>
+
+          <div class="disfruto-product__subscription">
+            <div class="disfruto-product__sub-heading">Dein Käse-Abo</div>
+            <div class="disfruto-product__sub-items">
+              <div class="disfruto-product__sub-item">
+                <div class="disfruto-product__sub-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="disfruto-product__sub-text">
+                  <span class="disfruto-product__sub-label">Alle 2 oder 4 Wochen</span>
+                  <span class="disfruto-product__sub-sublabel">Du wählst deinen Rhythmus</span>
+                </div>
+              </div>
+              <div class="disfruto-product__sub-item">
+                <div class="disfruto-product__sub-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                </div>
+                <div class="disfruto-product__sub-text">
+                  <span class="disfruto-product__sub-label">Jederzeit pausieren</span>
+                  <span class="disfruto-product__sub-sublabel">Flexibel & ohne Bindung</span>
+                </div>
+              </div>
+              <div class="disfruto-product__sub-item">
+                <div class="disfruto-product__sub-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <div class="disfruto-product__sub-text">
+                  <span class="disfruto-product__sub-label">Berlin-Lieferung Do–So</span>
+                  <span class="disfruto-product__sub-sublabel">Frisch & gekühlt an deine Tür</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disfruto-product__delivery">
+            <div class="disfruto-product__delivery-eyebrow">LIEFERGEBIET</div>
+            <div class="disfruto-product__delivery-text">Nur Berlin • Zustellung Do–So</div>
+            <div class="disfruto-product__delivery-note">Frisch verpackt, gekühlt geliefert</div>
+          </div>
+
+          <div style="margin:20px 0;">
+            <a href="/product" class="disfruto-btn disfruto-btn--gold" style="display:block;text-align:center;padding:16px 28px;">GENUSS SET WÄHLEN</a>
+          </div>
+
+          <div class="disfruto-product__tasting">
+            <h3 class="disfruto-product__tasting-title">Geschmacksprofil</h3>
+            <div class="disfruto-product__tasting-grid">
+              <div class="disfruto-product__tasting-row">
+                <span class="disfruto-product__tasting-label">Milch</span>
+                <span class="disfruto-product__tasting-value">Kuhmilch</span>
+              </div>
+              <div class="disfruto-product__tasting-row">
+                <span class="disfruto-product__tasting-label">Textur</span>
+                <span class="disfruto-product__tasting-value">Cremig & geschmeidig</span>
+              </div>
+              <div class="disfruto-product__tasting-row">
+                <span class="disfruto-product__tasting-label">Intensität</span>
+                <span class="disfruto-product__tasting-value">
+                  <span class="disfruto-product__intensity">
+                    <span class="disfruto-product__intensity-dot disfruto-product__intensity-dot--active"></span>
+                    <span class="disfruto-product__intensity-dot disfruto-product__intensity-dot--active"></span>
+                    <span class="disfruto-product__intensity-dot disfruto-product__intensity-dot--active"></span>
+                    <span class="disfruto-product__intensity-dot"></span>
+                    <span class="disfruto-product__intensity-dot"></span>
+                  </span>
+                </span>
+              </div>
+              <div class="disfruto-product__tasting-row">
+                <span class="disfruto-product__tasting-label">Reifung</span>
+                <span class="disfruto-product__tasting-value">8–12 Wochen gereift</span>
+              </div>
+              <div class="disfruto-product__tasting-row">
+                <span class="disfruto-product__tasting-label">Aromen</span>
+                <span class="disfruto-product__tasting-value">Nussig, leicht salzig, lange Finish</span>
+              </div>
+              <div class="disfruto-product__tasting-row">
+                <span class="disfruto-product__tasting-label">Passt zu</span>
+                <span class="disfruto-product__tasting-value">Riesling, Sauerteig, Feigensenf</span>
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size:15px;line-height:1.7;color:#3A3A3A;margin:16px 0 0;">
+            Unser Klassik-Set bringt dir jeden Monat eine handverlesene Auswahl aus 4–5 Käsesorten von kleinen Hofkäsereien aus Norddeutschland.
+          </p>
         </div>
       </div>
     </div>
