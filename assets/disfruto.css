@@ -1294,8 +1294,13 @@
 .header__icon--account {
   width: auto !important;
   gap: 6px;
-  border-radius: var(--disfruto-radius) !important;
+  border-radius: 6px !important;
   padding: 0 4px;
+  text-decoration: none !important;
+}
+
+.header__icon--account:hover {
+  text-decoration: none !important;
 }
 
 .header__account-label {
@@ -1304,26 +1309,44 @@
   font-weight: 500;
   color: var(--disfruto-dark);
   white-space: nowrap;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+a.header__icon--account,
+a.header__icon--account:hover,
+a.header__icon--account:focus {
+  text-decoration: none !important;
+}
+
+.header__icon--account svg,
+.header__icon--account .icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
 }
 
 .header__cta-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
+  padding: 10px 24px;
   background: var(--disfruto-cta-gold);
-  color: var(--disfruto-dark);
+  color: var(--disfruto-dark) !important;
   font-family: var(--disfruto-font-body);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   border: 1px solid var(--disfruto-cta-gold);
-  border-radius: var(--disfruto-radius);
+  border-radius: 6px;
   transition: all 0.3s ease;
   white-space: nowrap;
-  margin-left: 8px;
+  margin-left: 10px;
+  line-height: 1.2;
+  height: 40px;
+  box-sizing: border-box;
 }
 
 .header__cta-button:hover {
@@ -1331,6 +1354,8 @@
   border-color: #B8963F;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(201,168,76,0.25);
+  text-decoration: none !important;
+  color: var(--disfruto-dark) !important;
 }
 
 .header__cta-button:active {
@@ -1341,16 +1366,20 @@
 .header__flag {
   display: inline-flex;
   align-items: center;
-  margin-left: 12px;
+  margin-left: 10px;
   cursor: default;
   flex-shrink: 0;
 }
 
 .header__flag svg {
-  width: 28px;
-  height: 20px;
+  width: 26px;
+  height: 18px;
   border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.header__icons {
+  gap: 4px !important;
 }
 
 .header__icon--cart {

@@ -155,10 +155,7 @@
       ],
       "settings": {
         "eyebrow": "Warum Disfruto",
-        "heading": "Käse, der Geschichten erzählt",
-        "statement": "Wir glauben, dass großartiger Käse mehr ist als ein Lebensmittel. Er ist Ausdruck von Handwerk, Terroir und der Leidenschaft der Menschen, die ihn herstellen. Disfruto bringt diese Geschichten direkt zu dir nach Hause — kuratiert, authentisch und immer aus den besten Käsereien Europas.",
-        "cta_label": "Unsere Geschichte entdecken",
-        "cta_link": ""
+        "heading": "Käse, der Geschichten erzählt"
       }
     },
     "disfruto_faq": {
@@ -207,7 +204,14 @@
           }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
       "settings": {
         "eyebrow": "Häufige Fragen",
         "heading": "Alles, was du wissen musst",
