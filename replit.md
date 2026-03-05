@@ -49,6 +49,8 @@ vendor → title → cheese_badges → price → subscription_info → delivery_
 
 Preview: `/product` route in preview server
 
+The same 4 block types are also available in `sections/featured-product.liquid` (Dawn's "Featured product" section) for use on the homepage or any other page via the theme editor.
+
 ## Dawn Built-in Sections (NOT custom)
 | Section | Config File | Color Scheme |
 |---|---|---|
