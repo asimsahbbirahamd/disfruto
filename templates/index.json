@@ -153,25 +153,6 @@
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector_LKyDVa": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_qD9yMz": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "delivery_info_7nCAUe": {
-          "type": "delivery_info",
-          "settings": {
-            "eyebrow": "LIEFERGEBIET",
-            "text": "Nur Berlin • Zustellung Do–So",
-            "note": "Frisch verpackt, gekühlt geliefert"
-          }
-        },
         "subscription_info_hBjArJ": {
           "type": "subscription_info",
           "settings": {
@@ -182,6 +163,25 @@
             "item_2_sublabel": "Flexibel & ohne Bindung",
             "item_3_label": "Berlin-Lieferung Do–So",
             "item_3_sublabel": "Frisch & gekühlt an deine Tür"
+          }
+        },
+        "delivery_info_7nCAUe": {
+          "type": "delivery_info",
+          "settings": {
+            "eyebrow": "LIEFERGEBIET",
+            "text": "Nur Berlin • Zustellung Do–So",
+            "note": "Frisch verpackt, gekühlt geliefert"
+          }
+        },
+        "quantity_selector_LKyDVa": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_qD9yMz": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
           }
         },
         "tasting_profile_c4KJBA": {
@@ -209,10 +209,10 @@
         "title_jJrYC4",
         "price_UkQQrz",
         "variant_picker_9ACydm",
+        "subscription_info_hBjArJ",
+        "delivery_info_7nCAUe",
         "quantity_selector_LKyDVa",
         "buy_buttons_qD9yMz",
-        "delivery_info_7nCAUe",
-        "subscription_info_hBjArJ",
         "tasting_profile_c4KJBA",
         "share_zwYAVc"
       ],
