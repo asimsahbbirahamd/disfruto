@@ -117,6 +117,121 @@
         "subheading": "Handverlesene Sorten von den besten Käsemachern Europas"
       }
     },
+    "featured_product_mzGLwA": {
+      "type": "featured-product",
+      "blocks": {
+        "cheese_badges_yUH7ec": {
+          "type": "cheese_badges",
+          "settings": {
+            "badge_1": "100% Natürlich",
+            "badge_2": "Handwerklich hergestellt",
+            "badge_3": "Regionale Höfe",
+            "badge_4": "Kleine Chargen"
+          }
+        },
+        "text_D7NMUY": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_jJrYC4": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_UkQQrz": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_9ACydm": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_LKyDVa": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_qD9yMz": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "delivery_info_7nCAUe": {
+          "type": "delivery_info",
+          "settings": {
+            "eyebrow": "LIEFERGEBIET",
+            "text": "Nur Berlin • Zustellung Do–So",
+            "note": "Frisch verpackt, gekühlt geliefert"
+          }
+        },
+        "subscription_info_hBjArJ": {
+          "type": "subscription_info",
+          "settings": {
+            "heading": "Dein Käse-Abo",
+            "item_1_label": "Alle 2 oder 4 Wochen",
+            "item_1_sublabel": "Du wählst deinen Rhythmus",
+            "item_2_label": "Jederzeit pausieren",
+            "item_2_sublabel": "Flexibel & ohne Bindung",
+            "item_3_label": "Berlin-Lieferung Do–So",
+            "item_3_sublabel": "Frisch & gekühlt an deine Tür"
+          }
+        },
+        "tasting_profile_c4KJBA": {
+          "type": "tasting_profile",
+          "settings": {
+            "heading": "Geschmacksprofil",
+            "milk_type": "Kuhmilch",
+            "texture": "Cremig & geschmeidig",
+            "intensity": 3,
+            "aging": "8–12 Wochen gereift",
+            "notes": "Nussig, leicht salzig, lange Finish",
+            "pairing": "Riesling, Sauerteig, Feigensenf"
+          }
+        },
+        "share_zwYAVc": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "cheese_badges_yUH7ec",
+        "text_D7NMUY",
+        "title_jJrYC4",
+        "price_UkQQrz",
+        "variant_picker_9ACydm",
+        "quantity_selector_LKyDVa",
+        "buy_buttons_qD9yMz",
+        "delivery_info_7nCAUe",
+        "subscription_info_hBjArJ",
+        "tasting_profile_c4KJBA",
+        "share_zwYAVc"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "cheese",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "disfruto_maker": {
       "type": "disfruto-cheesemaker",
       "settings": {
@@ -290,6 +405,7 @@
     "disfruto_trust_bar_84YB3G",
     "disfruto_story",
     "disfruto_cheeses",
+    "featured_product_mzGLwA",
     "disfruto_maker",
     "disfruto_banner",
     "disfruto_why",
