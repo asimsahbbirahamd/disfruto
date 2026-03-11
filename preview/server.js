@@ -49,17 +49,28 @@ const html = `<!DOCTYPE html>
     .preview-header__cta:hover { background: #163836; border-color: #163836; }
     .preview-header__flag { width: 26px; height: 18px; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     .preview-header__flag span { flex: 1; }
-    .preview-footer { background: #2D1A40; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
-    .preview-footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-    .preview-footer__brand { font-family: 'Inter',sans-serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
-    .preview-footer__text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.5); margin: 0 0 20px; max-width: 280px; }
-    .preview-footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; margin: 0 0 18px; }
+    .preview-footer { background: #F5F5F0; color: #3A3A3A; padding: 56px 0 0; border-top: 1px solid #E0E0DA; }
+    .preview-footer__inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .preview-footer__grid { display: grid; grid-template-columns: 1.5fr 2.5fr 1fr 1.2fr; gap: 48px; align-items: start; padding-bottom: 40px; }
+    .preview-footer__brand { font-family: 'Inter',sans-serif; font-size: 26px; font-weight: 700; color: #2D1A40; margin: 0; letter-spacing: -0.02em; }
+    .preview-footer h4 { font-size: 14px; font-weight: 700; color: #2D1A40; margin: 0 0 12px; }
+    .preview-footer__newsletter-desc { font-size: 13px; line-height: 1.6; color: #6B6B6B; margin: 0 0 16px; }
+    .preview-footer__newsletter-form { display: flex; gap: 0; }
+    .preview-footer__newsletter-input { flex: 1; padding: 10px 14px; border: 1px solid #D0D0CA; border-right: none; border-radius: 6px 0 0 6px; font-size: 14px; font-family: 'Inter', sans-serif; background: #fff; color: #3A3A3A; outline: none; }
+    .preview-footer__newsletter-input::placeholder { color: #A0A09A; }
+    .preview-footer__newsletter-input:focus { border-color: #1E4A47; }
+    .preview-footer__newsletter-btn { padding: 10px 20px; background: #2D1A40; color: #fff; font-size: 13px; font-weight: 600; border: none; border-radius: 0 6px 6px 0; cursor: pointer; font-family: 'Inter', sans-serif; white-space: nowrap; }
+    .preview-footer__newsletter-btn:hover { background: #3d2656; }
+    .preview-footer__social { display: flex; gap: 16px; }
+    .preview-footer__social a { color: #2D1A40; text-decoration: none; display: flex; align-items: center; }
+    .preview-footer__social a:hover { color: #1E4A47; }
     .preview-footer ul { list-style: none; padding: 0; margin: 0; }
-    .preview-footer li { margin-bottom: 10px; }
-    .preview-footer a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; }
-    .preview-footer a:hover { color: #fff; }
-    .preview-footer__bottom { padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: rgba(255,255,255,0.35); }
-    .preview-footer__bottom a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; margin-left: 20px; }
+    .preview-footer li { margin-bottom: 8px; }
+    .preview-footer a { font-size: 14px; color: #6B6B6B; text-decoration: none; }
+    .preview-footer a:hover { color: #2D1A40; }
+    .preview-footer__bottom { padding: 20px 24px; border-top: 1px solid #E0E0DA; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: #A0A09A; max-width: 1200px; margin: 0 auto; }
+    .preview-footer__bottom a { font-size: 12px; color: #A0A09A; text-decoration: none; margin-left: 20px; }
+    .preview-footer__bottom a:hover { color: #2D1A40; }
 
     @media (max-width: 989px) {
       .preview-header__nav, .preview-header__flag { display: none; }
@@ -558,44 +569,42 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Footer (Dawn built-in, enhanced via CSS + color scheme-4) -->
   <footer class="preview-footer">
-    <div class="disfruto-container">
+    <div class="preview-footer__inner">
       <div class="preview-footer__grid">
         <div>
-          <div class="preview-footer__brand">Disfruto</div>
-          <p class="preview-footer__text">Kuratierte Käse-Spezialitäten, direkt an deine Tür in Berlin geliefert.</p>
+          <div class="preview-footer__brand">disfruto</div>
         </div>
         <div>
-          <h4>Produkt</h4>
-          <ul>
-            <li><a href="#">So funktioniert's</a></li>
-            <li><a href="#">Unsere Käse</a></li>
-            <li><a href="#">Preise</a></li>
-          </ul>
+          <h4>Newsletter</h4>
+          <p class="preview-footer__newsletter-desc">Neue Sorten, Käsereien & Genuss-Tipps direkt ins Postfach.</p>
+          <form class="preview-footer__newsletter-form" onsubmit="return false;">
+            <input type="email" class="preview-footer__newsletter-input" placeholder="E-Mail-Adresse">
+            <button type="submit" class="preview-footer__newsletter-btn">Anmelden</button>
+          </form>
         </div>
         <div>
-          <h4>Unternehmen</h4>
-          <ul>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
+          <h4>Social</h4>
+          <div class="preview-footer__social">
+            <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
         </div>
         <div>
           <h4>Kontakt</h4>
           <ul>
-            <li><a href="mailto:hallo@disfruto.de">hallo@disfruto.de</a></li>
-            <li><a href="#">Berlin, Deutschland</a></li>
+            <li><a href="mailto:support@disfruto.de">support@disfruto.de</a></li>
+            <li><a href="#">Kontaktformular</a></li>
           </ul>
         </div>
       </div>
       <div class="preview-footer__bottom">
-        <span>&copy; 2026 Disfruto. Alle Rechte vorbehalten.</span>
+        <span>&copy; 2026 disfruto</span>
         <div>
           <a href="#">Datenschutz</a>
           <a href="#">AGB</a>
           <a href="#">Impressum</a>
+          <a href="#">Cookie-Einstellungen</a>
         </div>
       </div>
     </div>
@@ -682,16 +691,28 @@ const productHtml = `<!DOCTYPE html>
     .preview-product__accordion details[open] summary::after { content: '−'; }
     .preview-product__accordion .accordion-content { padding: 0 0 16px; font-size: 14px; line-height: 1.7; color: #6B6B6B; }
 
-    .preview-footer { background: #2D1A40; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
-    .preview-footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 24px; }
-    .preview-footer__brand { font-family: 'Inter',sans-serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
-    .preview-footer__text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.5); margin: 0 0 20px; max-width: 280px; }
-    .preview-footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; margin: 0 0 18px; }
+    .preview-footer { background: #F5F5F0; color: #3A3A3A; padding: 56px 0 0; border-top: 1px solid #E0E0DA; }
+    .preview-footer__inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .preview-footer__grid { display: grid; grid-template-columns: 1.5fr 2.5fr 1fr 1.2fr; gap: 48px; align-items: start; padding-bottom: 40px; }
+    .preview-footer__brand { font-family: 'Inter',sans-serif; font-size: 26px; font-weight: 700; color: #2D1A40; margin: 0; letter-spacing: -0.02em; }
+    .preview-footer h4 { font-size: 14px; font-weight: 700; color: #2D1A40; margin: 0 0 12px; }
+    .preview-footer__newsletter-desc { font-size: 13px; line-height: 1.6; color: #6B6B6B; margin: 0 0 16px; }
+    .preview-footer__newsletter-form { display: flex; gap: 0; }
+    .preview-footer__newsletter-input { flex: 1; padding: 10px 14px; border: 1px solid #D0D0CA; border-right: none; border-radius: 6px 0 0 6px; font-size: 14px; font-family: 'Inter', sans-serif; background: #fff; color: #3A3A3A; outline: none; }
+    .preview-footer__newsletter-input::placeholder { color: #A0A09A; }
+    .preview-footer__newsletter-input:focus { border-color: #1E4A47; }
+    .preview-footer__newsletter-btn { padding: 10px 20px; background: #2D1A40; color: #fff; font-size: 13px; font-weight: 600; border: none; border-radius: 0 6px 6px 0; cursor: pointer; font-family: 'Inter', sans-serif; white-space: nowrap; }
+    .preview-footer__newsletter-btn:hover { background: #3d2656; }
+    .preview-footer__social { display: flex; gap: 16px; }
+    .preview-footer__social a { color: #2D1A40; text-decoration: none; display: flex; align-items: center; }
+    .preview-footer__social a:hover { color: #1E4A47; }
     .preview-footer ul { list-style: none; padding: 0; margin: 0; }
-    .preview-footer li { margin-bottom: 10px; }
-    .preview-footer a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; }
-    .preview-footer a:hover { color: #fff; }
-    .preview-footer__bottom { padding: 28px 24px 0; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: rgba(255,255,255,0.35); max-width: 1200px; margin: 0 auto; }
+    .preview-footer li { margin-bottom: 8px; }
+    .preview-footer a { font-size: 14px; color: #6B6B6B; text-decoration: none; }
+    .preview-footer a:hover { color: #2D1A40; }
+    .preview-footer__bottom { padding: 20px 24px; border-top: 1px solid #E0E0DA; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: #A0A09A; max-width: 1200px; margin: 0 auto; }
+    .preview-footer__bottom a { font-size: 12px; color: #A0A09A; text-decoration: none; margin-left: 20px; }
+    .preview-footer__bottom a:hover { color: #2D1A40; }
 
     @media (max-width: 989px) {
       .preview-product { grid-template-columns: 1fr; gap: 32px; padding: 24px 16px 60px; }
@@ -898,42 +919,42 @@ const productHtml = `<!DOCTYPE html>
   </main>
 
   <footer class="preview-footer">
-    <div class="preview-footer__grid">
-      <div>
-        <h3 class="preview-footer__brand">disfruto</h3>
-        <p class="preview-footer__text">Kuratierte Käse-Spezialitäten aus handwerklichen Hofkäsereien — direkt an deine Tür in Berlin.</p>
+    <div class="preview-footer__inner">
+      <div class="preview-footer__grid">
+        <div>
+          <div class="preview-footer__brand">disfruto</div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="preview-footer__newsletter-desc">Neue Sorten, Käsereien & Genuss-Tipps direkt ins Postfach.</p>
+          <form class="preview-footer__newsletter-form" onsubmit="return false;">
+            <input type="email" class="preview-footer__newsletter-input" placeholder="E-Mail-Adresse">
+            <button type="submit" class="preview-footer__newsletter-btn">Anmelden</button>
+          </form>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <div class="preview-footer__social">
+            <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:support@disfruto.de">support@disfruto.de</a></li>
+            <li><a href="#">Kontaktformular</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h4>Produkte</h4>
-        <ul>
-          <li><a href="#">Genuss Set — Klassik</a></li>
-          <li><a href="#">Genuss Set — Premium</a></li>
-          <li><a href="#">Geschenkabo</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Unternehmen</h4>
-        <ul>
-          <li><a href="#">Über uns</a></li>
-          <li><a href="#">Käsemacher</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Kontakt</h4>
-        <ul>
-          <li><a href="#">hallo@disfruto.de</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Hilfe</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="preview-footer__bottom">
-      <span>&copy; 2026 Disfruto. Alle Rechte vorbehalten.</span>
-      <div>
-        <a href="#">Datenschutz</a>
-        <a href="#">AGB</a>
-        <a href="#">Impressum</a>
+      <div class="preview-footer__bottom">
+        <span>&copy; 2026 disfruto</span>
+        <div>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
+          <a href="#">Impressum</a>
+          <a href="#">Cookie-Einstellungen</a>
+        </div>
       </div>
     </div>
   </footer>
