@@ -31,6 +31,19 @@ Shopify Dawn-based theme customized for Disfruto, a curated artisan cheese subsc
 | `sections/disfruto-banner.liquid` | Full-width CTA banner with background image overlay |
 | `sections/disfruto-why.liquid` | Editorial split layout: manifesto left (sticky) + numbered benefits right, IntersectionObserver animations |
 | `sections/disfruto-faq.liquid` | Collapsible FAQ accordion (uses native `<details>` element) |
+| `sections/disfruto-page-unser-kaese.liquid` | "Unser Käse" page intro: philosophy headline + 3 feature cards (handwerk, nachhaltig, lieferung) with icons |
+| `sections/disfruto-page-how-it-works.liquid` | "So funktioniert's" page: 3-step numbered process with CTA |
+| `sections/disfruto-page-kaesemacher.liquid` | "Käsemacher" page: 6-card grid of cheesemaker profiles with photo, region, description, specialty badge |
+
+## Page Templates
+| Template File | Page | Sections Used |
+|---|---|---|
+| `templates/page.unser-kaese.json` | Unser Käse | disfruto-page-unser-kaese + disfruto-cheese-grid (6 cheeses) |
+| `templates/page.so-funktionierts.json` | So funktioniert's | disfruto-page-how-it-works + disfruto-product-story + disfruto-faq (3 items) |
+| `templates/page.kaesemacher.json` | Käsemacher | disfruto-page-kaesemacher (6 makers) + disfruto-cheesemaker (weekly spotlight) |
+| `templates/page.faqs.json` | FAQs | disfruto-faq (9 questions) |
+
+To use these in Shopify: Create pages in Shopify Admin → Pages, set each page's template to the matching template suffix (e.g., "unser-kaese"), then link them in the navigation menu.
 
 ## Product Page (main-product.liquid enhancements)
 4 custom block types added to Dawn's `sections/main-product.liquid`:

@@ -2023,3 +2023,230 @@ a.header__icon--account:focus {
     font-size: 11px;
   }
 }
+
+.disfruto-how-it-works__header,
+.disfruto-unser-kaese__header,
+.disfruto-makers-page__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.disfruto-how-it-works__eyebrow,
+.disfruto-unser-kaese__eyebrow,
+.disfruto-makers-page__eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--disfruto-dark-green);
+  margin-bottom: 12px;
+}
+
+.disfruto-how-it-works__title,
+.disfruto-unser-kaese__title,
+.disfruto-makers-page__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--disfruto-dark);
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.disfruto-how-it-works__subtitle,
+.disfruto-unser-kaese__subtitle,
+.disfruto-makers-page__subtitle {
+  font-size: 17px;
+  color: #6B6B6B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.disfruto-how-it-works__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.disfruto-how-it-works__step {
+  text-align: center;
+  padding: 40px 24px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #E8E8E3;
+}
+
+.disfruto-how-it-works__step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--disfruto-dark-green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.disfruto-how-it-works__step-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+  margin: 0 0 12px;
+}
+
+.disfruto-how-it-works__step-text {
+  font-size: 15px;
+  color: #6B6B6B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.disfruto-how-it-works__cta,
+.disfruto-unser-kaese__cta {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.disfruto-unser-kaese__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.disfruto-unser-kaese__feature {
+  text-align: center;
+  padding: 40px 24px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #E8E8E3;
+}
+
+.disfruto-unser-kaese__feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(30, 74, 71, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--disfruto-dark-green);
+}
+
+.disfruto-unser-kaese__feature-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+  margin: 0 0 12px;
+}
+
+.disfruto-unser-kaese__feature-text {
+  font-size: 15px;
+  color: #6B6B6B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.disfruto-makers-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.disfruto-makers-page__card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #E8E8E3;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.disfruto-makers-page__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.disfruto-makers-page__card-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.disfruto-makers-page__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.disfruto-makers-page__card-content {
+  padding: 24px;
+}
+
+.disfruto-makers-page__card-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--disfruto-dark);
+  margin: 0 0 4px;
+}
+
+.disfruto-makers-page__card-region {
+  font-size: 13px;
+  color: var(--disfruto-dark-green);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.disfruto-makers-page__card-text {
+  font-size: 15px;
+  color: #6B6B6B;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.disfruto-makers-page__card-specialty {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--disfruto-dark-green);
+  background: rgba(30, 74, 71, 0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+@media (max-width: 899px) {
+  .disfruto-how-it-works__steps,
+  .disfruto-unser-kaese__features,
+  .disfruto-makers-page__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .disfruto-how-it-works__title,
+  .disfruto-unser-kaese__title,
+  .disfruto-makers-page__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 599px) {
+  .disfruto-how-it-works__steps,
+  .disfruto-unser-kaese__features,
+  .disfruto-makers-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .disfruto-how-it-works__title,
+  .disfruto-unser-kaese__title,
+  .disfruto-makers-page__title {
+    font-size: 28px;
+  }
+}

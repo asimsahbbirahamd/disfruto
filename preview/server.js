@@ -98,10 +98,10 @@ const html = `<!DOCTYPE html>
             <img src="/assets/disfruto-logo.png" alt="Disfruto">
           </a>
           <nav class="preview-header__nav">
-            <a href="#cheeses">Unser Käse</a>
-            <a href="#story">So funktioniert's</a>
-            <a href="#maker">Käsemacher</a>
-            <a href="#why">FAQs</a>
+            <a href="/pages/unser-kaese">Unser Käse</a>
+            <a href="/pages/so-funktionierts">So funktioniert's</a>
+            <a href="/pages/kaesemacher">Käsemacher</a>
+            <a href="/pages/faqs">FAQs</a>
           </nav>
         </div>
         <div class="preview-header__right">
@@ -737,10 +737,10 @@ const productHtml = `<!DOCTYPE html>
         <div class="preview-header__left">
           <a href="/" class="preview-header__logo"><img src="/assets/disfruto-logo.png" alt="Disfruto" width="120" height="28"></a>
           <nav class="preview-header__nav">
-            <a href="/#cheeses">Unser Käse</a>
-            <a href="/#story">So funktioniert's</a>
-            <a href="/#maker">Käsemacher</a>
-            <a href="/#faq">FAQs</a>
+            <a href="/pages/unser-kaese">Unser Käse</a>
+            <a href="/pages/so-funktionierts">So funktioniert's</a>
+            <a href="/pages/kaesemacher">Käsemacher</a>
+            <a href="/pages/faqs">FAQs</a>
           </nav>
         </div>
         <div class="preview-header__right">
@@ -961,6 +961,376 @@ const productHtml = `<!DOCTYPE html>
 </body>
 </html>`;
 
+function buildPageHtml(title, bodyContent) {
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title} — Disfruto</title>
+  <link rel="stylesheet" href="/assets/disfruto.css">
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; background: var(--disfruto-cream); color: var(--disfruto-dark); }
+    .preview-announcement { background: var(--disfruto-dark); color: white; text-align: center; padding: 10px 16px; font-size: 14px; }
+    .preview-announcement a { color: #3dbdb5; font-weight: 600; }
+    .preview-header { background: white; border-bottom: 1px solid #E8E8E3; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .preview-header__inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; height: 64px; }
+    .preview-header__left { display: flex; align-items: center; gap: 40px; }
+    .preview-header__logo img { height: 28px; width: auto; }
+    .preview-header__nav { display: flex; gap: 28px; }
+    .preview-header__nav a { text-decoration: none; color: var(--disfruto-dark); font-size: 15px; font-weight: 500; }
+    .preview-header__nav a:hover { color: var(--disfruto-dark-green); }
+    .preview-header__right { display: flex; align-items: center; gap: 16px; }
+    .preview-header__login { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--disfruto-dark); font-size: 14px; }
+    .preview-header__cta { background: var(--disfruto-dark-green); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .preview-header__flag { font-size: 22px; }
+    .page-hero { background: white; padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid #E8E8E3; }
+    .page-hero h1 { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: var(--disfruto-dark); margin: 0 0 12px; }
+    .page-hero p { font-size: 17px; color: #6B6B6B; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .preview-footer { background: #F5F5F0; border-top: 1px solid #E8E8E3; padding: 48px 24px 0; }
+    .preview-footer__inner { max-width: 1200px; margin: 0 auto; }
+    .preview-footer__grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+    .preview-footer__brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 24px; color: var(--disfruto-dark); letter-spacing: -0.5px; }
+    .preview-footer h4 { font-size: 14px; font-weight: 600; color: var(--disfruto-dark); margin: 0 0 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .preview-footer ul { list-style: none; padding: 0; margin: 0; }
+    .preview-footer ul li { margin-bottom: 8px; }
+    .preview-footer ul a { text-decoration: none; color: #6B6B6B; font-size: 14px; }
+    .preview-footer ul a:hover { color: var(--disfruto-dark-green); }
+    .preview-footer__newsletter-desc { font-size: 14px; color: #6B6B6B; margin: 0 0 12px; line-height: 1.5; }
+    .preview-footer__newsletter-form { display: flex; gap: 8px; }
+    .preview-footer__newsletter-input { flex: 1; padding: 10px 14px; border: 1px solid #D0D0CB; border-radius: 8px; font-size: 14px; background: white; outline: none; }
+    .preview-footer__newsletter-btn { background: var(--disfruto-dark-green); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
+    .preview-footer__social { display: flex; gap: 12px; }
+    .preview-footer__social a { color: #6B6B6B; transition: color 0.2s; }
+    .preview-footer__social a:hover { color: var(--disfruto-dark-green); }
+    .preview-footer__bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 1px solid #E8E8E3; font-size: 13px; color: #999; }
+    .preview-footer__bottom a { color: #999; text-decoration: none; margin-left: 20px; }
+    .preview-footer__bottom a:hover { color: var(--disfruto-dark-green); }
+    @media (max-width: 899px) { .preview-footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 549px) { .preview-footer__grid { grid-template-columns: 1fr; } .preview-header__nav { display: none; } }
+  </style>
+</head>
+<body>
+  <div class="preview-announcement">Dein 1. Käse Genuss Set <a href="#">gratis</a> — Nur für kurze Zeit!</div>
+  <header class="preview-header">
+    <div class="preview-header__inner">
+      <div class="preview-header__left">
+        <a href="/" class="preview-header__logo"><img src="/assets/disfruto-logo.png" alt="Disfruto"></a>
+        <nav class="preview-header__nav">
+          <a href="/pages/unser-kaese">Unser Käse</a>
+          <a href="/pages/so-funktionierts">So funktioniert's</a>
+          <a href="/pages/kaesemacher">Käsemacher</a>
+          <a href="/pages/faqs">FAQs</a>
+        </nav>
+      </div>
+      <div class="preview-header__right">
+        <a href="#" class="preview-header__login"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Login</a>
+        <a href="/product" class="preview-header__cta">GENUSS SET WÄHLEN</a>
+        <span class="preview-header__flag">🇩🇪</span>
+      </div>
+    </div>
+  </header>
+  <main>${bodyContent}</main>
+  <footer class="preview-footer">
+    <div class="preview-footer__inner">
+      <div class="preview-footer__grid">
+        <div><div class="preview-footer__brand">disfruto</div></div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="preview-footer__newsletter-desc">Neue Sorten, Käsereien & Genuss-Tipps direkt ins Postfach.</p>
+          <form class="preview-footer__newsletter-form" onsubmit="return false;">
+            <input type="email" class="preview-footer__newsletter-input" placeholder="E-Mail-Adresse">
+            <button type="submit" class="preview-footer__newsletter-btn">Anmelden</button>
+          </form>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <div class="preview-footer__social">
+            <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:support@disfruto.de">support@disfruto.de</a></li>
+            <li><a href="#">Kontaktformular</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="preview-footer__bottom">
+        <span>&copy; 2026 disfruto</span>
+        <div>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
+          <a href="#">Impressum</a>
+          <a href="#">Cookie-Einstellungen</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>`;
+}
+
+const unseresKaeseBody = `
+  <div class="page-hero">
+    <h1>Unser Käse</h1>
+    <p>Handverlesene Käse-Spezialitäten von den besten Hofkäsereien Europas — kuratiert für echten Genuss.</p>
+  </div>
+  <section class="disfruto-section disfruto-unser-kaese">
+    <div class="disfruto-container">
+      <div class="disfruto-unser-kaese__header">
+        <span class="disfruto-unser-kaese__eyebrow">Unsere Philosophie</span>
+        <h2 class="disfruto-unser-kaese__title">Käse mit Charakter</h2>
+        <p class="disfruto-unser-kaese__subtitle">Wir kuratieren die besten handwerklich hergestellten Käsesorten Europas — direkt von kleinen Hofkäsereien zu dir nach Hause in Berlin.</p>
+      </div>
+      <div class="disfruto-unser-kaese__features">
+        <div class="disfruto-unser-kaese__feature">
+          <div class="disfruto-unser-kaese__feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 13"/></svg>
+          </div>
+          <h3 class="disfruto-unser-kaese__feature-title">Handwerklich hergestellt</h3>
+          <p class="disfruto-unser-kaese__feature-text">Jeder Käse wird von erfahrenen Käsemachern in Handarbeit produziert — keine industrielle Massenware, sondern echtes Handwerk mit Tradition.</p>
+        </div>
+        <div class="disfruto-unser-kaese__feature">
+          <div class="disfruto-unser-kaese__feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <h3 class="disfruto-unser-kaese__feature-title">Natürlich & nachhaltig</h3>
+          <p class="disfruto-unser-kaese__feature-text">Unsere Partner setzen auf natürliche Zutaten, artgerechte Tierhaltung und nachhaltige Produktionsmethoden. Guter Käse braucht gute Milch.</p>
+        </div>
+        <div class="disfruto-unser-kaese__feature">
+          <div class="disfruto-unser-kaese__feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          </div>
+          <h3 class="disfruto-unser-kaese__feature-title">Frisch geliefert</h3>
+          <p class="disfruto-unser-kaese__feature-text">Von der Käserei direkt an deine Tür in Berlin — gekühlt und frisch, donnerstags bis sonntags. Kostenlos für alle Abonnenten.</p>
+        </div>
+      </div>
+      <div class="disfruto-unser-kaese__cta">
+        <a href="/product" class="disfruto-btn disfruto-btn--warm">Genuss Set wählen</a>
+      </div>
+    </div>
+  </section>
+  <section class="disfruto-section disfruto-cheeses">
+    <div class="disfruto-container">
+      <div class="disfruto-cheeses__header">
+        <span class="disfruto-cheeses__eyebrow">Aktuelle Auswahl</span>
+        <h2 class="disfruto-cheeses__title">Unsere Käse-Sorten</h2>
+        <p class="disfruto-cheeses__subtitle">Handverlesene Sorten von den besten Käsemachern Europas</p>
+      </div>
+    </div>
+    <div class="disfruto-cheeses__slider-wrap">
+      <div class="disfruto-container">
+        <div class="disfruto-cheeses__grid">
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
+              </div>
+            </div>
+            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Alpiner Bergkäse</h3><p class="disfruto-cheese-card__origin">Allgäu, Deutschland</p><p class="disfruto-cheese-card__desc">18 Monate gereift, kräftig-nussig</p></div>
+          </div>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
+              </div>
+            </div>
+            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Normandie Camembert</h3><p class="disfruto-cheese-card__origin">Normandie, Frankreich</p><p class="disfruto-cheese-card__desc">Cremig-mild mit Weißschimmelrinde</p></div>
+          </div>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
+              </div>
+            </div>
+            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Piemonteser Ziegenkäse</h3><p class="disfruto-cheese-card__origin">Piemont, Italien</p><p class="disfruto-cheese-card__desc">Frisch & zitronig, leicht cremig</p></div>
+          </div>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
+              </div>
+            </div>
+            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Nordfriesischer Deichkäse</h3><p class="disfruto-cheese-card__origin">Nordfriesland, Deutschland</p><p class="disfruto-cheese-card__desc">Salzwiesen-Aroma, buttrig-mild</p></div>
+          </div>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
+              </div>
+            </div>
+            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Roquefort Prestige</h3><p class="disfruto-cheese-card__origin">Aveyron, Frankreich</p><p class="disfruto-cheese-card__desc">Intensiv-würziger Blauschimmelkäse</p></div>
+          </div>
+          <div class="disfruto-cheese-card">
+            <div class="disfruto-cheese-card__image">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
+              </div>
+            </div>
+            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Tiroler Graukäse</h3><p class="disfruto-cheese-card__origin">Tirol, Österreich</p><p class="disfruto-cheese-card__desc">Fettarm, säuerlich-pikant, traditionell</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+const soFunktioniertsBody = `
+  <div class="page-hero">
+    <h1>So funktioniert's</h1>
+    <p>In nur drei Schritten zu deinem persönlichen Käse-Erlebnis — kuratiert, geliefert, genossen.</p>
+  </div>
+  <section class="disfruto-section disfruto-how-it-works">
+    <div class="disfruto-container">
+      <div class="disfruto-how-it-works__steps">
+        <div class="disfruto-how-it-works__step">
+          <div class="disfruto-how-it-works__step-number">1</div>
+          <h3 class="disfruto-how-it-works__step-title">Genuss Set wählen</h3>
+          <p class="disfruto-how-it-works__step-text">Wähle zwischen unserem Klassik oder Premium Set — je nach deinem Geschmack und Appetit. Beide Sets werden von unseren Käse-Experten sorgfältig zusammengestellt.</p>
+        </div>
+        <div class="disfruto-how-it-works__step">
+          <div class="disfruto-how-it-works__step-number">2</div>
+          <h3 class="disfruto-how-it-works__step-title">Lieferrhythmus bestimmen</h3>
+          <p class="disfruto-how-it-works__step-text">Entscheide, ob du alle 2 oder alle 4 Wochen beliefert werden möchtest. Wähle deinen bevorzugten Liefertag (Do–So). Flexibel änderbar, jederzeit pausierbar.</p>
+        </div>
+        <div class="disfruto-how-it-works__step">
+          <div class="disfruto-how-it-works__step-number">3</div>
+          <h3 class="disfruto-how-it-works__step-title">Genießen & entdecken</h3>
+          <p class="disfruto-how-it-works__step-text">Deine kuratierte Käse-Box kommt frisch an deine Tür in Berlin. Mit Tasting Notes, Herkunftsgeschichten und Genuss-Tipps zu jeder Sorte.</p>
+        </div>
+      </div>
+      <div class="disfruto-how-it-works__cta">
+        <a href="/product" class="disfruto-btn disfruto-btn--warm">Genuss Set wählen</a>
+      </div>
+    </div>
+  </section>
+  <section class="disfruto-section disfruto-story">
+    <div class="disfruto-container">
+      <div class="disfruto-story__grid">
+        <div class="disfruto-story__image">
+          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:400px;">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><rect x="15" y="25" width="70" height="50" rx="8" fill="#C4A882" opacity="0.3"/><text x="50" y="55" text-anchor="middle" fill="#1E4A47" font-family="Georgia" font-size="12">Käse Auswahl</text></svg>
+          </div>
+        </div>
+        <div class="disfruto-story__content">
+          <span class="disfruto-story__eyebrow">Unser Konzept</span>
+          <h2 class="disfruto-story__title">Käse mit Charakter. Bewusst ausgewählt.</h2>
+          <p class="disfruto-story__text">Jede Box ist eine Reise durch die besten Käsereien Europas. Wir wählen handwerklich hergestellte Käsesorten aus, die du in keinem Supermarkt findest — direkt zu dir nach Hause in Berlin.</p>
+          <a href="/product" class="disfruto-btn disfruto-btn--warm">Mehr erfahren</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="disfruto-section disfruto-faq">
+    <div class="disfruto-container">
+      <div class="disfruto-faq__header">
+        <span class="disfruto-faq__eyebrow">Noch Fragen?</span>
+        <h2 class="disfruto-faq__title">Häufige Fragen zum Ablauf</h2>
+      </div>
+      <div class="disfruto-faq__list">
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Wie oft wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Du kannst zwischen zwei Lieferintervallen wählen: alle 2 Wochen oder alle 4 Wochen. Dein Abo kannst du jederzeit anpassen.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">An welchen Tagen wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Wir liefern donnerstags bis sonntags in ganz Berlin. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Kann ich mein Abo pausieren?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten.</p></div></details>
+      </div>
+    </div>
+  </section>`;
+
+const kaesemacherBody = `
+  <div class="page-hero">
+    <h1>Käsemacher</h1>
+    <p>Wir arbeiten mit den besten handwerklichen Käsereien Europas zusammen. Jeder Käsemacher steht für Tradition, Qualität und Hingabe.</p>
+  </div>
+  <section class="disfruto-section disfruto-makers-page">
+    <div class="disfruto-container">
+      <div class="disfruto-makers-page__grid">
+        <div class="disfruto-makers-page__card">
+          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
+          <div class="disfruto-makers-page__card-content">
+            <h3 class="disfruto-makers-page__card-name">Familie Schönberg</h3>
+            <span class="disfruto-makers-page__card-region">Nordfriesland, Deutschland</span>
+            <p class="disfruto-makers-page__card-text">Seit drei Generationen stellt Familie Schönberg auf ihrer kleinen Hofkäserei in Nordfriesland handwerklichen Käse her. Ihre Kühe grasen auf den salzigen Weiden der Nordseeküste.</p>
+            <span class="disfruto-makers-page__card-specialty">Spezialität: Nordfriesischer Deichkäse</span>
+          </div>
+        </div>
+        <div class="disfruto-makers-page__card">
+          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
+          <div class="disfruto-makers-page__card-content">
+            <h3 class="disfruto-makers-page__card-name">Pierre & Claire Dubois</h3>
+            <span class="disfruto-makers-page__card-region">Auvergne, Frankreich</span>
+            <p class="disfruto-makers-page__card-text">In den vulkanischen Highlands der Auvergne reifen die Käse von Pierre und Claire in natürlichen Höhlen. Ihre Methoden sind seit 150 Jahren unverändert.</p>
+            <span class="disfruto-makers-page__card-specialty">Spezialität: Höhlen-gereifter Blauschimmel</span>
+          </div>
+        </div>
+        <div class="disfruto-makers-page__card">
+          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
+          <div class="disfruto-makers-page__card-content">
+            <h3 class="disfruto-makers-page__card-name">Marco Benedetti</h3>
+            <span class="disfruto-makers-page__card-region">Piemont, Italien</span>
+            <p class="disfruto-makers-page__card-text">Marco Benedetti pflegt die piemontesische Käsetradition mit Milch von seinen eigenen Ziegen. Jeder Laib wird von Hand geformt und mindestens 6 Monate gereift.</p>
+            <span class="disfruto-makers-page__card-specialty">Spezialität: Piemonteser Ziegenkäse</span>
+          </div>
+        </div>
+        <div class="disfruto-makers-page__card">
+          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
+          <div class="disfruto-makers-page__card-content">
+            <h3 class="disfruto-makers-page__card-name">Heidi & Thomas Berger</h3>
+            <span class="disfruto-makers-page__card-region">Allgäu, Deutschland</span>
+            <p class="disfruto-makers-page__card-text">Auf 1.200 Meter Höhe im Allgäu produzieren Heidi und Thomas ihren berühmten Bergkäse. Nur Heumilch von ihren eigenen Kühen, gereift in den kühlen Kellern ihrer Alpe.</p>
+            <span class="disfruto-makers-page__card-specialty">Spezialität: Allgäuer Bergkäse</span>
+          </div>
+        </div>
+        <div class="disfruto-makers-page__card">
+          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
+          <div class="disfruto-makers-page__card-content">
+            <h3 class="disfruto-makers-page__card-name">Anke van der Berg</h3>
+            <span class="disfruto-makers-page__card-region">Gouda, Niederlande</span>
+            <p class="disfruto-makers-page__card-text">Anke führt eine der letzten traditionellen Boerenkaas-Käsereien in der Region Gouda. Ihr Käse wird ausschließlich aus roher Weidemilch hergestellt und bis zu 36 Monate gereift.</p>
+            <span class="disfruto-makers-page__card-specialty">Spezialität: Boerenkaas Gouda</span>
+          </div>
+        </div>
+        <div class="disfruto-makers-page__card">
+          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
+          <div class="disfruto-makers-page__card-content">
+            <h3 class="disfruto-makers-page__card-name">Josef & Anna Gruber</h3>
+            <span class="disfruto-makers-page__card-region">Tirol, Österreich</span>
+            <p class="disfruto-makers-page__card-text">Im Herzen Tirols stellt Familie Gruber traditionellen Graukäse her — einen der ältesten Käse der Alpenregion. Fettarm, charakterstark und unverwechselbar im Geschmack.</p>
+            <span class="disfruto-makers-page__card-specialty">Spezialität: Tiroler Graukäse</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+const faqsBody = `
+  <div class="page-hero">
+    <h1>FAQs</h1>
+    <p>Hier findest du Antworten auf die häufigsten Fragen rund um Disfruto.</p>
+  </div>
+  <section id="faq" class="disfruto-section disfruto-faq">
+    <div class="disfruto-container">
+      <div class="disfruto-faq__list">
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Was ist Disfruto?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Disfruto ist ein Käse-Abonnement, das dir kuratierte Käse-Spezialitäten direkt an die Tür in Berlin liefert. Jede Box enthält handverlesene Sorten von den besten Käsemachern Europas.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Wie oft wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Du kannst zwischen zwei Lieferintervallen wählen: alle 2 Wochen oder alle 4 Wochen. Dein Abo kannst du jederzeit anpassen.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">An welchen Tagen wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Wir liefern donnerstags bis sonntags in ganz Berlin. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Kann ich mein Abo pausieren oder kündigen?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Liefert ihr auch außerhalb von Berlin?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Aktuell liefern wir nur innerhalb Berlins, um die Frische und Qualität unserer Käse-Spezialitäten zu garantieren. Eine Expansion ist geplant.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Ist die Lieferung kostenlos?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja, die Lieferung ist für alle Abonnenten in Berlin komplett kostenlos — egal ob du alle 2 oder alle 4 Wochen bestellst.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Was ist im Genuss Set enthalten?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Jedes Genuss Set enthält 3–5 handverlesene Käsesorten (je nach Klassik oder Premium), dazu Tasting Notes mit Herkunftsgeschichten, Genuss-Tipps und passenden Begleitern.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Wie werden die Käse transportiert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Alle Käse werden in einer gekühlten, nachhaltigen Verpackung geliefert, damit sie frisch und in perfektem Zustand bei dir ankommen.</p></div></details>
+        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Kann ich ein Abo verschenken?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja! Unser Geschenkabo ist das perfekte Geschenk für Käseliebhaber. Du wählst die Laufzeit, wir kümmern uns um den Rest.</p></div></details>
+      </div>
+    </div>
+  </section>`;
+
+const pageHtmlMap = {
+  'unser-kaese': buildPageHtml('Unser Käse', unseresKaeseBody),
+  'so-funktionierts': buildPageHtml("So funktioniert's", soFunktioniertsBody),
+  'kaesemacher': buildPageHtml('Käsemacher', kaesemacherBody),
+  'faqs': buildPageHtml('FAQs', faqsBody),
+};
+
 const server = http.createServer((req, res) => {
   if (req.url.startsWith('/assets/')) {
     const filePath = path.join(__dirname, '..', req.url);
@@ -972,6 +1342,12 @@ const server = http.createServer((req, res) => {
       res.end(file);
       return;
     }
+  }
+  const pageMatch = req.url.match(/^\/pages\/([a-z-]+)/);
+  if (pageMatch && pageHtmlMap[pageMatch[1]]) {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.end(pageHtmlMap[pageMatch[1]]);
+    return;
   }
   if (req.url === '/product' || req.url.startsWith('/product?') || req.url.startsWith('/products/')) {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
