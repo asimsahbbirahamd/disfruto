@@ -2567,7 +2567,8 @@ a.header__icon--account:focus {
 .disfruto-km__container {
   max-width: 780px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  padding: 0 24px;
 }
 
 .disfruto-km__eyebrow {
@@ -2576,29 +2577,34 @@ a.header__icon--account:focus {
   font-weight: 600 !important;
   letter-spacing: 2.5px !important;
   text-transform: uppercase;
-  color: #6B6B6B !important;
-  margin: 0 0 16px !important;
+  color: #888 !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
 .disfruto-km__name {
   font-family: 'Inter', sans-serif !important;
-  font-size: 48px !important;
+  font-size: 42px !important;
   font-weight: 700 !important;
   color: var(--disfruto-dark) !important;
   margin: 0 0 8px !important;
-  letter-spacing: -1px !important;
-  line-height: 1.1 !important;
+  padding: 0 !important;
+  letter-spacing: -0.5px !important;
+  line-height: 1.15 !important;
+  text-align: left !important;
 }
 
 .disfruto-km__subtitle {
   font-size: 16px !important;
-  color: #6B6B6B !important;
-  margin: 0 0 40px !important;
+  color: #888 !important;
+  margin: 0 0 32px !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
 .disfruto-km__portrait {
-  margin: 0 0 48px;
-  border-radius: 12px;
+  margin: 0 0 40px;
   overflow: hidden;
 }
 
@@ -2613,46 +2619,50 @@ a.header__icon--account:focus {
 .disfruto-km__body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 36px;
   text-align: left;
-  margin: 0 0 48px;
+  margin: 0 0 40px;
 }
 
 .disfruto-km__col p {
-  font-size: 15px !important;
-  color: #444 !important;
-  line-height: 1.75 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  color: #555 !important;
+  line-height: 1.8 !important;
   margin: 0 !important;
+  padding: 0 !important;
 }
 
 .disfruto-km__quote {
   border-top: 1px solid #E0E0DC;
   margin: 0;
-  padding: 32px 0 0;
+  padding: 28px 0 0;
   text-align: left;
 }
 
 .disfruto-km__quote p {
-  font-size: 16px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
   font-style: italic;
   color: var(--disfruto-dark) !important;
   line-height: 1.7 !important;
   margin: 0 !important;
+  padding: 0 !important;
   font-weight: 500 !important;
 }
 
 .disfruto-km-cta {
-  padding: 48px 0 72px;
-  background: #F5F5F0;
+  padding: 56px 0 72px;
   text-align: center;
 }
 
 .disfruto-km-cta__title {
   font-family: 'Inter', sans-serif !important;
-  font-size: 32px !important;
+  font-size: 28px !important;
   font-weight: 700 !important;
   color: var(--disfruto-dark) !important;
-  margin: 0 0 24px !important;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
 }
 
 .disfruto-km-cta__btn {
@@ -2664,7 +2674,7 @@ a.header__icon--account:focus {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 16px 36px;
+  padding: 14px 32px;
   border-radius: 50px;
   text-decoration: none;
   transition: background 0.2s;
@@ -2676,11 +2686,11 @@ a.header__icon--account:focus {
 
 @media (max-width: 767px) {
   .disfruto-km__name {
-    font-size: 36px !important;
+    font-size: 34px !important;
   }
 
   .disfruto-km__body {
-    gap: 28px;
+    gap: 24px;
   }
 
   .disfruto-km-hero__img {
@@ -2690,12 +2700,12 @@ a.header__icon--account:focus {
 
 @media (max-width: 599px) {
   .disfruto-km__name {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
 
   .disfruto-km__body {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .disfruto-km-hero__img {
@@ -2703,7 +2713,7 @@ a.header__icon--account:focus {
   }
 
   .disfruto-km-cta__title {
-    font-size: 26px !important;
+    font-size: 24px !important;
   }
 }
 
