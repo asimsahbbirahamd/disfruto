@@ -917,22 +917,16 @@
 .disfruto-why__item {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
-  padding: 32px 28px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
+  gap: 28px;
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
-  margin-bottom: 4px;
-}
-
-.disfruto-why__item:hover {
-  background: rgba(255,255,255,0.04);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .disfruto-why__item:first-child {
-  border-top: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .disfruto-why__item.is-visible {
@@ -977,19 +971,31 @@
 }
 
 .disfruto-why__number {
-  display: none;
+  font-family: var(--disfruto-font-heading);
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(61,189,181,0.3);
+  flex-shrink: 0;
+  min-width: 56px;
+  transition: color 0.4s ease;
+  user-select: none;
+}
+
+.disfruto-why__item:hover .disfruto-why__number {
+  color: rgba(61,189,181,0.55);
 }
 
 .disfruto-why__item-content {
   flex: 1;
-  padding-top: 2px;
+  padding-top: 8px;
 }
 
 .disfruto-why__item-title {
   font-family: var(--disfruto-font-heading);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   color: var(--disfruto-white);
   transition: color 0.3s ease;
 }
@@ -1000,8 +1006,8 @@
 
 .disfruto-why__item-text {
   font-size: 14px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  color: rgba(255,255,255,0.5);
   margin: 0;
   max-width: 420px;
 }
@@ -1082,25 +1088,19 @@
     font-size: 12px;
   }
   .disfruto-why__item {
-    gap: 16px;
-    padding: 20px 16px;
+    gap: 18px;
+    padding: 24px 0;
   }
-  .disfruto-why__icon {
-    width: 40px;
-    height: 40px;
+  .disfruto-why__number {
+    font-size: 36px;
     min-width: 40px;
-    border-radius: 10px;
-  }
-  .disfruto-why__icon svg {
-    width: 18px;
-    height: 18px;
   }
   .disfruto-why__item-content {
-    padding-top: 0;
+    padding-top: 4px;
   }
   .disfruto-why__item-title {
-    font-size: 16px;
-    margin-bottom: 6px;
+    font-size: 17px;
+    margin-bottom: 8px;
   }
   .disfruto-why__item-text {
     font-size: 13px;
@@ -1116,20 +1116,15 @@
     font-size: 24px;
   }
   .disfruto-why__item {
-    gap: 12px;
-    padding: 16px 12px;
+    gap: 14px;
+    padding: 20px 0;
   }
-  .disfruto-why__icon {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-  }
-  .disfruto-why__icon svg {
-    width: 16px;
-    height: 16px;
+  .disfruto-why__number {
+    font-size: 30px;
+    min-width: 34px;
   }
   .disfruto-why__item-title {
-    font-size: 15px;
+    font-size: 16px;
   }
   .disfruto-why__item-text {
     font-size: 12.5px;
