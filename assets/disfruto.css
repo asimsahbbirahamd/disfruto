@@ -2573,38 +2573,40 @@ a.header__icon--account:focus {
 
 .disfruto-km__eyebrow {
   display: block;
+  font-family: 'Inter', sans-serif !important;
   font-size: 11px !important;
   font-weight: 600 !important;
-  letter-spacing: 2.5px !important;
+  letter-spacing: 3px !important;
   text-transform: uppercase;
-  color: #888 !important;
-  margin: 0 0 12px !important;
+  color: #999 !important;
+  margin: 0 0 10px !important;
   padding: 0 !important;
   text-align: left !important;
 }
 
 .disfruto-km__name {
   font-family: 'Inter', sans-serif !important;
-  font-size: 42px !important;
+  font-size: 52px !important;
   font-weight: 700 !important;
   color: var(--disfruto-dark) !important;
-  margin: 0 0 8px !important;
+  margin: 0 0 6px !important;
   padding: 0 !important;
-  letter-spacing: -0.5px !important;
-  line-height: 1.15 !important;
+  letter-spacing: -1px !important;
+  line-height: 1.1 !important;
   text-align: left !important;
 }
 
 .disfruto-km__subtitle {
-  font-size: 16px !important;
-  color: #888 !important;
-  margin: 0 0 32px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  color: #999 !important;
+  margin: 0 0 36px !important;
   padding: 0 !important;
   text-align: left !important;
 }
 
 .disfruto-km__portrait {
-  margin: 0 0 40px;
+  margin: 0 0 44px;
   overflow: hidden;
 }
 
@@ -2621,7 +2623,7 @@ a.header__icon--account:focus {
   grid-template-columns: 1fr 1fr;
   gap: 36px;
   text-align: left;
-  margin: 0 0 40px;
+  margin: 0 0 44px;
 }
 
 .disfruto-km__col p {
@@ -2634,9 +2636,10 @@ a.header__icon--account:focus {
 }
 
 .disfruto-km__quote {
-  border-top: 1px solid #E0E0DC;
+  border-top: none;
+  border-left: 3px solid #D0D0CB;
   margin: 0;
-  padding: 28px 0 0;
+  padding: 0 0 0 24px;
   text-align: left;
 }
 
@@ -2645,14 +2648,14 @@ a.header__icon--account:focus {
   font-size: 15px !important;
   font-style: italic;
   color: var(--disfruto-dark) !important;
-  line-height: 1.7 !important;
+  line-height: 1.75 !important;
   margin: 0 !important;
   padding: 0 !important;
   font-weight: 500 !important;
 }
 
 .disfruto-km-cta {
-  padding: 56px 0 72px;
+  padding: 64px 0 80px;
   text-align: center;
 }
 
@@ -2686,7 +2689,7 @@ a.header__icon--account:focus {
 
 @media (max-width: 767px) {
   .disfruto-km__name {
-    font-size: 34px !important;
+    font-size: 38px !important;
   }
 
   .disfruto-km__body {
@@ -2700,7 +2703,7 @@ a.header__icon--account:focus {
 
 @media (max-width: 599px) {
   .disfruto-km__name {
-    font-size: 28px !important;
+    font-size: 32px !important;
   }
 
   .disfruto-km__body {
