@@ -73,8 +73,8 @@
           "settings": {
             "image": "shopify://shop_images/disfruto-hero.png",
             "name": "Käse Name",
-            "description": "Beschreibung des Käses",
-            "tag": "",
+            "description": "Beschreibung des Käses, this is dummy content so you can balance whatever it is.",
+            "tag": "TGAINAHG",
             "profile_milk": "Kuhmilch",
             "profile_texture": "Cremig",
             "profile_intensity": 3,
