@@ -443,41 +443,48 @@ const html = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Why Disfruto — Editorial Layout -->
+  <!-- Why Disfruto — Creative Editorial -->
   <section id="why" class="disfruto-section disfruto-why">
     <div class="disfruto-container">
       <div class="disfruto-why__layout">
-        <div class="disfruto-why__manifesto">
+        <div class="disfruto-why__manifesto is-visible">
           <span class="disfruto-why__eyebrow">Warum Disfruto</span>
           <h2 class="disfruto-why__title">Käse, der Geschichten erzählt</h2>
           <p class="disfruto-why__statement">Wir glauben, dass großartiger Käse mehr ist als ein Lebensmittel. Er ist Ausdruck von Handwerk, Terroir und der Leidenschaft der Menschen, die ihn herstellen. Disfruto bringt diese Geschichten direkt zu dir nach Hause — kuratiert, authentisch und immer aus den besten Käsereien Europas.</p>
           <a href="#" class="disfruto-btn disfruto-btn--outline">Unsere Geschichte entdecken</a>
         </div>
-        <div class="disfruto-why__divider" aria-hidden="true"></div>
         <div class="disfruto-why__benefits">
-          <div class="disfruto-why__item">
-            <span class="disfruto-why__number">01</span>
+          <div class="disfruto-why__item is-visible">
+            <div class="disfruto-why__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
             <div class="disfruto-why__item-content">
               <h3 class="disfruto-why__item-title">Vom Hof auf deinen Tisch</h3>
               <p class="disfruto-why__item-text">Jeder Käse erzählt seine Geschichte — vom Deichkäse Alt aus Nordfriesland bis zum cremigen Friesisch Blue. Du erfährst, wer ihn macht, woher die Milch stammt und wie er gereift wurde.</p>
             </div>
           </div>
-          <div class="disfruto-why__item">
-            <span class="disfruto-why__number">02</span>
+          <div class="disfruto-why__item is-visible">
+            <div class="disfruto-why__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
             <div class="disfruto-why__item-content">
               <h3 class="disfruto-why__item-title">Generationen von Handwerk</h3>
               <p class="disfruto-why__item-text">Wir arbeiten mit Käsereien, die ihr Handwerk über Generationen perfektioniert haben. Keine Massenproduktion — nur Tradition, Sorgfalt und echte Leidenschaft für Käse.</p>
             </div>
           </div>
-          <div class="disfruto-why__item">
-            <span class="disfruto-why__number">03</span>
+          <div class="disfruto-why__item is-visible">
+            <div class="disfruto-why__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
             <div class="disfruto-why__item-content">
               <h3 class="disfruto-why__item-title">Jede Box eine Entdeckung</h3>
               <p class="disfruto-why__item-text">Von kräftigem Hartkäse über milden Weichkäse bis zu edlem Blauschimmel — jede Box ist eine sorgfältig komponierte Reise durch Geschmack, Textur und Reife.</p>
             </div>
           </div>
-          <div class="disfruto-why__item">
-            <span class="disfruto-why__number">04</span>
+          <div class="disfruto-why__item is-visible">
+            <div class="disfruto-why__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
             <div class="disfruto-why__item-content">
               <h3 class="disfruto-why__item-title">Berlin, kostenlos geliefert</h3>
               <p class="disfruto-why__item-text">Donnerstag bis Sonntag direkt an deine Tür — alle 2 oder 4 Wochen, immer versandkostenfrei. Pausiere, überspringe oder kündige jederzeit.</p>
