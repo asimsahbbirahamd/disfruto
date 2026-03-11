@@ -987,37 +987,37 @@ function buildPageHtml(title, bodyContent) {
     .page-hero { background: white; padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid #E8E8E3; }
     .page-hero h1 { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: var(--disfruto-dark); margin: 0 0 12px; }
     .page-hero p { font-size: 17px; color: #6B6B6B; max-width: 600px; margin: 0 auto; line-height: 1.6; }
-    .disfruto-unser-kaese { padding: 56px 0 64px; }
-    .disfruto-uk__grid { display: grid; grid-template-columns: 5fr 6fr; gap: 64px; align-items: start; }
+    .disfruto-unser-kaese { padding: 48px 0 56px; }
+    .disfruto-uk__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; max-width: 960px; margin: 0 auto; }
     .disfruto-uk__left { min-width: 0; }
-    .disfruto-uk__image { border-radius: 14px; overflow: hidden; background: #F0EBE1; }
-    .disfruto-uk__image img { width: 100%; height: auto; display: block; }
-    .disfruto-uk__image-placeholder { width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #EDEDE8 0%, #E2E0D8 100%); border-radius: 14px; }
-    .disfruto-uk__image-caption { text-align: center; font-size: 12.5px; color: #A0A0A0; font-style: italic; margin: 10px 0 20px; letter-spacing: 0.2px; }
-    .disfruto-uk__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-    .disfruto-uk__stat { background: white; border: 1px solid #E8E8E3; border-radius: 10px; padding: 18px 12px; text-align: center; transition: border-color 0.2s; }
+    .disfruto-uk__image { border-radius: 16px; overflow: hidden; background: #F0EBE1; }
+    .disfruto-uk__image img { width: 100%; height: auto; display: block; border-radius: 16px; }
+    .disfruto-uk__image-placeholder { width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #EDEDE8 0%, #E2E0D8 100%); border-radius: 16px; }
+    .disfruto-uk__image-caption { text-align: center; font-size: 13px; color: #999; font-style: italic; margin: 12px 0 24px; }
+    .disfruto-uk__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .disfruto-uk__stat { background: white; border: 1px solid #E8E8E3; border-radius: 12px; padding: 20px 16px; text-align: center; transition: border-color 0.2s; }
     .disfruto-uk__stat:hover { border-color: #1E4A47; }
-    .disfruto-uk__stat-value { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #2D1A40; line-height: 1.15; }
-    .disfruto-uk__stat-label { font-size: 12px; color: #888; margin-top: 3px; line-height: 1.35; }
-    .disfruto-uk__price { text-align: center; padding-top: 4px; }
-    .disfruto-uk__price-amount { font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 700; color: #2D1A40; letter-spacing: -0.5px; }
-    .disfruto-uk__price-note { display: block; font-size: 12.5px; color: #A0A0A0; margin-top: 2px; }
-    .disfruto-uk__right { min-width: 0; padding-top: 4px; }
-    .disfruto-uk__heading { font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 700; color: #2D1A40; margin: 0 0 20px; line-height: 1.2; letter-spacing: -0.3px; }
-    .disfruto-uk__subheading { font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 700; color: #2D1A40; margin: 32px 0 14px; line-height: 1.25; letter-spacing: -0.2px; }
-    .disfruto-uk__bullets { display: flex; flex-direction: column; gap: 14px; }
-    .disfruto-uk__bullet { display: flex; gap: 14px; align-items: baseline; }
-    .disfruto-uk__bullet-dot { width: 7px; height: 7px; min-width: 7px; border-radius: 50%; background: #1E4A47; position: relative; top: -1px; }
+    .disfruto-uk__stat-value { font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 700; color: #2D1A40; line-height: 1.15; }
+    .disfruto-uk__stat-label { font-size: 13px; color: #777; margin-top: 4px; line-height: 1.35; }
+    .disfruto-uk__price { text-align: center; padding-top: 8px; }
+    .disfruto-uk__price-amount { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; letter-spacing: -0.5px; }
+    .disfruto-uk__price-note { display: block; font-size: 14px; color: #999; margin-top: 4px; }
+    .disfruto-uk__right { min-width: 0; }
+    .disfruto-uk__heading { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; margin: 0 0 24px; line-height: 1.15; letter-spacing: -0.5px; }
+    .disfruto-uk__subheading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 32px 0 16px; line-height: 1.2; letter-spacing: -0.3px; }
+    .disfruto-uk__bullets { display: flex; flex-direction: column; gap: 16px; }
+    .disfruto-uk__bullet { display: flex; gap: 12px; align-items: flex-start; }
+    .disfruto-uk__bullet-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: #1E4A47; margin-top: 7px; flex-shrink: 0; }
     .disfruto-uk__bullet-text { font-size: 15px; color: #555; line-height: 1.7; margin: 0; }
     .disfruto-uk__bullet-text strong { color: #2D1A40; font-weight: 600; }
-    .disfruto-uk__cta-banner { background: #1E4A47; text-align: center; padding: 56px 24px; }
-    .disfruto-uk__cta-title { font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 700; color: white; margin: 0 0 8px; letter-spacing: -0.3px; }
-    .disfruto-uk__cta-sub { font-size: 15px; color: rgba(255,255,255,0.7); margin: 0 0 24px; }
-    .disfruto-uk__cta-btn { display: inline-block; background: white; color: #2D1A40 !important; padding: 14px 36px; border-radius: 8px; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
-    .disfruto-uk__cta-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
-    @media (max-width: 999px) { .disfruto-uk__grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
-    @media (max-width: 799px) { .disfruto-uk__grid { grid-template-columns: 1fr; gap: 36px; } .disfruto-uk__left { max-width: 420px; margin: 0 auto; } .disfruto-uk__heading { font-size: 26px; } .disfruto-uk__subheading { font-size: 19px; } .disfruto-uk__cta-title { font-size: 24px; } .disfruto-unser-kaese { padding: 40px 0 48px; } }
-    @media (max-width: 599px) { .disfruto-uk__stats { gap: 8px; } .disfruto-uk__stat { padding: 14px 10px; } .disfruto-uk__stat-value { font-size: 22px; } .disfruto-uk__price-amount { font-size: 26px; } .disfruto-uk__heading { font-size: 24px; } .disfruto-uk__subheading { font-size: 18px; } .disfruto-uk__cta-title { font-size: 22px; } .disfruto-unser-kaese { padding: 32px 0 40px; } }
+    .disfruto-uk__cta-banner { background: #1E4A47; text-align: center; padding: 80px 24px; }
+    .disfruto-uk__cta-title { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: white; margin: 0 0 12px; letter-spacing: -0.5px; }
+    .disfruto-uk__cta-sub { font-size: 16px; color: rgba(255,255,255,0.65); margin: 0 0 32px; }
+    .disfruto-uk__cta-btn { display: inline-block; background: transparent; color: white !important; padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: 2px solid white; transition: background 0.2s, color 0.2s, transform 0.15s; }
+    .disfruto-uk__cta-btn:hover { background: white; color: #1E4A47 !important; transform: translateY(-1px); }
+    @media (max-width: 899px) { .disfruto-uk__grid { gap: 36px; } }
+    @media (max-width: 767px) { .disfruto-uk__grid { grid-template-columns: 1fr; gap: 32px; } .disfruto-uk__left { max-width: 420px; margin: 0 auto; } .disfruto-uk__heading { font-size: 28px; } .disfruto-uk__subheading { font-size: 20px; } .disfruto-uk__cta-title { font-size: 28px; } .disfruto-uk__cta-banner { padding: 56px 24px; } .disfruto-unser-kaese { padding: 36px 0 40px; } }
+    @media (max-width: 599px) { .disfruto-uk__stats { gap: 8px; } .disfruto-uk__stat { padding: 16px 10px; } .disfruto-uk__stat-value { font-size: 26px; } .disfruto-uk__price-amount { font-size: 30px; } .disfruto-uk__heading { font-size: 26px; } .disfruto-uk__subheading { font-size: 18px; } .disfruto-uk__cta-title { font-size: 24px; } .disfruto-unser-kaese { padding: 28px 0 32px; } }
     .preview-footer { background: #F5F5F0; border-top: 1px solid #E8E8E3; padding: 48px 24px 0; }
     .preview-footer__inner { max-width: 1200px; margin: 0 auto; }
     .preview-footer__grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
@@ -1110,9 +1110,7 @@ const unseresKaeseBody = `
       <div class="disfruto-uk__grid">
         <div class="disfruto-uk__left">
           <div class="disfruto-uk__image">
-            <div class="disfruto-uk__image-placeholder">
-              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" fill="#1E4A47" opacity="0.12"/><circle cx="30" cy="35" r="5" fill="#1E4A47" opacity="0.15"/><circle cx="48" cy="42" r="6" fill="#1E4A47" opacity="0.15"/><circle cx="38" cy="52" r="4" fill="#1E4A47" opacity="0.15"/></svg>
-            </div>
+            <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?w=800&h=600&fit=crop&q=80" alt="Kuratierte Käse-Auswahl – Beispiel einer Disfruto Lieferung" loading="lazy">
           </div>
           <p class="disfruto-uk__image-caption">Beispiel einer Lieferung. Zusammenstellung variiert.</p>
           <div class="disfruto-uk__stats">
