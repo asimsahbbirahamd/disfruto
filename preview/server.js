@@ -1019,6 +1019,19 @@ function buildPageHtml(title, bodyContent) {
     @media (max-width: 899px) { .disfruto-uk__grid { gap: 36px; } }
     @media (max-width: 767px) { .disfruto-uk__grid { grid-template-columns: 1fr; gap: 32px; } .disfruto-uk__left { max-width: 420px; margin: 0 auto; } .disfruto-uk__heading { font-size: 28px; } .disfruto-uk__subheading { font-size: 20px; } .disfruto-uk__cta-title { font-size: 28px; } .disfruto-uk__cta-banner { padding: 56px 24px; } .disfruto-unser-kaese { padding: 36px 0 40px; } }
     @media (max-width: 599px) { .disfruto-uk__stats { gap: 8px; } .disfruto-uk__stat { padding: 16px 10px; } .disfruto-uk__stat-value { font-size: 26px; } .disfruto-uk__price-amount { font-size: 30px; } .disfruto-uk__heading { font-size: 26px; } .disfruto-uk__subheading { font-size: 18px; } .disfruto-uk__cta-title { font-size: 24px; } .disfruto-unser-kaese { padding: 28px 0 32px; } }
+    .disfruto-sf { padding: 48px 0 64px; }
+    .disfruto-sf__title { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; text-align: center; margin: 0 0 56px; letter-spacing: -0.5px; }
+    .disfruto-sf__step { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 48px; max-width: 960px; margin-left: auto; margin-right: auto; }
+    .disfruto-sf__step--reverse { direction: rtl; }
+    .disfruto-sf__step--reverse > * { direction: ltr; }
+    .disfruto-sf__step-image { border-radius: 20px; overflow: hidden; }
+    .disfruto-sf__step-image img { width: 100%; height: auto; display: block; border-radius: 20px; }
+    .disfruto-sf__step-content { padding: 8px 0; }
+    .disfruto-sf__step-number { width: 36px; height: 36px; border-radius: 50%; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .disfruto-sf__step-heading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 0 0 12px; line-height: 1.25; letter-spacing: -0.3px; }
+    .disfruto-sf__step-text { font-size: 15px; color: #555; line-height: 1.7; margin: 0; }
+    @media (max-width: 767px) { .disfruto-sf__step { grid-template-columns: 1fr; gap: 24px; } .disfruto-sf__step--reverse { direction: ltr; } .disfruto-sf__step-image { max-width: 480px; } .disfruto-sf__title { font-size: 28px; margin-bottom: 40px; } }
+    @media (max-width: 599px) { .disfruto-sf__title { font-size: 24px; } .disfruto-sf__step-heading { font-size: 20px; } .disfruto-sf { padding: 32px 0 48px; } }
     .preview-footer { background: #F5F5F0; border-top: 1px solid #E8E8E3; padding: 48px 24px 0; }
     .preview-footer__inner { max-width: 1200px; margin: 0 auto; }
     .preview-footer__grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
@@ -1155,62 +1168,54 @@ const unseresKaeseBody = `
   </section>`;
 
 const soFunktioniertsBody = `
-  <div class="page-hero">
-    <h1>So funktioniert's</h1>
-    <p>In nur drei Schritten zu deinem persönlichen Käse-Erlebnis — kuratiert, geliefert, genossen.</p>
-  </div>
-  <section class="disfruto-section disfruto-how-it-works">
+  <section class="disfruto-section disfruto-sf">
     <div class="disfruto-container">
-      <div class="disfruto-how-it-works__steps">
-        <div class="disfruto-how-it-works__step">
-          <div class="disfruto-how-it-works__step-number">1</div>
-          <h3 class="disfruto-how-it-works__step-title">Genuss Set wählen</h3>
-          <p class="disfruto-how-it-works__step-text">Wähle zwischen unserem Klassik oder Premium Set — je nach deinem Geschmack und Appetit. Beide Sets werden von unseren Käse-Experten sorgfältig zusammengestellt.</p>
+      <h1 class="disfruto-sf__title">So funktioniert's</h1>
+
+      <div class="disfruto-sf__step">
+        <div class="disfruto-sf__step-image">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80" alt="Genuss Set auswählen" loading="lazy">
         </div>
-        <div class="disfruto-how-it-works__step">
-          <div class="disfruto-how-it-works__step-number">2</div>
-          <h3 class="disfruto-how-it-works__step-title">Lieferrhythmus bestimmen</h3>
-          <p class="disfruto-how-it-works__step-text">Entscheide, ob du alle 2 oder alle 4 Wochen beliefert werden möchtest. Wähle deinen bevorzugten Liefertag (Do–So). Flexibel änderbar, jederzeit pausierbar.</p>
-        </div>
-        <div class="disfruto-how-it-works__step">
-          <div class="disfruto-how-it-works__step-number">3</div>
-          <h3 class="disfruto-how-it-works__step-title">Genießen & entdecken</h3>
-          <p class="disfruto-how-it-works__step-text">Deine kuratierte Käse-Box kommt frisch an deine Tür in Berlin. Mit Tasting Notes, Herkunftsgeschichten und Genuss-Tipps zu jeder Sorte.</p>
+        <div class="disfruto-sf__step-content">
+          <div class="disfruto-sf__step-number">1</div>
+          <h3 class="disfruto-sf__step-heading">Dein Genuss Set auswählen</h3>
+          <p class="disfruto-sf__step-text">Wähle deinen Lieblingsgeschmack, bestimme das Lieferintervall und entscheide dich für ein Zeitfenster, das perfekt in deinen Tag passt. Um den Rest kümmern wir uns für Dich!</p>
         </div>
       </div>
-      <div class="disfruto-how-it-works__cta">
-        <a href="/product" class="disfruto-btn disfruto-btn--warm">Genuss Set wählen</a>
-      </div>
-    </div>
-  </section>
-  <section class="disfruto-section disfruto-story">
-    <div class="disfruto-container">
-      <div class="disfruto-story__grid">
-        <div class="disfruto-story__image">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:400px;">
-            <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><rect x="15" y="25" width="70" height="50" rx="8" fill="#C4A882" opacity="0.3"/><text x="50" y="55" text-anchor="middle" fill="#1E4A47" font-family="Georgia" font-size="12">Käse Auswahl</text></svg>
-          </div>
+
+      <div class="disfruto-sf__step disfruto-sf__step--reverse">
+        <div class="disfruto-sf__step-image">
+          <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&h=400&fit=crop&q=80" alt="Frisch verpackt" loading="lazy">
         </div>
-        <div class="disfruto-story__content">
-          <span class="disfruto-story__eyebrow">Unser Konzept</span>
-          <h2 class="disfruto-story__title">Käse mit Charakter. Bewusst ausgewählt.</h2>
-          <p class="disfruto-story__text">Jede Box ist eine Reise durch die besten Käsereien Europas. Wir wählen handwerklich hergestellte Käsesorten aus, die du in keinem Supermarkt findest — direkt zu dir nach Hause in Berlin.</p>
-          <a href="/product" class="disfruto-btn disfruto-btn--warm">Mehr erfahren</a>
+        <div class="disfruto-sf__step-content">
+          <div class="disfruto-sf__step-number">2</div>
+          <h3 class="disfruto-sf__step-heading">Frisch für Dich verpackt</h3>
+          <p class="disfruto-sf__step-text">Deine Käsesorten werden frisch zugeschnitten, einzeln handverpackt und liebevoll zu einer Auswahl zusammengestellt. Bei Qualität machen wir keine Kompromisse!</p>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="faq" class="disfruto-section disfruto-faq">
-    <div class="disfruto-container">
-      <div class="disfruto-faq__header">
-        <span class="disfruto-faq__eyebrow">Noch Fragen?</span>
-        <h2 class="disfruto-faq__title">Häufige Fragen zum Ablauf</h2>
+
+      <div class="disfruto-sf__step">
+        <div class="disfruto-sf__step-image">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80" alt="Schnelle Lieferung" loading="lazy">
+        </div>
+        <div class="disfruto-sf__step-content">
+          <div class="disfruto-sf__step-number">3</div>
+          <h3 class="disfruto-sf__step-heading">Schnelle & sichere Lieferung</h3>
+          <p class="disfruto-sf__step-text">Innerhalb deines gewählten Lieferfensters bringt unser Kurierpartner deine Box direkt zu dir nach Hause. Zwischen Abholung und Zustellung liegen weniger als 60 Minuten. Dank isolierter Kühltaschen bleibt dein Käse auf dem ganzen Weg bei perfekter Temperatur.</p>
+        </div>
       </div>
-      <div class="disfruto-faq__list">
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Wie oft wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Du kannst zwischen zwei Lieferintervallen wählen: alle 2 Wochen oder alle 4 Wochen. Dein Abo kannst du jederzeit anpassen.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">An welchen Tagen wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Wir liefern donnerstags bis sonntags in ganz Berlin. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Kann ich mein Abo pausieren?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten.</p></div></details>
+
+      <div class="disfruto-sf__step disfruto-sf__step--reverse">
+        <div class="disfruto-sf__step-image">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop&q=80" alt="Genießen und entdecken" loading="lazy">
+        </div>
+        <div class="disfruto-sf__step-content">
+          <div class="disfruto-sf__step-number">4</div>
+          <h3 class="disfruto-sf__step-heading">Genießen & entdecken</h3>
+          <p class="disfruto-sf__step-text">Ob gemütlicher Abend, Dinner mit Freunden oder entspannter Sonntagsbrunch: Deine Käseauswahl ist sofort bereit zum Genießen. Über den QR-Code erfährst du zudem die Geschichten hinter jedem Stück – von der Herkunft bis zur kleinen Besonderheit jedes einzelnen Käses.</p>
+        </div>
       </div>
+
     </div>
   </section>`;
 

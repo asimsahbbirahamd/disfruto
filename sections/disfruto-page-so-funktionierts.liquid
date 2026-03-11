@@ -1,0 +1,83 @@
+<section class="disfruto-section disfruto-sf">
+  <div class="disfruto-container">
+    <h1 class="disfruto-sf__title">{{ section.settings.title }}</h1>
+
+    {%- assign fallback_images = 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80,https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&h=400&fit=crop&q=80,https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80,https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop&q=80' | split: ',' -%}
+
+    {% for block in section.blocks %}
+      {% if block.type == 'step' %}
+        <div class="disfruto-sf__step {% if block.settings.reverse %}disfruto-sf__step--reverse{% endif %}" {{ block.shopify_attributes }}>
+          <div class="disfruto-sf__step-image">
+            {% if block.settings.image != blank %}
+              {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', alt: block.settings.heading }}
+            {% else %}
+              {%- assign fb_index = forloop.index0 | modulo: 4 -%}
+              <img src="{{ fallback_images[fb_index] }}" alt="{{ block.settings.heading }}" loading="lazy">
+            {% endif %}
+          </div>
+          <div class="disfruto-sf__step-content">
+            <div class="disfruto-sf__step-number">{{ block.settings.number }}</div>
+            <h3 class="disfruto-sf__step-heading">{{ block.settings.heading }}</h3>
+            <p class="disfruto-sf__step-text">{{ block.settings.text }}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Disfruto So funktionierts",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page Title",
+      "default": "So funktioniert's"
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Step Number",
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Schritt"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "reverse",
+          "label": "Reverse layout (text left, image right)",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Disfruto So funktionierts"
+    }
+  ]
+}
+{% endschema %}

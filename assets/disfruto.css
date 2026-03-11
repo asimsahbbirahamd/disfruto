@@ -2395,6 +2395,121 @@ a.header__icon--account:focus {
   }
 }
 
+.disfruto-sf {
+  padding: 48px 0 64px;
+}
+
+.disfruto-sf__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--disfruto-dark);
+  text-align: center;
+  margin: 0 0 56px;
+  letter-spacing: -0.5px;
+}
+
+.disfruto-sf__step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.disfruto-sf__step--reverse {
+  direction: rtl;
+}
+
+.disfruto-sf__step--reverse > * {
+  direction: ltr;
+}
+
+.disfruto-sf__step-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.disfruto-sf__step-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.disfruto-sf__step-content {
+  padding: 8px 0;
+}
+
+.disfruto-sf__step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--disfruto-dark-green);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.disfruto-sf__step-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--disfruto-dark);
+  margin: 0 0 12px;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+}
+
+.disfruto-sf__step-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .disfruto-sf__step {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .disfruto-sf__step--reverse {
+    direction: ltr;
+  }
+
+  .disfruto-sf__step-image {
+    max-width: 480px;
+  }
+
+  .disfruto-sf__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 599px) {
+  .disfruto-sf__title {
+    font-size: 24px;
+  }
+
+  .disfruto-sf__step-heading {
+    font-size: 20px;
+  }
+
+  .disfruto-sf {
+    padding: 32px 0 48px;
+  }
+}
+
 .disfruto-makers-page__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
