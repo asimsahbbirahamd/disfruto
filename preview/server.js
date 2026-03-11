@@ -1021,23 +1021,23 @@ function buildPageHtml(title, bodyContent) {
     @media (max-width: 599px) { .disfruto-uk__stats { gap: 8px; } .disfruto-uk__stat { padding: 16px 10px; } .disfruto-uk__stat-value { font-size: 26px; } .disfruto-uk__price-amount { font-size: 30px; } .disfruto-uk__heading { font-size: 26px; } .disfruto-uk__subheading { font-size: 18px; } .disfruto-uk__cta-title { font-size: 24px; } .disfruto-unser-kaese { padding: 28px 0 32px; } }
     .disfruto-km-hero { width: 100%; max-height: 420px; overflow: hidden; margin: 0; padding: 0; }
     .disfruto-km-hero__img { width: 100%; height: 420px; object-fit: cover; display: block; }
-    .disfruto-km { padding: 56px 0 48px; }
-    .disfruto-km__container { max-width: 780px; margin: 0 auto; text-align: left; padding: 0 24px; }
-    .disfruto-km__eyebrow { display: block; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #999; margin: 0 0 10px; text-align: left; }
-    .disfruto-km__name { font-family: 'Inter', sans-serif; font-size: 52px; font-weight: 700; color: #2D1A40; margin: 0 0 6px; letter-spacing: -1px; line-height: 1.1; text-align: left; }
-    .disfruto-km__subtitle { font-family: 'Inter', sans-serif; font-size: 15px; color: #999; margin: 0 0 36px; text-align: left; }
-    .disfruto-km__portrait { margin: 0 0 44px; overflow: hidden; }
+    .disfruto-km { padding: 72px 0 56px; }
+    .disfruto-km__container { max-width: 900px; margin: 0 auto; text-align: left; padding: 0 32px; }
+    .disfruto-km__eyebrow { display: block; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #999; margin: 0 0 14px; text-align: left; }
+    .disfruto-km__name { font-family: 'Inter', sans-serif; font-size: 64px; font-weight: 700; color: #2D1A40; margin: 0 0 8px; letter-spacing: -1.5px; line-height: 1.08; text-align: left; }
+    .disfruto-km__subtitle { font-family: 'Inter', sans-serif; font-size: 18px; color: #999; margin: 0 0 44px; text-align: left; }
+    .disfruto-km__portrait { margin: 0 0 56px; overflow: hidden; }
     .disfruto-km__portrait img { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 3 / 2; }
-    .disfruto-km__body { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; text-align: left; margin: 0 0 44px; }
-    .disfruto-km__col p { font-family: 'Inter', sans-serif; font-size: 14px; color: #555; line-height: 1.8; margin: 0; }
-    .disfruto-km__quote { border-top: none; border-left: 3px solid #D0D0CB; margin: 0; padding: 0 0 0 24px; text-align: left; }
-    .disfruto-km__quote p { font-family: 'Inter', sans-serif; font-size: 15px; font-style: italic; color: #2D1A40; line-height: 1.75; margin: 0; font-weight: 500; }
-    .disfruto-km-cta { padding: 64px 0 80px; text-align: center; }
-    .disfruto-km-cta__title { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: #2D1A40; margin: 0 0 20px; }
-    .disfruto-km-cta__btn { display: inline-block; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: background 0.2s; }
+    .disfruto-km__body { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; text-align: left; margin: 0 0 56px; }
+    .disfruto-km__col p { font-family: 'Inter', sans-serif; font-size: 16px; color: #555; line-height: 1.8; margin: 0; }
+    .disfruto-km__quote { border-top: none; border-left: 3px solid #D0D0CB; margin: 0; padding: 4px 0 4px 28px; text-align: left; }
+    .disfruto-km__quote p { font-family: 'Inter', sans-serif; font-size: 17px; font-style: italic; color: #2D1A40; line-height: 1.75; margin: 0; font-weight: 500; }
+    .disfruto-km-cta { padding: 72px 0 88px; text-align: center; }
+    .disfruto-km-cta__title { font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 700; color: #2D1A40; margin: 0 0 24px; }
+    .disfruto-km-cta__btn { display: inline-block; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 16px 36px; border-radius: 50px; text-decoration: none; transition: background 0.2s; }
     .disfruto-km-cta__btn:hover { background: #163836; }
-    @media (max-width: 767px) { .disfruto-km__name { font-size: 38px; } .disfruto-km__body { gap: 24px; } .disfruto-km-hero__img { height: 300px; } }
-    @media (max-width: 599px) { .disfruto-km__name { font-size: 32px; } .disfruto-km__body { grid-template-columns: 1fr; gap: 20px; } .disfruto-km-hero__img { height: 240px; } .disfruto-km-cta__title { font-size: 24px; } }
+    @media (max-width: 767px) { .disfruto-km { padding: 48px 0 40px; } .disfruto-km__container { padding: 0 20px; } .disfruto-km__eyebrow { font-size: 11px; } .disfruto-km__name { font-size: 36px; } .disfruto-km__subtitle { font-size: 15px; margin: 0 0 28px; } .disfruto-km__body { gap: 24px; margin: 0 0 36px; } .disfruto-km__col p { font-size: 14px; } .disfruto-km__quote p { font-size: 14px; } .disfruto-km__portrait { margin: 0 0 36px; } .disfruto-km-hero__img { height: 280px; } .disfruto-km-cta { padding: 48px 0 56px; } .disfruto-km-cta__title { font-size: 26px; } }
+    @media (max-width: 599px) { .disfruto-km__name { font-size: 30px; } .disfruto-km__body { grid-template-columns: 1fr; gap: 20px; } .disfruto-km-hero__img { height: 220px; } .disfruto-km-cta__title { font-size: 22px; } .disfruto-km-cta__btn { font-size: 12px; padding: 14px 28px; } }
     .disfruto-sf { padding: 48px 0 64px; }
     .disfruto-sf .disfruto-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
     .disfruto-sf__title { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; text-align: center; margin: 0 0 56px; letter-spacing: -0.5px; padding: 0; }
