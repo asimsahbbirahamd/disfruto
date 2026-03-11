@@ -1009,6 +1009,7 @@ function buildPageHtml(title, bodyContent) {
     .disfruto-uk__bullet { display: flex; gap: 12px; align-items: flex-start; line-height: 1.7; }
     .disfruto-uk__bullet-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: #1E4A47; margin-top: 0.55em; flex-shrink: 0; }
     .disfruto-uk__bullet-text { font-size: 15px; color: #555; line-height: 1.7; margin: 0; }
+    .disfruto-uk__bullet-text p { margin: 0; padding: 0; }
     .disfruto-uk__bullet-text strong { color: #2D1A40; font-weight: 600; }
     .disfruto-uk__cta-banner { background: #1E4A47; text-align: center; padding: 80px 24px; }
     .disfruto-uk__cta-title { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: white; margin: 0 0 12px; letter-spacing: -0.5px; }

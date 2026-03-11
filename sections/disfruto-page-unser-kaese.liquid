@@ -32,7 +32,7 @@
             {% if block.type == 'bullet' %}
               <div class="disfruto-uk__bullet" {{ block.shopify_attributes }}>
                 <span class="disfruto-uk__bullet-dot"></span>
-                <p class="disfruto-uk__bullet-text">{{ block.settings.text }}</p>
+                <div class="disfruto-uk__bullet-text">{{ block.settings.text }}</div>
               </div>
             {% endif %}
           {% endfor %}
@@ -44,7 +44,7 @@
               {% if block.type == 'tip' %}
                 <div class="disfruto-uk__bullet" {{ block.shopify_attributes }}>
                   <span class="disfruto-uk__bullet-dot"></span>
-                  <p class="disfruto-uk__bullet-text">{{ block.settings.text }}</p>
+                  <div class="disfruto-uk__bullet-text">{{ block.settings.text }}</div>
                 </div>
               {% endif %}
             {% endfor %}
@@ -57,7 +57,7 @@
               {% if block.type == 'delivery' %}
                 <div class="disfruto-uk__bullet" {{ block.shopify_attributes }}>
                   <span class="disfruto-uk__bullet-dot"></span>
-                  <p class="disfruto-uk__bullet-text">{{ block.settings.text }}</p>
+                  <div class="disfruto-uk__bullet-text">{{ block.settings.text }}</div>
                 </div>
               {% endif %}
             {% endfor %}
