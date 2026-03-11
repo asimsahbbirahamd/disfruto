@@ -1,131 +1,67 @@
 {
   "sections": {
-    "intro": {
+    "main": {
       "type": "disfruto-page-unser-kaese",
       "settings": {
-        "eyebrow": "Unsere Philosophie",
-        "heading": "Käse mit Charakter",
-        "subheading": "Wir kuratieren die besten handwerklich hergestellten Käsesorten Europas — direkt von kleinen Hofkäsereien zu dir nach Hause in Berlin.",
-        "cta_label": "Genuss Set wählen",
+        "image_caption": "Beispiel einer Lieferung. Zusammenstellung variiert.",
+        "heading": "Unser Konzept",
+        "price": "€ 39.99",
+        "price_note": "inkl. MwSt & Versandkosten",
+        "section2_heading": "Genussempfehlung",
+        "section3_heading": "Lieferung",
+        "cta_heading": "Bereit für deine erste Lieferung",
+        "cta_subtext": "Kuratierter Käse. Regelmäßig neu zusammengestellt.",
+        "cta_label": "GENUSS SET ABONNIEREN",
         "cta_link": "/collections/all"
       },
       "blocks": {
-        "feature-1": {
-          "type": "feature",
-          "settings": {
-            "icon": "hand",
-            "title": "Handwerklich hergestellt",
-            "text": "Jeder Käse wird von erfahrenen Käsemachern in Handarbeit produziert — keine industrielle Massenware, sondern echtes Handwerk mit Tradition."
-          }
+        "stat-1": {
+          "type": "stat",
+          "settings": { "value": "4", "label": "Käsesorten pro Lieferung" }
         },
-        "feature-2": {
-          "type": "feature",
-          "settings": {
-            "icon": "leaf",
-            "title": "Natürlich & nachhaltig",
-            "text": "Unsere Partner setzen auf natürliche Zutaten, artgerechte Tierhaltung und nachhaltige Produktionsmethoden. Guter Käse braucht gute Milch."
-          }
+        "stat-2": {
+          "type": "stat",
+          "settings": { "value": "600g", "label": "Mindestgewicht" }
         },
-        "feature-3": {
-          "type": "feature",
-          "settings": {
-            "icon": "truck",
-            "title": "Frisch geliefert",
-            "text": "Von der Käserei direkt an deine Tür in Berlin — gekühlt und frisch, donnerstags bis sonntags. Kostenlos für alle Abonnenten."
-          }
+        "stat-3": {
+          "type": "stat",
+          "settings": { "value": "1", "label": "Käserei im Fokus" }
+        },
+        "stat-4": {
+          "type": "stat",
+          "settings": { "value": "∞", "label": "Kombinationen" }
+        },
+        "bullet-1": {
+          "type": "bullet",
+          "settings": { "text": "<p>Jede Lieferung enthält <strong>vier unterschiedliche Käsesorten</strong> aus einer europäischen Käserei, die im Mittelpunkt steht. Mindestens <strong>600 g Käse</strong> pro Lieferung.</p>" }
+        },
+        "bullet-2": {
+          "type": "bullet",
+          "settings": { "text": "<p>Pro Lieferung steht <strong>eine Käserei im Mittelpunkt</strong> – so lernst du mit jeder Box eine neue handwerkliche Tradition kennen.</p>" }
+        },
+        "tip-1": {
+          "type": "tip",
+          "settings": { "text": "<p><strong>Portionierung:</strong> Als Hauptgericht reicht eine Lieferung für ca. 3 Portionen. Als Teil eines Dinner-Snacks für ca. 6 Portionen.</p>" }
+        },
+        "tip-2": {
+          "type": "tip",
+          "settings": { "text": "<p><strong>Lagerung & Temperatur:</strong> Den Käse bitte bei max. 7 °C lagern. Für den optimalen Geschmack empfehlen wir, den Käse ca. 30 Minuten vor dem Servieren aus dem Kühlschrank zu nehmen.</p>" }
+        },
+        "delivery-1": {
+          "type": "delivery",
+          "settings": { "text": "<p>Lieferrhythmus: alle <strong>2 oder 4 Wochen</strong> – du wählst deinen Rhythmus.</p>" }
+        },
+        "delivery-2": {
+          "type": "delivery",
+          "settings": { "text": "<p>Lieferslots von <strong>Donnerstag bis Sonntag</strong> – direkt an deine Haustür.</p>" }
+        },
+        "delivery-3": {
+          "type": "delivery",
+          "settings": { "text": "<p><strong>Sehr kurze Lieferstrecke:</strong> Von unserer gekühlten Lagerung ist der Käse innerhalb von max. 45 Minuten in isolierten Thermotaschen bei dir an der Haustür.</p>" }
         }
       },
-      "block_order": ["feature-1", "feature-2", "feature-3"]
-    },
-    "cheese-grid": {
-      "type": "disfruto-cheese-grid",
-      "settings": {
-        "eyebrow": "Aktuelle Auswahl",
-        "heading": "Unsere Käse-Sorten",
-        "subheading": "Handverlesene Sorten von den besten Käsemachern Europas"
-      },
-      "blocks": {
-        "cheese-1": {
-          "type": "cheese",
-          "settings": {
-            "name": "Alpiner Bergkäse",
-            "description": "Allgäu, Deutschland — 18 Monate gereift, kräftig-nussig",
-            "profile_milk": "Kuh (Heumilch)",
-            "profile_texture": "Hart, kristallin",
-            "profile_intensity": 4,
-            "profile_aging": "18 Monate",
-            "profile_aromas": "Nuss, Karamell, Heu",
-            "profile_pairing": "Rotwein, Feigensenf, Walnüsse"
-          }
-        },
-        "cheese-2": {
-          "type": "cheese",
-          "settings": {
-            "name": "Normandie Camembert",
-            "description": "Normandie, Frankreich — Cremig-mild mit Weißschimmelrinde",
-            "profile_milk": "Kuh (Rohmilch)",
-            "profile_texture": "Weich, cremig",
-            "profile_intensity": 2,
-            "profile_aging": "4 Wochen",
-            "profile_aromas": "Champignon, Butter, Erde",
-            "profile_pairing": "Baguette, Cidre, Trauben"
-          }
-        },
-        "cheese-3": {
-          "type": "cheese",
-          "settings": {
-            "name": "Piemonteser Ziegenkäse",
-            "description": "Piemont, Italien — Frisch & zitronig, leicht cremig",
-            "profile_milk": "Ziege",
-            "profile_texture": "Halbweich, samtig",
-            "profile_intensity": 2,
-            "profile_aging": "6 Wochen",
-            "profile_aromas": "Zitrus, Kräuter, Honig",
-            "profile_pairing": "Weißwein, Honig, Oliven"
-          }
-        },
-        "cheese-4": {
-          "type": "cheese",
-          "settings": {
-            "name": "Nordfriesischer Deichkäse",
-            "description": "Nordfriesland, Deutschland — Salzwiesen-Aroma, buttrig-mild",
-            "profile_milk": "Kuh (Weidemilch)",
-            "profile_texture": "Halbhart, geschmeidig",
-            "profile_intensity": 3,
-            "profile_aging": "3 Monate",
-            "profile_aromas": "Butter, Meer, Gras",
-            "profile_pairing": "Craft Beer, Pumpernickel, Senf"
-          }
-        },
-        "cheese-5": {
-          "type": "cheese",
-          "settings": {
-            "name": "Roquefort Prestige",
-            "description": "Aveyron, Frankreich — Intensiv-würziger Blauschimmelkäse",
-            "profile_milk": "Schaf (Lacaune)",
-            "profile_texture": "Cremig, krümelig",
-            "profile_intensity": 5,
-            "profile_aging": "5 Monate Höhlenreifung",
-            "profile_aromas": "Salz, Mineral, scharf-pikant",
-            "profile_pairing": "Süßwein, Birne, Walnüsse"
-          }
-        },
-        "cheese-6": {
-          "type": "cheese",
-          "settings": {
-            "name": "Tiroler Graukäse",
-            "description": "Tirol, Österreich — Fettarm, säuerlich-pikant, traditionell",
-            "profile_milk": "Kuh (Magermilch)",
-            "profile_texture": "Krümelig, trocken",
-            "profile_intensity": 4,
-            "profile_aging": "2–4 Wochen",
-            "profile_aromas": "Sauer, erdig, mineralisch",
-            "profile_pairing": "Essig, Zwiebel, Schwarzbrot"
-          }
-        }
-      },
-      "block_order": ["cheese-1", "cheese-2", "cheese-3", "cheese-4", "cheese-5", "cheese-6"]
+      "block_order": ["stat-1", "stat-2", "stat-3", "stat-4", "bullet-1", "bullet-2", "tip-1", "tip-2", "delivery-1", "delivery-2", "delivery-3"]
     }
   },
-  "order": ["intro", "cheese-grid"]
+  "order": ["main"]
 }

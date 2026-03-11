@@ -2114,46 +2114,227 @@ a.header__icon--account:focus {
   margin-top: 16px;
 }
 
-.disfruto-unser-kaese__features {
+.disfruto-uk__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-bottom: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
 }
 
-.disfruto-unser-kaese__feature {
-  text-align: center;
-  padding: 40px 24px;
-  background: white;
+.disfruto-uk__image {
   border-radius: 16px;
-  border: 1px solid #E8E8E3;
+  overflow: hidden;
+  background: #F0EBE1;
 }
 
-.disfruto-unser-kaese__feature-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: rgba(30, 74, 71, 0.08);
+.disfruto-uk__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.disfruto-uk__image-placeholder {
+  width: 100%;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  color: var(--disfruto-dark-green);
+  background: linear-gradient(135deg, #EDEDE8, #E5E5DF);
 }
 
-.disfruto-unser-kaese__feature-title {
+.disfruto-uk__image-caption {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+  margin: 12px 0 24px;
+}
+
+.disfruto-uk__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.disfruto-uk__stat {
+  background: white;
+  border: 1px solid #E8E8E3;
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.disfruto-uk__stat-value {
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
   color: var(--disfruto-dark);
-  margin: 0 0 12px;
+  line-height: 1.2;
 }
 
-.disfruto-unser-kaese__feature-text {
-  font-size: 15px;
+.disfruto-uk__stat-label {
+  font-size: 13px;
   color: #6B6B6B;
-  line-height: 1.6;
+  margin-top: 4px;
+}
+
+.disfruto-uk__price {
+  text-align: center;
+}
+
+.disfruto-uk__price-amount {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--disfruto-dark);
+}
+
+.disfruto-uk__price-note {
+  display: block;
+  font-size: 13px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.disfruto-uk__heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--disfruto-dark);
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.disfruto-uk__subheading {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--disfruto-dark);
+  margin: 36px 0 16px;
+  line-height: 1.3;
+}
+
+.disfruto-uk__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.disfruto-uk__bullet {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.disfruto-uk__bullet-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: var(--disfruto-dark-green);
+  margin-top: 6px;
+}
+
+.disfruto-uk__bullet-text {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.65;
   margin: 0;
+}
+
+.disfruto-uk__bullet-text strong {
+  color: var(--disfruto-dark);
+  font-weight: 600;
+}
+
+.disfruto-uk__cta-banner {
+  background: var(--disfruto-dark-green);
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.disfruto-uk__cta-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 8px;
+}
+
+.disfruto-uk__cta-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 28px;
+}
+
+.disfruto-uk__cta-btn {
+  display: inline-block;
+  background: white;
+  color: var(--disfruto-dark) !important;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.disfruto-uk__cta-btn:hover {
+  background: #F5F5F0;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 899px) {
+  .disfruto-uk__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .disfruto-uk__left {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .disfruto-uk__heading {
+    font-size: 28px;
+  }
+
+  .disfruto-uk__cta-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 599px) {
+  .disfruto-uk__stats {
+    gap: 8px;
+  }
+
+  .disfruto-uk__stat {
+    padding: 14px 12px;
+  }
+
+  .disfruto-uk__stat-value {
+    font-size: 22px;
+  }
+
+  .disfruto-uk__price-amount {
+    font-size: 26px;
+  }
+
+  .disfruto-uk__heading {
+    font-size: 24px;
+  }
+
+  .disfruto-uk__subheading {
+    font-size: 20px;
+  }
+
+  .disfruto-uk__cta-title {
+    font-size: 22px;
+  }
 }
 
 .disfruto-makers-page__grid {

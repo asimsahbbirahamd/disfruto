@@ -1,68 +1,149 @@
 <section class="disfruto-section disfruto-unser-kaese">
   <div class="disfruto-container">
-    <div class="disfruto-unser-kaese__header">
-      {% if section.settings.eyebrow != blank %}
-        <span class="disfruto-unser-kaese__eyebrow">{{ section.settings.eyebrow }}</span>
-      {% endif %}
-      <h2 class="disfruto-unser-kaese__title">{{ section.settings.heading }}</h2>
-      {% if section.settings.subheading != blank %}
-        <p class="disfruto-unser-kaese__subtitle">{{ section.settings.subheading }}</p>
-      {% endif %}
-    </div>
-    <div class="disfruto-unser-kaese__features">
-      {% for block in section.blocks %}
-        <div class="disfruto-unser-kaese__feature" {{ block.shopify_attributes }}>
-          <div class="disfruto-unser-kaese__feature-icon">
-            {% if block.settings.icon == 'hand' %}
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 13"/></svg>
-            {% elsif block.settings.icon == 'leaf' %}
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-            {% elsif block.settings.icon == 'truck' %}
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
-            {% else %}
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            {% endif %}
-          </div>
-          <h3 class="disfruto-unser-kaese__feature-title">{{ block.settings.title }}</h3>
-          <p class="disfruto-unser-kaese__feature-text">{{ block.settings.text }}</p>
+    <div class="disfruto-uk__grid">
+      <div class="disfruto-uk__left">
+        <div class="disfruto-uk__image">
+          {% if section.settings.image != blank %}
+            {{ section.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+          {% else %}
+            <div class="disfruto-uk__image-placeholder">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" fill="#1E4A47" opacity="0.12"/><circle cx="30" cy="35" r="5" fill="#1E4A47" opacity="0.15"/><circle cx="48" cy="42" r="6" fill="#1E4A47" opacity="0.15"/><circle cx="38" cy="52" r="4" fill="#1E4A47" opacity="0.15"/></svg>
+            </div>
+          {% endif %}
         </div>
-      {% endfor %}
-    </div>
-    {% if section.settings.cta_label != blank %}
-      <div class="disfruto-unser-kaese__cta">
-        <a href="{{ section.settings.cta_link }}" class="disfruto-btn disfruto-btn--warm">{{ section.settings.cta_label }}</a>
+        <p class="disfruto-uk__image-caption">{{ section.settings.image_caption }}</p>
+        <div class="disfruto-uk__stats">
+          {% for block in section.blocks %}
+            {% if block.type == 'stat' %}
+              <div class="disfruto-uk__stat" {{ block.shopify_attributes }}>
+                <div class="disfruto-uk__stat-value">{{ block.settings.value }}</div>
+                <div class="disfruto-uk__stat-label">{{ block.settings.label }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="disfruto-uk__price">
+          <span class="disfruto-uk__price-amount">{{ section.settings.price }}</span>
+          <span class="disfruto-uk__price-note">{{ section.settings.price_note }}</span>
+        </div>
       </div>
-    {% endif %}
+      <div class="disfruto-uk__right">
+        <h1 class="disfruto-uk__heading">{{ section.settings.heading }}</h1>
+        <div class="disfruto-uk__bullets">
+          {% for block in section.blocks %}
+            {% if block.type == 'bullet' %}
+              <div class="disfruto-uk__bullet" {{ block.shopify_attributes }}>
+                <span class="disfruto-uk__bullet-dot"></span>
+                <p class="disfruto-uk__bullet-text">{{ block.settings.text }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% if section.settings.section2_heading != blank %}
+          <h2 class="disfruto-uk__subheading">{{ section.settings.section2_heading }}</h2>
+          <div class="disfruto-uk__bullets">
+            {% for block in section.blocks %}
+              {% if block.type == 'tip' %}
+                <div class="disfruto-uk__bullet" {{ block.shopify_attributes }}>
+                  <span class="disfruto-uk__bullet-dot"></span>
+                  <p class="disfruto-uk__bullet-text">{{ block.settings.text }}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if section.settings.section3_heading != blank %}
+          <h2 class="disfruto-uk__subheading">{{ section.settings.section3_heading }}</h2>
+          <div class="disfruto-uk__bullets">
+            {% for block in section.blocks %}
+              {% if block.type == 'delivery' %}
+                <div class="disfruto-uk__bullet" {{ block.shopify_attributes }}>
+                  <span class="disfruto-uk__bullet-dot"></span>
+                  <p class="disfruto-uk__bullet-text">{{ block.settings.text }}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </section>
 
+{% if section.settings.cta_heading != blank %}
+  <section class="disfruto-section disfruto-uk__cta-banner">
+    <div class="disfruto-container">
+      <h2 class="disfruto-uk__cta-title">{{ section.settings.cta_heading }}</h2>
+      <p class="disfruto-uk__cta-sub">{{ section.settings.cta_subtext }}</p>
+      {% if section.settings.cta_label != blank %}
+        <a href="{{ section.settings.cta_link }}" class="disfruto-btn disfruto-uk__cta-btn">{{ section.settings.cta_label }}</a>
+      {% endif %}
+    </div>
+  </section>
+{% endif %}
+
 {% schema %}
 {
-  "name": "Disfruto Unser Käse Intro",
+  "name": "Disfruto Unser Käse",
   "settings": [
     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product Image"
+    },
+    {
       "type": "text",
-      "id": "eyebrow",
-      "label": "Eyebrow Text",
-      "default": "Unsere Philosophie"
+      "id": "image_caption",
+      "label": "Image Caption",
+      "default": "Beispiel einer Lieferung. Zusammenstellung variiert."
     },
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Käse mit Charakter"
+      "default": "Unser Konzept"
     },
     {
-      "type": "textarea",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Wir kuratieren die besten handwerklich hergestellten Käsesorten Europas — direkt von kleinen Hofkäsereien zu dir nach Hause in Berlin."
+      "type": "text",
+      "id": "price",
+      "label": "Price Display",
+      "default": "€ 39.99"
+    },
+    {
+      "type": "text",
+      "id": "price_note",
+      "label": "Price Note",
+      "default": "inkl. MwSt & Versandkosten"
+    },
+    {
+      "type": "text",
+      "id": "section2_heading",
+      "label": "Section 2 Heading",
+      "default": "Genussempfehlung"
+    },
+    {
+      "type": "text",
+      "id": "section3_heading",
+      "label": "Section 3 Heading",
+      "default": "Lieferung"
+    },
+    {
+      "type": "text",
+      "id": "cta_heading",
+      "label": "CTA Banner Heading",
+      "default": "Bereit für deine erste Lieferung"
+    },
+    {
+      "type": "text",
+      "id": "cta_subtext",
+      "label": "CTA Banner Subtext",
+      "default": "Kuratierter Käse. Regelmäßig neu zusammengestellt."
     },
     {
       "type": "text",
       "id": "cta_label",
       "label": "CTA Button Label",
-      "default": "Genuss Set wählen"
+      "default": "GENUSS SET ABONNIEREN"
     },
     {
       "type": "url",
@@ -72,63 +153,107 @@
   ],
   "blocks": [
     {
-      "type": "feature",
-      "name": "Feature",
+      "type": "stat",
+      "name": "Stat Box",
       "settings": [
         {
-          "type": "select",
-          "id": "icon",
-          "label": "Icon",
-          "options": [
-            { "value": "hand", "label": "Handwerk" },
-            { "value": "leaf", "label": "Natürlich" },
-            { "value": "truck", "label": "Lieferung" },
-            { "value": "star", "label": "Qualität" }
-          ],
-          "default": "star"
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "4"
         },
         {
           "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Feature"
-        },
+          "id": "label",
+          "label": "Label",
+          "default": "Käsesorten pro Lieferung"
+        }
+      ]
+    },
+    {
+      "type": "bullet",
+      "name": "Konzept Bullet",
+      "settings": [
         {
-          "type": "textarea",
+          "type": "richtext",
           "id": "text",
-          "label": "Description",
-          "default": "Beschreibung"
+          "label": "Text",
+          "default": "<p>Beschreibung</p>"
+        }
+      ]
+    },
+    {
+      "type": "tip",
+      "name": "Genussempfehlung",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Tipp</p>"
+        }
+      ]
+    },
+    {
+      "type": "delivery",
+      "name": "Lieferung Bullet",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Lieferinfo</p>"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Disfruto Unser Käse Intro",
+      "name": "Disfruto Unser Käse",
       "blocks": [
         {
-          "type": "feature",
-          "settings": {
-            "icon": "hand",
-            "title": "Handwerklich hergestellt",
-            "text": "Jeder Käse wird von erfahrenen Käsemachern in Handarbeit produziert — keine industrielle Massenware, sondern echtes Handwerk mit Tradition."
-          }
+          "type": "stat",
+          "settings": { "value": "4", "label": "Käsesorten pro Lieferung" }
         },
         {
-          "type": "feature",
-          "settings": {
-            "icon": "leaf",
-            "title": "Natürlich & nachhaltig",
-            "text": "Unsere Partner setzen auf natürliche Zutaten, artgerechte Tierhaltung und nachhaltige Produktionsmethoden. Guter Käse braucht gute Milch."
-          }
+          "type": "stat",
+          "settings": { "value": "600g", "label": "Mindestgewicht" }
         },
         {
-          "type": "feature",
-          "settings": {
-            "icon": "truck",
-            "title": "Frisch geliefert",
-            "text": "Von der Käserei direkt an deine Tür in Berlin — gekühlt und frisch, donnerstags bis sonntags. Kostenlos für alle Abonnenten."
-          }
+          "type": "stat",
+          "settings": { "value": "1", "label": "Käserei im Fokus" }
+        },
+        {
+          "type": "stat",
+          "settings": { "value": "∞", "label": "Kombinationen" }
+        },
+        {
+          "type": "bullet",
+          "settings": { "text": "<p>Jede Lieferung enthält <strong>vier unterschiedliche Käsesorten</strong> aus einer europäischen Käserei, die im Mittelpunkt steht. Mindestens <strong>600 g Käse</strong> pro Lieferung.</p>" }
+        },
+        {
+          "type": "bullet",
+          "settings": { "text": "<p>Pro Lieferung steht <strong>eine Käserei im Mittelpunkt</strong> – so lernst du mit jeder Box eine neue handwerkliche Tradition kennen.</p>" }
+        },
+        {
+          "type": "tip",
+          "settings": { "text": "<p><strong>Portionierung:</strong> Als Hauptgericht reicht eine Lieferung für ca. 3 Portionen. Als Teil eines Dinner-Snacks für ca. 6 Portionen.</p>" }
+        },
+        {
+          "type": "tip",
+          "settings": { "text": "<p><strong>Lagerung & Temperatur:</strong> Den Käse bitte bei max. 7 °C lagern. Für den optimalen Geschmack empfehlen wir, den Käse ca. 30 Minuten vor dem Servieren aus dem Kühlschrank zu nehmen.</p>" }
+        },
+        {
+          "type": "delivery",
+          "settings": { "text": "<p>Lieferrhythmus: alle <strong>2 oder 4 Wochen</strong> – du wählst deinen Rhythmus.</p>" }
+        },
+        {
+          "type": "delivery",
+          "settings": { "text": "<p>Lieferslots von <strong>Donnerstag bis Sonntag</strong> – direkt an deine Haustür.</p>" }
+        },
+        {
+          "type": "delivery",
+          "settings": { "text": "<p><strong>Sehr kurze Lieferstrecke:</strong> Von unserer gekühlten Lagerung ist der Käse innerhalb von max. 45 Minuten in isolierten Thermotaschen bei dir an der Haustür.</p>" }
         }
       ]
     }

@@ -987,6 +987,31 @@ function buildPageHtml(title, bodyContent) {
     .page-hero { background: white; padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid #E8E8E3; }
     .page-hero h1 { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: var(--disfruto-dark); margin: 0 0 12px; }
     .page-hero p { font-size: 17px; color: #6B6B6B; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .disfruto-uk__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .disfruto-uk__image { border-radius: 16px; overflow: hidden; background: #F0EBE1; }
+    .disfruto-uk__image img { width: 100%; height: auto; display: block; }
+    .disfruto-uk__image-placeholder { width: 100%; min-height: 320px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #EDEDE8, #E5E5DF); border-radius: 16px; }
+    .disfruto-uk__image-caption { text-align: center; font-size: 13px; color: #999; font-style: italic; margin: 12px 0 24px; }
+    .disfruto-uk__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .disfruto-uk__stat { background: white; border: 1px solid #E8E8E3; border-radius: 12px; padding: 20px 16px; text-align: center; }
+    .disfruto-uk__stat-value { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: #2D1A40; line-height: 1.2; }
+    .disfruto-uk__stat-label { font-size: 13px; color: #6B6B6B; margin-top: 4px; }
+    .disfruto-uk__price { text-align: center; }
+    .disfruto-uk__price-amount { font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 700; color: #2D1A40; }
+    .disfruto-uk__price-note { display: block; font-size: 13px; color: #999; margin-top: 4px; }
+    .disfruto-uk__heading { font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 700; color: #2D1A40; margin: 0 0 24px; line-height: 1.2; }
+    .disfruto-uk__subheading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 36px 0 16px; line-height: 1.3; }
+    .disfruto-uk__bullets { display: flex; flex-direction: column; gap: 16px; }
+    .disfruto-uk__bullet { display: flex; gap: 12px; align-items: flex-start; }
+    .disfruto-uk__bullet-dot { width: 10px; height: 10px; min-width: 10px; border-radius: 50%; background: #1E4A47; margin-top: 6px; }
+    .disfruto-uk__bullet-text { font-size: 15px; color: #444; line-height: 1.65; margin: 0; }
+    .disfruto-uk__bullet-text strong { color: #2D1A40; font-weight: 600; }
+    .disfruto-uk__cta-banner { background: #1E4A47; text-align: center; padding: 64px 24px; }
+    .disfruto-uk__cta-title { font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 700; color: white; margin: 0 0 8px; }
+    .disfruto-uk__cta-sub { font-size: 16px; color: rgba(255,255,255,0.75); margin: 0 0 28px; }
+    .disfruto-uk__cta-btn { display: inline-block; background: white; color: #2D1A40 !important; padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+    @media (max-width: 899px) { .disfruto-uk__grid { grid-template-columns: 1fr; gap: 32px; } .disfruto-uk__left { max-width: 480px; margin: 0 auto; } .disfruto-uk__heading { font-size: 28px; } .disfruto-uk__cta-title { font-size: 26px; } }
+    @media (max-width: 599px) { .disfruto-uk__stats { gap: 8px; } .disfruto-uk__stat { padding: 14px 12px; } .disfruto-uk__stat-value { font-size: 22px; } .disfruto-uk__price-amount { font-size: 26px; } .disfruto-uk__heading { font-size: 24px; } .disfruto-uk__subheading { font-size: 20px; } .disfruto-uk__cta-title { font-size: 22px; } }
     .preview-footer { background: #F5F5F0; border-top: 1px solid #E8E8E3; padding: 48px 24px 0; }
     .preview-footer__inner { max-width: 1200px; margin: 0 auto; }
     .preview-footer__grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
@@ -1074,106 +1099,53 @@ function buildPageHtml(title, bodyContent) {
 }
 
 const unseresKaeseBody = `
-  <div class="page-hero">
-    <h1>Unser Käse</h1>
-    <p>Handverlesene Käse-Spezialitäten von den besten Hofkäsereien Europas — kuratiert für echten Genuss.</p>
-  </div>
   <section class="disfruto-section disfruto-unser-kaese">
     <div class="disfruto-container">
-      <div class="disfruto-unser-kaese__header">
-        <span class="disfruto-unser-kaese__eyebrow">Unsere Philosophie</span>
-        <h2 class="disfruto-unser-kaese__title">Käse mit Charakter</h2>
-        <p class="disfruto-unser-kaese__subtitle">Wir kuratieren die besten handwerklich hergestellten Käsesorten Europas — direkt von kleinen Hofkäsereien zu dir nach Hause in Berlin.</p>
-      </div>
-      <div class="disfruto-unser-kaese__features">
-        <div class="disfruto-unser-kaese__feature">
-          <div class="disfruto-unser-kaese__feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 13"/></svg>
+      <div class="disfruto-uk__grid">
+        <div class="disfruto-uk__left">
+          <div class="disfruto-uk__image">
+            <div class="disfruto-uk__image-placeholder">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" fill="#1E4A47" opacity="0.12"/><circle cx="30" cy="35" r="5" fill="#1E4A47" opacity="0.15"/><circle cx="48" cy="42" r="6" fill="#1E4A47" opacity="0.15"/><circle cx="38" cy="52" r="4" fill="#1E4A47" opacity="0.15"/></svg>
+            </div>
           </div>
-          <h3 class="disfruto-unser-kaese__feature-title">Handwerklich hergestellt</h3>
-          <p class="disfruto-unser-kaese__feature-text">Jeder Käse wird von erfahrenen Käsemachern in Handarbeit produziert — keine industrielle Massenware, sondern echtes Handwerk mit Tradition.</p>
-        </div>
-        <div class="disfruto-unser-kaese__feature">
-          <div class="disfruto-unser-kaese__feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          <p class="disfruto-uk__image-caption">Beispiel einer Lieferung. Zusammenstellung variiert.</p>
+          <div class="disfruto-uk__stats">
+            <div class="disfruto-uk__stat"><div class="disfruto-uk__stat-value">4</div><div class="disfruto-uk__stat-label">Käsesorten pro Lieferung</div></div>
+            <div class="disfruto-uk__stat"><div class="disfruto-uk__stat-value">600g</div><div class="disfruto-uk__stat-label">Mindestgewicht</div></div>
+            <div class="disfruto-uk__stat"><div class="disfruto-uk__stat-value">1</div><div class="disfruto-uk__stat-label">Käserei im Fokus</div></div>
+            <div class="disfruto-uk__stat"><div class="disfruto-uk__stat-value">∞</div><div class="disfruto-uk__stat-label">Kombinationen</div></div>
           </div>
-          <h3 class="disfruto-unser-kaese__feature-title">Natürlich & nachhaltig</h3>
-          <p class="disfruto-unser-kaese__feature-text">Unsere Partner setzen auf natürliche Zutaten, artgerechte Tierhaltung und nachhaltige Produktionsmethoden. Guter Käse braucht gute Milch.</p>
-        </div>
-        <div class="disfruto-unser-kaese__feature">
-          <div class="disfruto-unser-kaese__feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          <div class="disfruto-uk__price">
+            <span class="disfruto-uk__price-amount">€ 39.99</span>
+            <span class="disfruto-uk__price-note">inkl. MwSt & Versandkosten</span>
           </div>
-          <h3 class="disfruto-unser-kaese__feature-title">Frisch geliefert</h3>
-          <p class="disfruto-unser-kaese__feature-text">Von der Käserei direkt an deine Tür in Berlin — gekühlt und frisch, donnerstags bis sonntags. Kostenlos für alle Abonnenten.</p>
         </div>
-      </div>
-      <div class="disfruto-unser-kaese__cta">
-        <a href="/product" class="disfruto-btn disfruto-btn--warm">Genuss Set wählen</a>
+        <div class="disfruto-uk__right">
+          <h1 class="disfruto-uk__heading">Unser Konzept</h1>
+          <div class="disfruto-uk__bullets">
+            <div class="disfruto-uk__bullet"><span class="disfruto-uk__bullet-dot"></span><p class="disfruto-uk__bullet-text">Jede Lieferung enthält <strong>vier unterschiedliche Käsesorten</strong> aus einer europäischen Käserei, die im Mittelpunkt steht. Mindestens <strong>600 g Käse</strong> pro Lieferung.</p></div>
+            <div class="disfruto-uk__bullet"><span class="disfruto-uk__bullet-dot"></span><p class="disfruto-uk__bullet-text">Pro Lieferung steht <strong>eine Käserei im Mittelpunkt</strong> – so lernst du mit jeder Box eine neue handwerkliche Tradition kennen.</p></div>
+          </div>
+          <h2 class="disfruto-uk__subheading">Genussempfehlung</h2>
+          <div class="disfruto-uk__bullets">
+            <div class="disfruto-uk__bullet"><span class="disfruto-uk__bullet-dot"></span><p class="disfruto-uk__bullet-text"><strong>Portionierung:</strong> Als Hauptgericht reicht eine Lieferung für ca. 3 Portionen. Als Teil eines Dinner-Snacks für ca. 6 Portionen.</p></div>
+            <div class="disfruto-uk__bullet"><span class="disfruto-uk__bullet-dot"></span><p class="disfruto-uk__bullet-text"><strong>Lagerung & Temperatur:</strong> Den Käse bitte bei max. 7 °C lagern. Für den optimalen Geschmack empfehlen wir, den Käse ca. 30 Minuten vor dem Servieren aus dem Kühlschrank zu nehmen.</p></div>
+          </div>
+          <h2 class="disfruto-uk__subheading">Lieferung</h2>
+          <div class="disfruto-uk__bullets">
+            <div class="disfruto-uk__bullet"><span class="disfruto-uk__bullet-dot"></span><p class="disfruto-uk__bullet-text">Lieferrhythmus: alle <strong>2 oder 4 Wochen</strong> – du wählst deinen Rhythmus.</p></div>
+            <div class="disfruto-uk__bullet"><span class="disfruto-uk__bullet-dot"></span><p class="disfruto-uk__bullet-text">Lieferslots von <strong>Donnerstag bis Sonntag</strong> – direkt an deine Haustür.</p></div>
+            <div class="disfruto-uk__bullet"><span class="disfruto-uk__bullet-dot"></span><p class="disfruto-uk__bullet-text"><strong>Sehr kurze Lieferstrecke:</strong> Von unserer gekühlten Lagerung ist der Käse innerhalb von max. 45 Minuten in isolierten Thermotaschen bei dir an der Haustür.</p></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section class="disfruto-section disfruto-cheeses">
+  <section class="disfruto-section disfruto-uk__cta-banner">
     <div class="disfruto-container">
-      <div class="disfruto-cheeses__header">
-        <span class="disfruto-cheeses__eyebrow">Aktuelle Auswahl</span>
-        <h2 class="disfruto-cheeses__title">Unsere Käse-Sorten</h2>
-        <p class="disfruto-cheeses__subtitle">Handverlesene Sorten von den besten Käsemachern Europas</p>
-      </div>
-    </div>
-    <div class="disfruto-cheeses__slider-wrap">
-      <div class="disfruto-container">
-        <div class="disfruto-cheeses__grid">
-          <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image">
-              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
-              </div>
-            </div>
-            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Alpiner Bergkäse</h3><p class="disfruto-cheese-card__origin">Allgäu, Deutschland</p><p class="disfruto-cheese-card__desc">18 Monate gereift, kräftig-nussig</p></div>
-          </div>
-          <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image">
-              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
-              </div>
-            </div>
-            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Normandie Camembert</h3><p class="disfruto-cheese-card__origin">Normandie, Frankreich</p><p class="disfruto-cheese-card__desc">Cremig-mild mit Weißschimmelrinde</p></div>
-          </div>
-          <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image">
-              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
-              </div>
-            </div>
-            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Piemonteser Ziegenkäse</h3><p class="disfruto-cheese-card__origin">Piemont, Italien</p><p class="disfruto-cheese-card__desc">Frisch & zitronig, leicht cremig</p></div>
-          </div>
-          <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image">
-              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
-              </div>
-            </div>
-            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Nordfriesischer Deichkäse</h3><p class="disfruto-cheese-card__origin">Nordfriesland, Deutschland</p><p class="disfruto-cheese-card__desc">Salzwiesen-Aroma, buttrig-mild</p></div>
-          </div>
-          <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image">
-              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
-              </div>
-            </div>
-            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Roquefort Prestige</h3><p class="disfruto-cheese-card__origin">Aveyron, Frankreich</p><p class="disfruto-cheese-card__desc">Intensiv-würziger Blauschimmelkäse</p></div>
-          </div>
-          <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image">
-              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/><circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/><circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/></svg>
-              </div>
-            </div>
-            <div class="disfruto-cheese-card__content"><h3 class="disfruto-cheese-card__title">Tiroler Graukäse</h3><p class="disfruto-cheese-card__origin">Tirol, Österreich</p><p class="disfruto-cheese-card__desc">Fettarm, säuerlich-pikant, traditionell</p></div>
-          </div>
-        </div>
-      </div>
+      <h2 class="disfruto-uk__cta-title">Bereit für deine erste Lieferung</h2>
+      <p class="disfruto-uk__cta-sub">Kuratierter Käse. Regelmäßig neu zusammengestellt.</p>
+      <a href="/product" class="disfruto-btn disfruto-uk__cta-btn">GENUSS SET ABONNIEREN</a>
     </div>
   </section>`;
 
@@ -1338,7 +1310,7 @@ const server = http.createServer((req, res) => {
       const ext = path.extname(filePath);
       const contentType = MIME_TYPES[ext] || 'application/octet-stream';
       const file = fs.readFileSync(filePath);
-      res.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': 'public, max-age=3600' });
+      res.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': 'no-cache, no-store, must-revalidate' });
       res.end(file);
       return;
     }
