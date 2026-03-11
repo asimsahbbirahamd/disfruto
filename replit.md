@@ -40,7 +40,7 @@ Shopify Dawn-based theme customized for Disfruto, a curated artisan cheese subsc
 | `cheese_badges` | Qualitätsbadges | Row of 4 editable trust badges with SVG icons (leaf, star, map-pin, checkmark) |
 | `tasting_profile` | Geschmacksprofil | Flavor profile card: milk type, texture, intensity (1-5 dot scale), aging, notes, pairing |
 | `subscription_info` | Abo-Vorteile | 3-item subscription highlights with icons (clock, refresh, truck) |
-| `delivery_info` | Lieferinfo | Compact gold-bordered banner: eyebrow, main text, note |
+| `delivery_info` | Lieferinfo | Compact teal-bordered banner: eyebrow, main text, note |
 
 All block settings are fully editable in Shopify theme editor with German defaults.
 

@@ -784,7 +784,7 @@
   }
 }
 
-/* Why Disfruto — Editorial Layout */
+/* Why Disfruto — Creative Editorial */
 .disfruto-why {
   padding: 120px 0;
   background: var(--disfruto-purple);
@@ -796,11 +796,22 @@
 .disfruto-why::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(ellipse at 15% 50%, rgba(30,74,71,0.06) 0%, transparent 60%);
+  top: -30%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(30,74,71,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.disfruto-why::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(61,189,181,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -831,7 +842,7 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--disfruto-gold);
+  color: #3dbdb5;
   margin-bottom: 24px;
   position: relative;
   padding-left: 36px;
@@ -844,7 +855,7 @@
   top: 50%;
   width: 24px;
   height: 1px;
-  background: var(--disfruto-gold);
+  background: #3dbdb5;
 }
 
 .disfruto-why__title {
@@ -859,7 +870,7 @@
 .disfruto-why__statement {
   font-size: 17px;
   line-height: 1.75;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.65);
   margin: 0 0 40px;
   max-width: 420px;
 }
@@ -870,8 +881,8 @@
   gap: 10px;
   padding: 15px 32px;
   background: transparent;
-  color: var(--disfruto-gold);
-  border: 1px solid rgba(30,74,71,0.35);
+  color: #3dbdb5;
+  border: 1px solid rgba(61,189,181,0.35);
   border-radius: var(--disfruto-radius);
   font-size: 13px;
   font-weight: 600;
@@ -883,9 +894,9 @@
 }
 
 .disfruto-why .disfruto-btn--outline:hover {
-  background: rgba(30,74,71,0.1);
-  border-color: var(--disfruto-teal);
-  color: var(--disfruto-teal);
+  background: rgba(61,189,181,0.1);
+  border-color: #3dbdb5;
+  color: #fff;
   transform: translateY(-2px);
 }
 
@@ -906,16 +917,22 @@
 .disfruto-why__item {
   display: flex;
   align-items: flex-start;
-  gap: 28px;
-  padding: 36px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  gap: 24px;
+  padding: 32px 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.disfruto-why__item:hover {
+  background: rgba(255,255,255,0.04);
 }
 
 .disfruto-why__item:first-child {
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: none;
 }
 
 .disfruto-why__item.is-visible {
@@ -935,44 +952,56 @@
   transition-delay: 0.36s;
 }
 
-.disfruto-why__number {
-  font-family: var(--disfruto-font-heading);
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 1;
-  color: rgba(30,74,71,0.2);
-  flex-shrink: 0;
-  min-width: 56px;
-  transition: color 0.4s ease;
-  user-select: none;
+.disfruto-why__icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background: rgba(61,189,181,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.disfruto-why__item:hover .disfruto-why__number {
-  color: rgba(30,74,71,0.45);
+.disfruto-why__icon svg {
+  width: 22px;
+  height: 22px;
+  color: #3dbdb5;
+  transition: color 0.3s ease;
+}
+
+.disfruto-why__item:hover .disfruto-why__icon {
+  background: rgba(61,189,181,0.2);
+  transform: scale(1.08);
+}
+
+.disfruto-why__number {
+  display: none;
 }
 
 .disfruto-why__item-content {
   flex: 1;
-  padding-top: 8px;
+  padding-top: 2px;
 }
 
 .disfruto-why__item-title {
   font-family: var(--disfruto-font-heading);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: var(--disfruto-white);
   transition: color 0.3s ease;
 }
 
 .disfruto-why__item:hover .disfruto-why__item-title {
-  color: var(--disfruto-gold);
+  color: #3dbdb5;
 }
 
 .disfruto-why__item-text {
   font-size: 14px;
-  line-height: 1.75;
-  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  color: rgba(255,255,255,0.55);
   margin: 0;
   max-width: 420px;
 }
@@ -982,7 +1011,10 @@
     padding: 80px 0;
   }
   .disfruto-why::before {
-    background: radial-gradient(ellipse at 50% 20%, rgba(30,74,71,0.06) 0%, transparent 60%);
+    width: 300px;
+    height: 300px;
+    top: -10%;
+    right: -5%;
   }
   .disfruto-why__layout {
     grid-template-columns: 1fr;
@@ -1015,14 +1047,14 @@
     display: block;
     width: 48px;
     height: 1px;
-    background: rgba(30,74,71,0.3);
+    background: rgba(61,189,181,0.3);
     margin: 0 auto 8px;
   }
   .disfruto-why__item-text {
     max-width: none;
   }
   .disfruto-why__item-title {
-    font-size: 19px;
+    font-size: 17px;
   }
 }
 
@@ -1050,19 +1082,25 @@
     font-size: 12px;
   }
   .disfruto-why__item {
-    gap: 18px;
-    padding: 24px 0;
+    gap: 16px;
+    padding: 20px 16px;
   }
-  .disfruto-why__number {
-    font-size: 36px;
+  .disfruto-why__icon {
+    width: 40px;
+    height: 40px;
     min-width: 40px;
+    border-radius: 10px;
+  }
+  .disfruto-why__icon svg {
+    width: 18px;
+    height: 18px;
   }
   .disfruto-why__item-content {
-    padding-top: 4px;
+    padding-top: 0;
   }
   .disfruto-why__item-title {
-    font-size: 17px;
-    margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 6px;
   }
   .disfruto-why__item-text {
     font-size: 13px;
@@ -1078,15 +1116,20 @@
     font-size: 24px;
   }
   .disfruto-why__item {
-    gap: 14px;
-    padding: 20px 0;
+    gap: 12px;
+    padding: 16px 12px;
   }
-  .disfruto-why__number {
-    font-size: 30px;
-    min-width: 34px;
+  .disfruto-why__icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+  .disfruto-why__icon svg {
+    width: 16px;
+    height: 16px;
   }
   .disfruto-why__item-title {
-    font-size: 16px;
+    font-size: 15px;
   }
   .disfruto-why__item-text {
     font-size: 12.5px;
@@ -1824,7 +1867,7 @@ a.header__icon--account:focus {
 
 .disfruto-product__intensity-dot--filled,
 .disfruto-product__intensity-dot--active {
-  background: var(--disfruto-cta-gold);
+  background: #3dbdb5;
 }
 
 /* Subscription Info */
@@ -1874,7 +1917,7 @@ a.header__icon--account:focus {
 .disfruto-product__sub-icon svg {
   width: 16px;
   height: 16px;
-  color: var(--disfruto-cta-gold);
+  color: #3dbdb5;
 }
 
 .disfruto-product__sub-text {
@@ -1897,10 +1940,10 @@ a.header__icon--account:focus {
 
 /* Delivery Info */
 .disfruto-product__delivery {
-  border-left: 3px solid var(--disfruto-cta-gold);
+  border-left: 3px solid #1E4A47;
   padding: 12px 16px;
   margin: 16px 0;
-  background: rgba(201, 168, 76, 0.04);
+  background: rgba(30, 74, 71, 0.04);
 }
 
 .disfruto-product__delivery-eyebrow {
