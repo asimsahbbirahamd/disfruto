@@ -3,76 +3,119 @@
     "faq": {
       "type": "disfruto-faq",
       "settings": {
-        "eyebrow": "Häufige Fragen",
-        "heading": "Alles, was du wissen musst",
-        "subheading": "Hier findest du Antworten auf die häufigsten Fragen rund um Disfruto"
+        "heading": "Häufige Fragen",
+        "subheading": "Alles, was du über disfruto wissen möchtest."
       },
       "blocks": {
+        "cat-1": {
+          "type": "category",
+          "settings": { "title": "Bestellung & Abo" }
+        },
         "faq-1": {
           "type": "faq",
           "settings": {
-            "question": "Was ist Disfruto?",
-            "answer": "<p>Disfruto ist ein Käse-Abonnement, das dir kuratierte Käse-Spezialitäten direkt an die Tür in Berlin liefert. Jede Box enthält handverlesene Sorten von den besten Käsemachern Europas.</p>"
+            "question": "Wie funktioniert das Genuss Set Abo?",
+            "answer": "<p>Wähle dein Genuss Set (Klassik oder Premium), deinen Lieferrhythmus (alle 2 oder 4 Wochen) und deinen bevorzugten Liefertag. Wir stellen jede Box frisch für dich zusammen und liefern direkt zu dir nach Hause.</p>"
           }
         },
         "faq-2": {
           "type": "faq",
           "settings": {
-            "question": "Wie oft wird geliefert?",
-            "answer": "<p>Du kannst zwischen zwei Lieferintervallen wählen: alle 2 Wochen oder alle 4 Wochen. Dein Abo kannst du jederzeit anpassen.</p>"
+            "question": "Kann ich mein Abo jederzeit pausieren oder kündigen?",
+            "answer": "<p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten. Einfach in deinem Konto verwalten.</p>"
           }
         },
         "faq-3": {
           "type": "faq",
           "settings": {
-            "question": "An welchen Tagen wird geliefert?",
-            "answer": "<p>Wir liefern donnerstags bis sonntags in ganz Berlin. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p>"
+            "question": "Kann ich den Lieferrhythmus ändern?",
+            "answer": "<p>Natürlich! Du kannst jederzeit zwischen alle 2 Wochen und alle 4 Wochen wechseln. Änderungen gelten ab der nächsten Lieferung.</p>"
           }
         },
         "faq-4": {
           "type": "faq",
           "settings": {
-            "question": "Kann ich mein Abo pausieren oder kündigen?",
-            "answer": "<p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten.</p>"
+            "question": "Wie viel kostet ein Genuss Set?",
+            "answer": "<p>Die aktuellen Preise findest du in unserem Bestellprozess. Die Lieferung ist immer kostenfrei.</p>"
           }
+        },
+        "cat-2": {
+          "type": "category",
+          "settings": { "title": "Lieferung" }
         },
         "faq-5": {
           "type": "faq",
           "settings": {
-            "question": "Liefert ihr auch außerhalb von Berlin?",
-            "answer": "<p>Aktuell liefern wir nur innerhalb Berlins, um die Frische und Qualität unserer Käse-Spezialitäten zu garantieren. Eine Expansion ist geplant.</p>"
+            "question": "Wohin liefert ihr?",
+            "answer": "<p>Aktuell liefern wir ausschließlich innerhalb Berlins, um die Frische und Qualität unserer Käse-Spezialitäten zu garantieren.</p>"
           }
         },
         "faq-6": {
           "type": "faq",
           "settings": {
-            "question": "Ist die Lieferung kostenlos?",
-            "answer": "<p>Ja, die Lieferung ist für alle Abonnenten in Berlin komplett kostenlos — egal ob du alle 2 oder alle 4 Wochen bestellst.</p>"
+            "question": "Wann wird geliefert?",
+            "answer": "<p>Wir liefern donnerstags bis sonntags. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p>"
           }
         },
         "faq-7": {
           "type": "faq",
           "settings": {
-            "question": "Was ist im Genuss Set enthalten?",
-            "answer": "<p>Jedes Genuss Set enthält 3–5 handverlesene Käsesorten (je nach Klassik oder Premium), dazu Tasting Notes mit Herkunftsgeschichten, Genuss-Tipps und passenden Begleitern.</p>"
+            "question": "Wie wird der Käse verpackt?",
+            "answer": "<p>Alle Käse werden in einer gekühlten, nachhaltigen Verpackung geliefert, damit sie frisch und in perfektem Zustand bei dir ankommen.</p>"
           }
+        },
+        "cat-3": {
+          "type": "category",
+          "settings": { "title": "Käse & Qualität" }
         },
         "faq-8": {
           "type": "faq",
           "settings": {
-            "question": "Wie werden die Käse transportiert?",
-            "answer": "<p>Alle Käse werden in einer gekühlten, nachhaltigen Verpackung geliefert, damit sie frisch und in perfektem Zustand bei dir ankommen.</p>"
+            "question": "Woher kommt der Käse?",
+            "answer": "<p>Wir arbeiten direkt mit ausgewählten Käsemachern aus ganz Europa zusammen — kleine Manufakturen, die mit Leidenschaft und traditionellen Methoden arbeiten.</p>"
           }
         },
         "faq-9": {
           "type": "faq",
           "settings": {
-            "question": "Kann ich ein Abo verschenken?",
-            "answer": "<p>Ja! Unser Geschenkabo ist das perfekte Geschenk für Käseliebhaber. Du wählst die Laufzeit, wir kümmern uns um den Rest.</p>"
+            "question": "Kann ich die Käsesorten selbst auswählen?",
+            "answer": "<p>Nein, die Auswahl wird von unserem Team kuratiert. Das ist das Besondere an Disfruto: Jede Box ist eine Überraschung mit sorgfältig aufeinander abgestimmten Sorten.</p>"
+          }
+        },
+        "faq-10": {
+          "type": "faq",
+          "settings": {
+            "question": "Sind die Käsesorten für Vegetarier geeignet?",
+            "answer": "<p>Viele unserer Käsesorten sind vegetarisch (mit mikrobiellem Lab hergestellt). In den Tasting Notes jeder Box findest du genaue Angaben zu jedem Käse.</p>"
+          }
+        },
+        "faq-11": {
+          "type": "faq",
+          "settings": {
+            "question": "Wie lagere ich den Käse am besten?",
+            "answer": "<p>Am besten im Kühlschrank bei 4–8°C aufbewahren, in der Originalverpackung oder in Käsepapier eingewickelt. 30 Minuten vor dem Genuss herausnehmen für volles Aroma.</p>"
+          }
+        },
+        "cat-4": {
+          "type": "category",
+          "settings": { "title": "Konto & Zahlung" }
+        },
+        "faq-12": {
+          "type": "faq",
+          "settings": {
+            "question": "Welche Zahlungsarten werden akzeptiert?",
+            "answer": "<p>Wir akzeptieren Kreditkarte (Visa, Mastercard), PayPal, Apple Pay und Google Pay. Alle Zahlungen werden sicher verarbeitet.</p>"
+          }
+        },
+        "faq-13": {
+          "type": "faq",
+          "settings": {
+            "question": "Wie kann ich meine Daten ändern?",
+            "answer": "<p>In deinem Kundenkonto kannst du jederzeit Lieferadresse, Zahlungsmethode und Abo-Einstellungen ändern.</p>"
           }
         }
       },
-      "block_order": ["faq-1", "faq-2", "faq-3", "faq-4", "faq-5", "faq-6", "faq-7", "faq-8", "faq-9"]
+      "block_order": ["cat-1", "faq-1", "faq-2", "faq-3", "faq-4", "cat-2", "faq-5", "faq-6", "faq-7", "cat-3", "faq-8", "faq-9", "faq-10", "faq-11", "cat-4", "faq-12", "faq-13"]
     }
   },
   "order": ["faq"]

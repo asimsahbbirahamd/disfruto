@@ -1285,23 +1285,42 @@ const kaesemacherBody = `
     </div>
   </section>`;
 
+const faqChevron = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+const faqItem = (q, a) => `<details class="disfruto-faq-page__item"><summary class="disfruto-faq-page__question"><span class="disfruto-faq-page__question-text">${q}</span><span class="disfruto-faq-page__chevron">${faqChevron}</span></summary><div class="disfruto-faq-page__answer"><p>${a}</p></div></details>`;
+
 const faqsBody = `
-  <div class="page-hero">
-    <h1>FAQs</h1>
-    <p>Hier findest du Antworten auf die häufigsten Fragen rund um Disfruto.</p>
+  <div class="disfruto-faq-hero">
+    <div class="disfruto-faq-hero__inner">
+      <h1 class="disfruto-faq-hero__title">Häufige Fragen</h1>
+      <p class="disfruto-faq-hero__subtitle">Alles, was du über disfruto wissen möchtest.</p>
+    </div>
   </div>
-  <section id="faq" class="disfruto-section disfruto-faq">
-    <div class="disfruto-container">
-      <div class="disfruto-faq__list">
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Was ist Disfruto?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Disfruto ist ein Käse-Abonnement, das dir kuratierte Käse-Spezialitäten direkt an die Tür in Berlin liefert. Jede Box enthält handverlesene Sorten von den besten Käsemachern Europas.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Wie oft wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Du kannst zwischen zwei Lieferintervallen wählen: alle 2 Wochen oder alle 4 Wochen. Dein Abo kannst du jederzeit anpassen.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">An welchen Tagen wird geliefert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Wir liefern donnerstags bis sonntags in ganz Berlin. Du wählst bei der Bestellung deinen bevorzugten Liefertag.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Kann ich mein Abo pausieren oder kündigen?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Liefert ihr auch außerhalb von Berlin?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Aktuell liefern wir nur innerhalb Berlins, um die Frische und Qualität unserer Käse-Spezialitäten zu garantieren. Eine Expansion ist geplant.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Ist die Lieferung kostenlos?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja, die Lieferung ist für alle Abonnenten in Berlin komplett kostenlos — egal ob du alle 2 oder alle 4 Wochen bestellst.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Was ist im Genuss Set enthalten?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Jedes Genuss Set enthält 3–5 handverlesene Käsesorten (je nach Klassik oder Premium), dazu Tasting Notes mit Herkunftsgeschichten, Genuss-Tipps und passenden Begleitern.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Wie werden die Käse transportiert?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Alle Käse werden in einer gekühlten, nachhaltigen Verpackung geliefert, damit sie frisch und in perfektem Zustand bei dir ankommen.</p></div></details>
-        <details class="disfruto-faq__item"><summary class="disfruto-faq__question"><span class="disfruto-faq__question-text">Kann ich ein Abo verschenken?</span><span class="disfruto-faq__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary><div class="disfruto-faq__answer"><p>Ja! Unser Geschenkabo ist das perfekte Geschenk für Käseliebhaber. Du wählst die Laufzeit, wir kümmern uns um den Rest.</p></div></details>
+  <section class="disfruto-faq-page">
+    <div class="disfruto-faq-page__container">
+      <div class="disfruto-faq-page__group">
+        <h2 class="disfruto-faq-page__category">Bestellung & Abo</h2>
+        ${faqItem('Wie funktioniert das Genuss Set Abo?', 'Wähle dein Genuss Set (Klassik oder Premium), deinen Lieferrhythmus (alle 2 oder 4 Wochen) und deinen bevorzugten Liefertag. Wir stellen jede Box frisch für dich zusammen und liefern direkt zu dir nach Hause.')}
+        ${faqItem('Kann ich mein Abo jederzeit pausieren oder kündigen?', 'Ja, du kannst dein Abonnement jederzeit pausieren, überspringen oder kündigen — ganz ohne Bindung oder versteckte Kosten. Einfach in deinem Konto verwalten.')}
+        ${faqItem('Kann ich den Lieferrhythmus ändern?', 'Natürlich! Du kannst jederzeit zwischen alle 2 Wochen und alle 4 Wochen wechseln. Änderungen gelten ab der nächsten Lieferung.')}
+        ${faqItem('Wie viel kostet ein Genuss Set?', 'Die aktuellen Preise findest du in unserem Bestellprozess. Die Lieferung ist immer kostenfrei.')}
+      </div>
+      <div class="disfruto-faq-page__group">
+        <h2 class="disfruto-faq-page__category">Lieferung</h2>
+        ${faqItem('Wohin liefert ihr?', 'Aktuell liefern wir ausschließlich innerhalb Berlins, um die Frische und Qualität unserer Käse-Spezialitäten zu garantieren.')}
+        ${faqItem('Wann wird geliefert?', 'Wir liefern donnerstags bis sonntags. Du wählst bei der Bestellung deinen bevorzugten Liefertag.')}
+        ${faqItem('Wie wird der Käse verpackt?', 'Alle Käse werden in einer gekühlten, nachhaltigen Verpackung geliefert, damit sie frisch und in perfektem Zustand bei dir ankommen.')}
+      </div>
+      <div class="disfruto-faq-page__group">
+        <h2 class="disfruto-faq-page__category">Käse & Qualität</h2>
+        ${faqItem('Woher kommt der Käse?', 'Wir arbeiten direkt mit ausgewählten Käsemachern aus ganz Europa zusammen — kleine Manufakturen, die mit Leidenschaft und traditionellen Methoden arbeiten.')}
+        ${faqItem('Kann ich die Käsesorten selbst auswählen?', 'Nein, die Auswahl wird von unserem Team kuratiert. Das ist das Besondere an Disfruto: Jede Box ist eine Überraschung mit sorgfältig aufeinander abgestimmten Sorten.')}
+        ${faqItem('Sind die Käsesorten für Vegetarier geeignet?', 'Viele unserer Käsesorten sind vegetarisch (mit mikrobiellem Lab hergestellt). In den Tasting Notes jeder Box findest du genaue Angaben zu jedem Käse.')}
+        ${faqItem('Wie lagere ich den Käse am besten?', 'Am besten im Kühlschrank bei 4–8°C aufbewahren, in der Originalverpackung oder in Käsepapier eingewickelt. 30 Minuten vor dem Genuss herausnehmen für volles Aroma.')}
+      </div>
+      <div class="disfruto-faq-page__group">
+        <h2 class="disfruto-faq-page__category">Konto & Zahlung</h2>
+        ${faqItem('Welche Zahlungsarten werden akzeptiert?', 'Wir akzeptieren Kreditkarte (Visa, Mastercard), PayPal, Apple Pay und Google Pay. Alle Zahlungen werden sicher verarbeitet.')}
+        ${faqItem('Wie kann ich meine Daten ändern?', 'In deinem Kundenkonto kannst du jederzeit Lieferadresse, Zahlungsmethode und Abo-Einstellungen ändern.')}
       </div>
     </div>
   </section>`;
