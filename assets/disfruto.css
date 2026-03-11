@@ -45,6 +45,11 @@
   letter-spacing: -0.02em;
 }
 
+.disfruto-why h2,
+.disfruto-why h3 {
+  color: var(--disfruto-white);
+}
+
 .disfruto-container {
   max-width: 1200px;
   margin: 0 auto;
