@@ -1,84 +1,32 @@
 {
   "sections": {
-    "makers": {
+    "main": {
       "type": "disfruto-page-kaesemacher",
       "settings": {
-        "eyebrow": "Unsere Partner",
-        "heading": "Käsemacher mit Leidenschaft",
-        "subheading": "Wir arbeiten mit den besten handwerklichen Käsereien Europas zusammen. Jeder Käsemacher steht für Tradition, Qualität und Hingabe."
+        "eyebrow": "Käsemacher der Woche",
+        "name": "Backensholz",
+        "subtitle": "Rohmilchkäse aus Schleswig-Holstein",
+        "quote": "Backensholz steht für eine Arbeitsweise, die Verantwortung nicht auslagert. Vom Gras bis zum gereiften Käse bleibt alles in einer Hand. Das Ergebnis ist ein Käse mit Tiefe, Struktur und Herkunft.",
+        "cta_heading": "Neugierig?",
+        "cta_label": "PROBIERE UNSER GENUSS SET",
+        "cta_link": "/collections/all"
       },
       "blocks": {
-        "maker-1": {
-          "type": "maker",
+        "col-1": {
+          "type": "text_column",
           "settings": {
-            "name": "Familie Schönberg",
-            "region": "Nordfriesland, Deutschland",
-            "description": "Seit drei Generationen stellt Familie Schönberg auf ihrer kleinen Hofkäserei in Nordfriesland handwerklichen Käse her. Ihre Kühe grasen auf den salzigen Weiden der Nordseeküste — das gibt dem Käse seinen unverwechselbaren Charakter.",
-            "specialty": "Spezialität: Nordfriesischer Deichkäse"
+            "text": "Im Norden Deutschlands, zwischen Weiden und Küstenluft, entsteht bei Backensholz Rohmilchkäse mit klarer Haltung. Die Milch stammt von den eigenen Kühen, die Verarbeitung erfolgt direkt auf dem Hof. Wege sind kurz, Entscheidungen bewusst."
           }
         },
-        "maker-2": {
-          "type": "maker",
+        "col-2": {
+          "type": "text_column",
           "settings": {
-            "name": "Pierre & Claire Dubois",
-            "region": "Auvergne, Frankreich",
-            "description": "In den vulkanischen Highlands der Auvergne reifen die Käse von Pierre und Claire in natürlichen Höhlen. Ihre Methoden sind seit 150 Jahren unverändert — der Geschmack spricht für sich.",
-            "specialty": "Spezialität: Höhlen-gereifter Blauschimmel"
-          }
-        },
-        "maker-3": {
-          "type": "maker",
-          "settings": {
-            "name": "Marco Benedetti",
-            "region": "Piemont, Italien",
-            "description": "Marco Benedetti pflegt die piemontesische Käsetradition mit Milch von seinen eigenen Ziegen. Jeder Laib wird von Hand geformt und mindestens 6 Monate gereift.",
-            "specialty": "Spezialität: Piemonteser Ziegenkäse"
-          }
-        },
-        "maker-4": {
-          "type": "maker",
-          "settings": {
-            "name": "Heidi & Thomas Berger",
-            "region": "Allgäu, Deutschland",
-            "description": "Auf 1.200 Meter Höhe im Allgäu produzieren Heidi und Thomas ihren berühmten Bergkäse. Nur Heumilch von ihren eigenen Kühen, gereift in den kühlen Kellern ihrer Alpe.",
-            "specialty": "Spezialität: Allgäuer Bergkäse"
-          }
-        },
-        "maker-5": {
-          "type": "maker",
-          "settings": {
-            "name": "Anke van der Berg",
-            "region": "Gouda, Niederlande",
-            "description": "Anke führt eine der letzten traditionellen Boerenkaas-Käsereien in der Region Gouda. Ihr Käse wird ausschließlich aus roher Weidemilch hergestellt und bis zu 36 Monate gereift.",
-            "specialty": "Spezialität: Boerenkaas Gouda"
-          }
-        },
-        "maker-6": {
-          "type": "maker",
-          "settings": {
-            "name": "Josef & Anna Gruber",
-            "region": "Tirol, Österreich",
-            "description": "Im Herzen Tirols stellt Familie Gruber traditionellen Graukäse her — einen der ältesten Käse der Alpenregion. Fettarm, charakterstark und unverwechselbar im Geschmack.",
-            "specialty": "Spezialität: Tiroler Graukäse"
+            "text": "Hier wird nicht mit Geschwindigkeit gearbeitet, sondern auf Reife. Jeder Laib erhält Zeit zur Entwicklung, jede Charge trägt die Handschrift von Handwerk und Umgebung. Klima, Futter, Jahreszeit – all das fließt in den Geschmack ein."
           }
         }
       },
-      "block_order": ["maker-1", "maker-2", "maker-3", "maker-4", "maker-5", "maker-6"]
-    },
-    "cheesemaker-spotlight": {
-      "type": "disfruto-cheesemaker",
-      "settings": {
-        "eyebrow": "Jede Woche neu",
-        "heading": "Käsemacher der Woche",
-        "text": "Jede Woche stellen wir einen besonderen Käsemacher vor — seine Geschichte, seine Philosophie und was seinen Käse einzigartig macht.",
-        "button_label": "",
-        "show_badge": true,
-        "badge_title": "Käsemacher der Woche",
-        "badge_subtitle": "Handwerk trifft Leidenschaft",
-        "maker_name": "Familie Schönberg",
-        "maker_region": "Nordfriesland, Deutschland"
-      }
+      "block_order": ["col-1", "col-2"]
     }
   },
-  "order": ["makers", "cheesemaker-spotlight"]
+  "order": ["main"]
 }

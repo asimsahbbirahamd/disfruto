@@ -1019,6 +1019,24 @@ function buildPageHtml(title, bodyContent) {
     @media (max-width: 899px) { .disfruto-uk__grid { gap: 36px; } }
     @media (max-width: 767px) { .disfruto-uk__grid { grid-template-columns: 1fr; gap: 32px; } .disfruto-uk__left { max-width: 420px; margin: 0 auto; } .disfruto-uk__heading { font-size: 28px; } .disfruto-uk__subheading { font-size: 20px; } .disfruto-uk__cta-title { font-size: 28px; } .disfruto-uk__cta-banner { padding: 56px 24px; } .disfruto-unser-kaese { padding: 36px 0 40px; } }
     @media (max-width: 599px) { .disfruto-uk__stats { gap: 8px; } .disfruto-uk__stat { padding: 16px 10px; } .disfruto-uk__stat-value { font-size: 26px; } .disfruto-uk__price-amount { font-size: 30px; } .disfruto-uk__heading { font-size: 26px; } .disfruto-uk__subheading { font-size: 18px; } .disfruto-uk__cta-title { font-size: 24px; } .disfruto-unser-kaese { padding: 28px 0 32px; } }
+    .disfruto-km-hero { width: 100%; max-height: 420px; overflow: hidden; margin: 0; padding: 0; }
+    .disfruto-km-hero__img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    .disfruto-km__container { max-width: 780px; margin: 0 auto; text-align: center; }
+    .disfruto-km__eyebrow { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #6B6B6B; margin: 0 0 16px; }
+    .disfruto-km__name { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; color: #2D1A40; margin: 0 0 8px; letter-spacing: -1px; line-height: 1.1; }
+    .disfruto-km__subtitle { font-size: 16px; color: #6B6B6B; margin: 0 0 40px; }
+    .disfruto-km__portrait { margin: 0 0 48px; border-radius: 12px; overflow: hidden; }
+    .disfruto-km__portrait img { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 3 / 2; }
+    .disfruto-km__body { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left; margin: 0 0 48px; }
+    .disfruto-km__col p { font-size: 15px; color: #444; line-height: 1.75; margin: 0; }
+    .disfruto-km__quote { border-top: 1px solid #E0E0DC; margin: 0 0 0; padding: 32px 0 0; text-align: left; }
+    .disfruto-km__quote p { font-size: 16px; font-style: italic; color: #2D1A40; line-height: 1.7; margin: 0; font-weight: 500; }
+    .disfruto-km { padding: 56px 0 48px; }
+    .disfruto-km-cta { padding: 48px 0 72px; background: #F5F5F0; }
+    .disfruto-km-cta__title { font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 700; color: #2D1A40; margin: 0 0 24px; }
+    .disfruto-km-cta__btn { display: inline-block; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 16px 36px; border-radius: 50px; text-decoration: none; transition: background 0.2s; }
+    .disfruto-km-cta__btn:hover { background: #163836; }
+    @media (max-width: 599px) { .disfruto-km__name { font-size: 32px; } .disfruto-km__body { grid-template-columns: 1fr; gap: 24px; } .disfruto-km-hero__img { height: 240px; } .disfruto-km-cta__title { font-size: 26px; } }
     .disfruto-sf { padding: 48px 0 64px; }
     .disfruto-sf .disfruto-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
     .disfruto-sf__title { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; text-align: center; margin: 0 0 56px; letter-spacing: -0.5px; padding: 0; }
@@ -1230,68 +1248,39 @@ const soFunktioniertsBody = `
   </section>`;
 
 const kaesemacherBody = `
-  <div class="page-hero">
-    <h1>Käsemacher</h1>
-    <p>Wir arbeiten mit den besten handwerklichen Käsereien Europas zusammen. Jeder Käsemacher steht für Tradition, Qualität und Hingabe.</p>
-  </div>
-  <section class="disfruto-section disfruto-makers-page">
-    <div class="disfruto-container">
-      <div class="disfruto-makers-page__grid">
-        <div class="disfruto-makers-page__card">
-          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
-          <div class="disfruto-makers-page__card-content">
-            <h3 class="disfruto-makers-page__card-name">Familie Schönberg</h3>
-            <span class="disfruto-makers-page__card-region">Nordfriesland, Deutschland</span>
-            <p class="disfruto-makers-page__card-text">Seit drei Generationen stellt Familie Schönberg auf ihrer kleinen Hofkäserei in Nordfriesland handwerklichen Käse her. Ihre Kühe grasen auf den salzigen Weiden der Nordseeküste.</p>
-            <span class="disfruto-makers-page__card-specialty">Spezialität: Nordfriesischer Deichkäse</span>
-          </div>
+  <section class="disfruto-km-hero">
+    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1600&h=500&fit=crop&q=80" alt="Weidelandschaft" class="disfruto-km-hero__img">
+  </section>
+
+  <section class="disfruto-section disfruto-km">
+    <div class="disfruto-container disfruto-km__container">
+      <span class="disfruto-km__eyebrow">Käsemacher der Woche</span>
+      <h1 class="disfruto-km__name">Backensholz</h1>
+      <p class="disfruto-km__subtitle">Rohmilchkäse aus Schleswig-Holstein</p>
+
+      <div class="disfruto-km__portrait">
+        <img src="https://images.unsplash.com/photo-1595475207225-428b62bda831?w=800&h=520&fit=crop&q=80" alt="Käsemacher bei der Arbeit" loading="lazy">
+      </div>
+
+      <div class="disfruto-km__body">
+        <div class="disfruto-km__col">
+          <p>Im Norden Deutschlands, zwischen Weiden und Küstenluft, entsteht bei Backensholz Rohmilchkäse mit klarer Haltung. Die Milch stammt von den eigenen Kühen, die Verarbeitung erfolgt direkt auf dem Hof. Wege sind kurz, Entscheidungen bewusst.</p>
         </div>
-        <div class="disfruto-makers-page__card">
-          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
-          <div class="disfruto-makers-page__card-content">
-            <h3 class="disfruto-makers-page__card-name">Pierre & Claire Dubois</h3>
-            <span class="disfruto-makers-page__card-region">Auvergne, Frankreich</span>
-            <p class="disfruto-makers-page__card-text">In den vulkanischen Highlands der Auvergne reifen die Käse von Pierre und Claire in natürlichen Höhlen. Ihre Methoden sind seit 150 Jahren unverändert.</p>
-            <span class="disfruto-makers-page__card-specialty">Spezialität: Höhlen-gereifter Blauschimmel</span>
-          </div>
-        </div>
-        <div class="disfruto-makers-page__card">
-          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
-          <div class="disfruto-makers-page__card-content">
-            <h3 class="disfruto-makers-page__card-name">Marco Benedetti</h3>
-            <span class="disfruto-makers-page__card-region">Piemont, Italien</span>
-            <p class="disfruto-makers-page__card-text">Marco Benedetti pflegt die piemontesische Käsetradition mit Milch von seinen eigenen Ziegen. Jeder Laib wird von Hand geformt und mindestens 6 Monate gereift.</p>
-            <span class="disfruto-makers-page__card-specialty">Spezialität: Piemonteser Ziegenkäse</span>
-          </div>
-        </div>
-        <div class="disfruto-makers-page__card">
-          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
-          <div class="disfruto-makers-page__card-content">
-            <h3 class="disfruto-makers-page__card-name">Heidi & Thomas Berger</h3>
-            <span class="disfruto-makers-page__card-region">Allgäu, Deutschland</span>
-            <p class="disfruto-makers-page__card-text">Auf 1.200 Meter Höhe im Allgäu produzieren Heidi und Thomas ihren berühmten Bergkäse. Nur Heumilch von ihren eigenen Kühen, gereift in den kühlen Kellern ihrer Alpe.</p>
-            <span class="disfruto-makers-page__card-specialty">Spezialität: Allgäuer Bergkäse</span>
-          </div>
-        </div>
-        <div class="disfruto-makers-page__card">
-          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
-          <div class="disfruto-makers-page__card-content">
-            <h3 class="disfruto-makers-page__card-name">Anke van der Berg</h3>
-            <span class="disfruto-makers-page__card-region">Gouda, Niederlande</span>
-            <p class="disfruto-makers-page__card-text">Anke führt eine der letzten traditionellen Boerenkaas-Käsereien in der Region Gouda. Ihr Käse wird ausschließlich aus roher Weidemilch hergestellt und bis zu 36 Monate gereift.</p>
-            <span class="disfruto-makers-page__card-specialty">Spezialität: Boerenkaas Gouda</span>
-          </div>
-        </div>
-        <div class="disfruto-makers-page__card">
-          <div class="disfruto-makers-page__card-image"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);min-height:280px;"><svg width="60" height="60" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="32" r="16" fill="#1E4A47" opacity="0.15"/><path d="M20 65c0-11 9-20 20-20s20 9 20 20" fill="#1E4A47" opacity="0.1"/></svg></div></div>
-          <div class="disfruto-makers-page__card-content">
-            <h3 class="disfruto-makers-page__card-name">Josef & Anna Gruber</h3>
-            <span class="disfruto-makers-page__card-region">Tirol, Österreich</span>
-            <p class="disfruto-makers-page__card-text">Im Herzen Tirols stellt Familie Gruber traditionellen Graukäse her — einen der ältesten Käse der Alpenregion. Fettarm, charakterstark und unverwechselbar im Geschmack.</p>
-            <span class="disfruto-makers-page__card-specialty">Spezialität: Tiroler Graukäse</span>
-          </div>
+        <div class="disfruto-km__col">
+          <p>Hier wird nicht mit Geschwindigkeit gearbeitet, sondern auf Reife. Jeder Laib erhält Zeit zur Entwicklung, jede Charge trägt die Handschrift von Handwerk und Umgebung. Klima, Futter, Jahreszeit – all das fließt in den Geschmack ein.</p>
         </div>
       </div>
+
+      <blockquote class="disfruto-km__quote">
+        <p>Backensholz steht für eine Arbeitsweise, die Verantwortung nicht auslagert. Vom Gras bis zum gereiften Käse bleibt alles in einer Hand. Das Ergebnis ist ein Käse mit Tiefe, Struktur und Herkunft.</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="disfruto-section disfruto-km-cta">
+    <div class="disfruto-container" style="text-align:center;">
+      <h2 class="disfruto-km-cta__title">Neugierig?</h2>
+      <a href="/collections/all" class="disfruto-km-cta__btn">PROBIERE UNSER GENUSS SET</a>
     </div>
   </section>`;
 

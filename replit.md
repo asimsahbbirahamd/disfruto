@@ -34,14 +34,14 @@ Shopify Dawn-based theme customized for Disfruto, a curated artisan cheese subsc
 | `sections/disfruto-page-unser-kaese.liquid` | "Unser Käse" page intro: philosophy headline + 3 feature cards (handwerk, nachhaltig, lieferung) with icons |
 | `sections/disfruto-page-how-it-works.liquid` | "So funktioniert's" page (old): 3-step numbered process with CTA |
 | `sections/disfruto-page-so-funktionierts.liquid` | "So funktioniert's" page (new): 4-step zigzag layout with alternating image/text rows, numbered teal circles, responsive |
-| `sections/disfruto-page-kaesemacher.liquid` | "Käsemacher" page: 6-card grid of cheesemaker profiles with photo, region, description, specialty badge |
+| `sections/disfruto-page-kaesemacher.liquid` | "Käsemacher" page: editorial story layout — full-width hero, maker name/subtitle, portrait, two-column text body, italic quote, CTA banner |
 
 ## Page Templates
 | Template File | Page | Sections Used |
 |---|---|---|
 | `templates/page.unser-kaese.json` | Unser Käse | disfruto-page-unser-kaese + disfruto-cheese-grid (6 cheeses) |
 | `templates/page.so-funktionierts.json` | So funktioniert's | disfruto-page-so-funktionierts (4-step zigzag) |
-| `templates/page.kaesemacher.json` | Käsemacher | disfruto-page-kaesemacher (6 makers) + disfruto-cheesemaker (weekly spotlight) |
+| `templates/page.kaesemacher.json` | Käsemacher | disfruto-page-kaesemacher (editorial story: Backensholz) |
 | `templates/page.faqs.json` | FAQs | disfruto-faq (9 questions) |
 
 To use these in Shopify: Create pages in Shopify Admin → Pages, set each page's template to the matching template suffix (e.g., "unser-kaese"), then link them in the navigation menu.
