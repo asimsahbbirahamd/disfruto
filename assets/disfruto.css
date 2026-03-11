@@ -2251,6 +2251,7 @@ a.header__icon--account:focus {
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  line-height: 1.7;
 }
 
 .disfruto-uk__bullet-dot {
@@ -2259,7 +2260,7 @@ a.header__icon--account:focus {
   min-width: 8px;
   border-radius: 50%;
   background: var(--disfruto-dark-green);
-  margin-top: 7px;
+  margin-top: 0.55em;
   flex-shrink: 0;
 }
 

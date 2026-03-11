@@ -1006,8 +1006,8 @@ function buildPageHtml(title, bodyContent) {
     .disfruto-uk__heading { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; margin: 0 0 24px; line-height: 1.15; letter-spacing: -0.5px; }
     .disfruto-uk__subheading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 32px 0 16px; line-height: 1.2; letter-spacing: -0.3px; }
     .disfruto-uk__bullets { display: flex; flex-direction: column; gap: 16px; }
-    .disfruto-uk__bullet { display: flex; gap: 12px; align-items: flex-start; }
-    .disfruto-uk__bullet-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: #1E4A47; margin-top: 7px; flex-shrink: 0; }
+    .disfruto-uk__bullet { display: flex; gap: 12px; align-items: flex-start; line-height: 1.7; }
+    .disfruto-uk__bullet-dot { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; background: #1E4A47; margin-top: 0.55em; flex-shrink: 0; }
     .disfruto-uk__bullet-text { font-size: 15px; color: #555; line-height: 1.7; margin: 0; }
     .disfruto-uk__bullet-text strong { color: #2D1A40; font-weight: 600; }
     .disfruto-uk__cta-banner { background: #1E4A47; text-align: center; padding: 80px 24px; }
