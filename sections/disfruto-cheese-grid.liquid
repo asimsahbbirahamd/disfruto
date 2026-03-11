@@ -19,13 +19,58 @@
               {% if block.settings.image != blank %}
                 {{ block.settings.image | image_url: width: 500 | image_tag: loading: 'lazy' }}
               {% else %}
-                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F0EBE1,#E8E0D4);">
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#EDEDE8,#E5E5DF);">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="25" fill="#C4A882" opacity="0.3"/>
-                    <circle cx="22" cy="25" r="3" fill="#C4A882" opacity="0.4"/>
-                    <circle cx="35" cy="32" r="4" fill="#C4A882" opacity="0.4"/>
-                    <circle cx="28" cy="38" r="2" fill="#C4A882" opacity="0.4"/>
+                    <circle cx="30" cy="30" r="25" fill="#1E4A47" opacity="0.15"/>
+                    <circle cx="22" cy="25" r="3" fill="#1E4A47" opacity="0.2"/>
+                    <circle cx="35" cy="32" r="4" fill="#1E4A47" opacity="0.2"/>
+                    <circle cx="28" cy="38" r="2" fill="#1E4A47" opacity="0.2"/>
                   </svg>
+                </div>
+              {% endif %}
+              {% if block.settings.profile_milk != blank or block.settings.profile_texture != blank %}
+                <div class="disfruto-cheese-card__profile">
+                  <div class="disfruto-cheese-card__profile-title">Geschmacksprofil</div>
+                  {% if block.settings.profile_milk != blank %}
+                    <div class="disfruto-cheese-card__profile-row">
+                      <span class="disfruto-cheese-card__profile-label">Milch</span>
+                      <span class="disfruto-cheese-card__profile-value">{{ block.settings.profile_milk }}</span>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.profile_texture != blank %}
+                    <div class="disfruto-cheese-card__profile-row">
+                      <span class="disfruto-cheese-card__profile-label">Textur</span>
+                      <span class="disfruto-cheese-card__profile-value">{{ block.settings.profile_texture }}</span>
+                    </div>
+                  {% endif %}
+                  <div class="disfruto-cheese-card__profile-row">
+                    <span class="disfruto-cheese-card__profile-label">Intensität</span>
+                    <span class="disfruto-cheese-card__profile-value">
+                      <span class="disfruto-cheese-card__profile-dots">
+                        {% for i in (1..5) %}
+                          <span class="disfruto-cheese-card__profile-dot{% if i <= block.settings.profile_intensity %} disfruto-cheese-card__profile-dot--active{% endif %}"></span>
+                        {% endfor %}
+                      </span>
+                    </span>
+                  </div>
+                  {% if block.settings.profile_aging != blank %}
+                    <div class="disfruto-cheese-card__profile-row">
+                      <span class="disfruto-cheese-card__profile-label">Reifung</span>
+                      <span class="disfruto-cheese-card__profile-value">{{ block.settings.profile_aging }}</span>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.profile_aromas != blank %}
+                    <div class="disfruto-cheese-card__profile-row">
+                      <span class="disfruto-cheese-card__profile-label">Aromen</span>
+                      <span class="disfruto-cheese-card__profile-value">{{ block.settings.profile_aromas }}</span>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.profile_pairing != blank %}
+                    <div class="disfruto-cheese-card__profile-row">
+                      <span class="disfruto-cheese-card__profile-label">Passt zu</span>
+                      <span class="disfruto-cheese-card__profile-value">{{ block.settings.profile_pairing }}</span>
+                    </div>
+                  {% endif %}
                 </div>
               {% endif %}
             </div>
@@ -92,6 +137,49 @@
           "type": "text",
           "id": "tag",
           "label": "Tag (optional)"
+        },
+        {
+          "type": "header",
+          "content": "Geschmacksprofil (Hover-Overlay)"
+        },
+        {
+          "type": "text",
+          "id": "profile_milk",
+          "label": "Milchart",
+          "default": "Kuhmilch"
+        },
+        {
+          "type": "text",
+          "id": "profile_texture",
+          "label": "Textur",
+          "default": "Cremig"
+        },
+        {
+          "type": "range",
+          "id": "profile_intensity",
+          "label": "Intensität",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "type": "text",
+          "id": "profile_aging",
+          "label": "Reifung",
+          "default": "8 Wochen"
+        },
+        {
+          "type": "text",
+          "id": "profile_aromas",
+          "label": "Aromen",
+          "default": "Nussig, mild"
+        },
+        {
+          "type": "text",
+          "id": "profile_pairing",
+          "label": "Passt zu",
+          "default": "Weißwein, Brot"
         }
       ]
     }
@@ -105,7 +193,13 @@
           "settings": {
             "name": "Deichkäse Alt",
             "description": "Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.",
-            "tag": "Hartkäse"
+            "tag": "Hartkäse",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Fest & körnig",
+            "profile_intensity": 4,
+            "profile_aging": "12 Monate",
+            "profile_aromas": "Nussig, salzig",
+            "profile_pairing": "Rotwein, Brot"
           }
         },
         {
@@ -113,7 +207,13 @@
           "settings": {
             "name": "Friesisch Blue",
             "description": "Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.",
-            "tag": "Blauschimmel"
+            "tag": "Blauschimmel",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Cremig & weich",
+            "profile_intensity": 3,
+            "profile_aging": "8 Wochen",
+            "profile_aromas": "Würzig, mild",
+            "profile_pairing": "Portwein, Birne"
           }
         },
         {
@@ -121,7 +221,13 @@
           "settings": {
             "name": "Grosser Husumer",
             "description": "Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.",
-            "tag": "Schnittkäse"
+            "tag": "Schnittkäse",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Geschmeidig",
+            "profile_intensity": 5,
+            "profile_aging": "10 Monate",
+            "profile_aromas": "Aromatisch, butter",
+            "profile_pairing": "Riesling, Feige"
           }
         },
         {
@@ -129,7 +235,13 @@
           "settings": {
             "name": "Hofkäse",
             "description": "Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.",
-            "tag": "Weichkäse"
+            "tag": "Weichkäse",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Zart & weich",
+            "profile_intensity": 2,
+            "profile_aging": "4 Wochen",
+            "profile_aromas": "Mild, cremig",
+            "profile_pairing": "Weißwein, Trauben"
           }
         }
       ]

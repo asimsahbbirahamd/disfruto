@@ -33,25 +33,25 @@ const html = `<!DOCTYPE html>
     ${css}
 
     /* Preview-only header/footer styles (Dawn handles these in Shopify) */
-    .preview-announcement { background: #1E1B3A; color: #fff; text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
-    .preview-announcement a { color: #D4A853; text-decoration: underline; text-underline-offset: 2px; }
-    .preview-header { background: #fff; border-bottom: 3px solid #2D4A3E; position: sticky; top: 0; z-index: 100; }
+    .preview-announcement { background: #2D1A40; color: #fff; text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+    .preview-announcement a { color: #3dbdb5; text-decoration: underline; text-underline-offset: 2px; }
+    .preview-header { background: #fff; border-bottom: 3px solid #1E4A47; position: sticky; top: 0; z-index: 100; }
     .preview-header__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .preview-header__left { display: flex; align-items: center; gap: 40px; }
     .preview-header__logo { text-decoration: none; display: flex; align-items: center; }
     .preview-header__logo img { height: 28px; width: auto; }
     .preview-header__nav { display: flex; align-items: center; gap: 28px; }
-    .preview-header__nav a { font-size: 14px; font-weight: 600; color: #2C2C2C; text-decoration: none; }
-    .preview-header__nav a:hover { color: #8B6F47; }
+    .preview-header__nav a { font-size: 14px; font-weight: 600; color: #2D1A40; text-decoration: none; }
+    .preview-header__nav a:hover { color: #1E4A47; }
     .preview-header__right { display: flex; align-items: center; gap: 10px; }
-    .preview-header__login { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: #2C2C2C; text-decoration: none; }
-    .preview-header__cta { display: inline-flex; align-items: center; padding: 10px 24px; height: 40px; box-sizing: border-box; background: #C9A84C; color: #2C2C2C; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: 1px solid #C9A84C; }
-    .preview-header__cta:hover { background: #B8963F; border-color: #B8963F; }
+    .preview-header__login { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: #2D1A40; text-decoration: none; }
+    .preview-header__cta { display: inline-flex; align-items: center; padding: 10px 24px; height: 40px; box-sizing: border-box; background: #1E4A47; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: 1px solid #1E4A47; }
+    .preview-header__cta:hover { background: #163836; border-color: #163836; }
     .preview-header__flag { width: 26px; height: 18px; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     .preview-header__flag span { flex: 1; }
-    .preview-footer { background: #2C2C2C; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
+    .preview-footer { background: #2D1A40; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
     .preview-footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-    .preview-footer__brand { font-family: 'Playfair Display',serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
+    .preview-footer__brand { font-family: 'Inter',sans-serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
     .preview-footer__text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.5); margin: 0 0 20px; max-width: 280px; }
     .preview-footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; margin: 0 0 18px; }
     .preview-footer ul { list-style: none; padding: 0; margin: 0; }
@@ -196,7 +196,18 @@ const html = `<!DOCTYPE html>
       <div class="disfruto-container">
         <div class="disfruto-cheeses__grid">
           <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-1.png" alt="Deichkäse Alt" loading="lazy"></div>
+            <div class="disfruto-cheese-card__image">
+              <img src="/assets/disfruto-cheese-1.png" alt="Deichkäse Alt" loading="lazy">
+              <div class="disfruto-cheese-card__profile">
+                <div class="disfruto-cheese-card__profile-title">Geschmacksprofil</div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Milch</span><span class="disfruto-cheese-card__profile-value">Kuhmilch</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Textur</span><span class="disfruto-cheese-card__profile-value">Fest & körnig</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Intensität</span><span class="disfruto-cheese-card__profile-value"><span class="disfruto-cheese-card__profile-dots"><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot"></span></span></span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Reifung</span><span class="disfruto-cheese-card__profile-value">12 Monate</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Aromen</span><span class="disfruto-cheese-card__profile-value">Nussig, salzig</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Passt zu</span><span class="disfruto-cheese-card__profile-value">Rotwein, Brot</span></div>
+              </div>
+            </div>
             <div class="disfruto-cheese-card__body">
               <h3 class="disfruto-cheese-card__name">Deichkäse Alt</h3>
               <p class="disfruto-cheese-card__desc">Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.</p>
@@ -204,7 +215,18 @@ const html = `<!DOCTYPE html>
             </div>
           </div>
           <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-2.png" alt="Friesisch Blue" loading="lazy"></div>
+            <div class="disfruto-cheese-card__image">
+              <img src="/assets/disfruto-cheese-2.png" alt="Friesisch Blue" loading="lazy">
+              <div class="disfruto-cheese-card__profile">
+                <div class="disfruto-cheese-card__profile-title">Geschmacksprofil</div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Milch</span><span class="disfruto-cheese-card__profile-value">Kuhmilch</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Textur</span><span class="disfruto-cheese-card__profile-value">Cremig & weich</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Intensität</span><span class="disfruto-cheese-card__profile-value"><span class="disfruto-cheese-card__profile-dots"><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot"></span><span class="disfruto-cheese-card__profile-dot"></span></span></span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Reifung</span><span class="disfruto-cheese-card__profile-value">8 Wochen</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Aromen</span><span class="disfruto-cheese-card__profile-value">Würzig, mild</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Passt zu</span><span class="disfruto-cheese-card__profile-value">Portwein, Birne</span></div>
+              </div>
+            </div>
             <div class="disfruto-cheese-card__body">
               <h3 class="disfruto-cheese-card__name">Friesisch Blue</h3>
               <p class="disfruto-cheese-card__desc">Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.</p>
@@ -212,7 +234,18 @@ const html = `<!DOCTYPE html>
             </div>
           </div>
           <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-3.png" alt="Grosser Husumer" loading="lazy"></div>
+            <div class="disfruto-cheese-card__image">
+              <img src="/assets/disfruto-cheese-3.png" alt="Grosser Husumer" loading="lazy">
+              <div class="disfruto-cheese-card__profile">
+                <div class="disfruto-cheese-card__profile-title">Geschmacksprofil</div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Milch</span><span class="disfruto-cheese-card__profile-value">Kuhmilch</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Textur</span><span class="disfruto-cheese-card__profile-value">Geschmeidig</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Intensität</span><span class="disfruto-cheese-card__profile-value"><span class="disfruto-cheese-card__profile-dots"><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span></span></span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Reifung</span><span class="disfruto-cheese-card__profile-value">10 Monate</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Aromen</span><span class="disfruto-cheese-card__profile-value">Aromatisch, butter</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Passt zu</span><span class="disfruto-cheese-card__profile-value">Riesling, Feige</span></div>
+              </div>
+            </div>
             <div class="disfruto-cheese-card__body">
               <h3 class="disfruto-cheese-card__name">Grosser Husumer</h3>
               <p class="disfruto-cheese-card__desc">Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.</p>
@@ -220,7 +253,18 @@ const html = `<!DOCTYPE html>
             </div>
           </div>
           <div class="disfruto-cheese-card">
-            <div class="disfruto-cheese-card__image"><img src="/assets/disfruto-cheese-4.png" alt="Hofkäse" loading="lazy"></div>
+            <div class="disfruto-cheese-card__image">
+              <img src="/assets/disfruto-cheese-4.png" alt="Hofkäse" loading="lazy">
+              <div class="disfruto-cheese-card__profile">
+                <div class="disfruto-cheese-card__profile-title">Geschmacksprofil</div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Milch</span><span class="disfruto-cheese-card__profile-value">Kuhmilch</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Textur</span><span class="disfruto-cheese-card__profile-value">Zart & weich</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Intensität</span><span class="disfruto-cheese-card__profile-value"><span class="disfruto-cheese-card__profile-dots"><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot disfruto-cheese-card__profile-dot--active"></span><span class="disfruto-cheese-card__profile-dot"></span><span class="disfruto-cheese-card__profile-dot"></span><span class="disfruto-cheese-card__profile-dot"></span></span></span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Reifung</span><span class="disfruto-cheese-card__profile-value">4 Wochen</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Aromen</span><span class="disfruto-cheese-card__profile-value">Mild, cremig</span></div>
+                <div class="disfruto-cheese-card__profile-row"><span class="disfruto-cheese-card__profile-label">Passt zu</span><span class="disfruto-cheese-card__profile-value">Weißwein, Trauben</span></div>
+              </div>
+            </div>
             <div class="disfruto-cheese-card__body">
               <h3 class="disfruto-cheese-card__name">Hofkäse</h3>
               <p class="disfruto-cheese-card__desc">Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.</p>
@@ -261,10 +305,10 @@ const html = `<!DOCTYPE html>
   <section class="disfruto-section" style="padding:0;">
     <div style="width:100%;height:340px;overflow:hidden;position:relative;">
       <img src="/assets/disfruto-banner.png" alt="Disfruto Subscription" style="width:100%;height:100%;object-fit:cover;">
-      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(44,44,44,0.75) 0%,rgba(44,44,44,0.35) 50%,transparent 100%);display:flex;align-items:center;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(45,26,64,0.8) 0%,rgba(45,26,64,0.4) 50%,transparent 100%);display:flex;align-items:center;">
         <div class="disfruto-container" style="width:100%;">
           <div style="max-width:460px;">
-            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:700;color:#fff;margin:0 0 14px;line-height:1.15;">Starte deine Käse-Reise</h2>
+            <h2 style="font-family:'Inter',sans-serif;font-size:34px;font-weight:700;color:#fff;margin:0 0 14px;line-height:1.15;">Starte deine Käse-Reise</h2>
             <p style="font-size:16px;color:rgba(255,255,255,0.8);margin:0 0 24px;line-height:1.6;">Entdecke jeden Monat neue Geschmackswelten mit unserer kuratierten Käse-Box.</p>
             <a href="#" class="disfruto-btn disfruto-btn--gold">Jetzt abonnieren</a>
           </div>
@@ -277,8 +321,8 @@ const html = `<!DOCTYPE html>
   <section class="disfruto-section" style="padding:80px 0;background:#fff;">
     <div class="disfruto-container">
       <div style="text-align:center;margin-bottom:48px;">
-        <span style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8B6F47;">Unser Bestseller</span>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:700;color:#2C2C2C;margin:12px 0 0;line-height:1.15;">Käse Genuss Set — Klassik</h2>
+        <span style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#1E4A47;">Unser Bestseller</span>
+        <h2 style="font-family:'Inter',sans-serif;font-size:36px;font-weight:700;color:#2D1A40;margin:12px 0 0;line-height:1.15;">Käse Genuss Set — Klassik</h2>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;" class="preview-featured-grid">
         <div style="border-radius:16px;overflow:hidden;border:1px solid #E5DFD6;">
@@ -305,7 +349,7 @@ const html = `<!DOCTYPE html>
           </div>
 
           <div style="margin:20px 0 4px;">
-            <span style="font-size:28px;font-weight:700;color:#2C2C2C;">€29,90</span>
+            <span style="font-size:28px;font-weight:700;color:#2D1A40;">€29,90</span>
             <span style="font-size:16px;font-weight:400;color:#6B6B6B;"> / Lieferung</span>
           </div>
           <p style="font-size:13px;color:#6B6B6B;margin:0 0 20px;">inkl. MwSt. • Kostenloser Versand in Berlin</p>
@@ -500,10 +544,10 @@ const html = `<!DOCTYPE html>
   </section>
 
   <!-- Newsletter (Dawn built-in, enhanced via CSS) -->
-  <section class="disfruto-section" style="padding:80px 0;background:#F5F1EB;">
+  <section class="disfruto-section" style="padding:80px 0;background:#DCE7F1;">
     <div class="disfruto-container">
       <div style="max-width:560px;margin:0 auto;text-align:center;">
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#2C2C2C;margin:0 0 14px;">Neue Sorten & Genuss-Tipps direkt ins Postfach</h2>
+        <h2 style="font-family:'Inter',sans-serif;font-size:32px;font-weight:700;color:#2D1A40;margin:0 0 14px;">Neue Sorten & Genuss-Tipps direkt ins Postfach</h2>
         <p style="font-size:16px;color:#6B6B6B;margin:0 0 32px;line-height:1.6;">Melde dich an und erfahre als Erstes von neuen Käsesorten, exklusiven Angeboten und Geschichten unserer Käsemacher.</p>
         <form style="display:flex;gap:10px;max-width:460px;margin:0 auto;" onsubmit="event.preventDefault();">
           <input type="email" placeholder="Deine E-Mail-Adresse" required style="flex:1;padding:14px 18px;border:1px solid #E5DFD6;border-radius:8px;font-size:14px;font-family:Inter,sans-serif;background:#fff;color:#3A3A3A;outline:none;">
@@ -589,58 +633,58 @@ const productHtml = `<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #3A3A3A; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #FAF7F2; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #3A3A3A; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #F5F5F0; }
     img { max-width: 100%; display: block; }
     a { color: inherit; }
     ${css}
 
-    .preview-announcement { background: #1E1B3A; color: #fff; text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
-    .preview-announcement a { color: #D4A853; text-decoration: underline; text-underline-offset: 2px; }
-    .preview-header { background: #fff; border-bottom: 3px solid #2D4A3E; position: sticky; top: 0; z-index: 100; }
+    .preview-announcement { background: #2D1A40; color: #fff; text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+    .preview-announcement a { color: #3dbdb5; text-decoration: underline; text-underline-offset: 2px; }
+    .preview-header { background: #fff; border-bottom: 3px solid #1E4A47; position: sticky; top: 0; z-index: 100; }
     .preview-header__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .preview-header__left { display: flex; align-items: center; gap: 40px; }
     .preview-header__logo { text-decoration: none; display: flex; align-items: center; }
     .preview-header__logo img { height: 28px; width: auto; }
     .preview-header__nav { display: flex; align-items: center; gap: 28px; }
-    .preview-header__nav a { font-size: 14px; font-weight: 600; color: #2C2C2C; text-decoration: none; }
-    .preview-header__nav a:hover { color: #8B6F47; }
+    .preview-header__nav a { font-size: 14px; font-weight: 600; color: #2D1A40; text-decoration: none; }
+    .preview-header__nav a:hover { color: #1E4A47; }
     .preview-header__right { display: flex; align-items: center; gap: 10px; }
-    .preview-header__login { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: #2C2C2C; text-decoration: none; }
-    .preview-header__cta { display: inline-flex; align-items: center; padding: 10px 24px; height: 40px; box-sizing: border-box; background: #C9A84C; color: #2C2C2C; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: 1px solid #C9A84C; }
-    .preview-header__cta:hover { background: #B8963F; border-color: #B8963F; }
+    .preview-header__login { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: #2D1A40; text-decoration: none; }
+    .preview-header__cta { display: inline-flex; align-items: center; padding: 10px 24px; height: 40px; box-sizing: border-box; background: #1E4A47; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: 1px solid #1E4A47; }
+    .preview-header__cta:hover { background: #163836; border-color: #163836; }
     .preview-header__flag { width: 26px; height: 18px; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     .preview-header__flag span { flex: 1; }
 
     .preview-product { max-width: 1200px; margin: 0 auto; padding: 40px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
     .preview-product__media { position: sticky; top: 100px; }
-    .preview-product__media-main { background: #fff; border-radius: 16px; overflow: hidden; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #E5DFD6; }
+    .preview-product__media-main { background: #fff; border-radius: 16px; overflow: hidden; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #E0E0DA; }
     .preview-product__media-main img { width: 100%; height: 100%; object-fit: cover; }
     .preview-product__media-thumbs { display: flex; gap: 12px; margin-top: 16px; }
     .preview-product__media-thumb { width: 80px; height: 80px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; cursor: pointer; background: #fff; }
-    .preview-product__media-thumb--active { border-color: #C9A84C; }
+    .preview-product__media-thumb--active { border-color: #1E4A47; }
     .preview-product__media-thumb img { width: 100%; height: 100%; object-fit: cover; }
     .preview-product__info { display: flex; flex-direction: column; gap: 0; }
-    .preview-product__vendor { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8B6F47; margin-bottom: 8px; }
-    .preview-product__title { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #2C2C2C; line-height: 1.2; margin-bottom: 12px; }
-    .preview-product__price { font-size: 24px; font-weight: 700; color: #2C2C2C; margin-bottom: 4px; }
+    .preview-product__vendor { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1E4A47; margin-bottom: 8px; }
+    .preview-product__title { font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 700; color: #2D1A40; line-height: 1.2; margin-bottom: 12px; }
+    .preview-product__price { font-size: 24px; font-weight: 700; color: #2D1A40; margin-bottom: 4px; }
     .preview-product__price-note { font-size: 13px; color: #6B6B6B; margin-bottom: 20px; }
     .preview-product__buy-row { display: flex; gap: 12px; margin: 20px 0; }
-    .preview-product__buy-btn { flex: 1; padding: 14px 28px; background: #C9A84C; color: #2C2C2C; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 8px; cursor: pointer; text-align: center; }
-    .preview-product__buy-btn:hover { background: #B8963F; }
-    .preview-product__buy-btn--secondary { background: transparent; border: 2px solid #2C2C2C; color: #2C2C2C; }
-    .preview-product__buy-btn--secondary:hover { background: #2C2C2C; color: #fff; }
+    .preview-product__buy-btn { flex: 1; padding: 14px 28px; background: #1E4A47; color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 8px; cursor: pointer; text-align: center; }
+    .preview-product__buy-btn:hover { background: #163836; }
+    .preview-product__buy-btn--secondary { background: transparent; border: 2px solid #2D1A40; color: #2D1A40; }
+    .preview-product__buy-btn--secondary:hover { background: #2D1A40; color: #fff; }
     .preview-product__description { font-size: 15px; line-height: 1.7; color: #3A3A3A; margin: 16px 0; }
-    .preview-product__accordion { border-top: 1px solid #E5DFD6; }
-    .preview-product__accordion details { border-bottom: 1px solid #E5DFD6; }
-    .preview-product__accordion summary { padding: 16px 0; font-size: 14px; font-weight: 600; color: #2C2C2C; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+    .preview-product__accordion { border-top: 1px solid #E0E0DA; }
+    .preview-product__accordion details { border-bottom: 1px solid #E0E0DA; }
+    .preview-product__accordion summary { padding: 16px 0; font-size: 14px; font-weight: 600; color: #2D1A40; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
     .preview-product__accordion summary::-webkit-details-marker { display: none; }
-    .preview-product__accordion summary::after { content: '+'; font-size: 18px; color: #8B6F47; transition: transform 0.2s; }
+    .preview-product__accordion summary::after { content: '+'; font-size: 18px; color: #1E4A47; transition: transform 0.2s; }
     .preview-product__accordion details[open] summary::after { content: '−'; }
     .preview-product__accordion .accordion-content { padding: 0 0 16px; font-size: 14px; line-height: 1.7; color: #6B6B6B; }
 
-    .preview-footer { background: #2C2C2C; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
+    .preview-footer { background: #2D1A40; color: rgba(255,255,255,0.7); padding: 72px 0 36px; }
     .preview-footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 24px; }
-    .preview-footer__brand { font-family: 'Playfair Display',serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
+    .preview-footer__brand { font-family: 'Inter',sans-serif; font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 14px; }
     .preview-footer__text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.5); margin: 0 0 20px; max-width: 280px; }
     .preview-footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; margin: 0 0 18px; }
     .preview-footer ul { list-style: none; padding: 0; margin: 0; }
@@ -703,11 +747,11 @@ const productHtml = `<!DOCTYPE html>
         <div class="preview-product__media-thumb preview-product__media-thumb--active">
           <img src="/assets/disfruto-hero.png" alt="Thumbnail 1">
         </div>
-        <div class="preview-product__media-thumb" style="background: #F5F1EB; display: flex; align-items: center; justify-content: center;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <div class="preview-product__media-thumb" style="background: #F5F5F0; display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E4A47" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <div class="preview-product__media-thumb" style="background: #F5F1EB; display: flex; align-items: center; justify-content: center;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <div class="preview-product__media-thumb" style="background: #F5F5F0; display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E4A47" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
       </div>
     </div>

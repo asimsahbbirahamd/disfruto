@@ -14,11 +14,11 @@ Shopify Dawn-based theme customized for Disfruto, a curated artisan cheese subsc
 ## Color Schemes (settings_data.json)
 | Scheme | Name | Background | Used By |
 |---|---|---|---|
-| scheme-1 | Cream | #FAF7F2 | Header, body |
-| scheme-2 | Light | #F5F1EB | Newsletter, cards |
-| scheme-3 | Navy | #1E1B3A | Announcement bar |
-| scheme-4 | Dark | #2C2C2C | Footer |
-| scheme-5 | Dark Green | #2D4A3E | Trust bar |
+| scheme-1 | Beige | #F5F5F0 | Header, body |
+| scheme-2 | Blue-Gray | #DCE7F1 | Newsletter, cards |
+| scheme-3 | Purple | #2D1A40 | Announcement bar |
+| scheme-4 | Purple | #2D1A40 | Footer |
+| scheme-5 | Teal | #1E4A47 | Trust bar |
 
 ## Custom Sections
 | Section File | Purpose |
@@ -82,14 +82,19 @@ The same 4 block types are also available in `sections/featured-product.liquid` 
 - `preview/server.js` — HTML preview server for client review outside Shopify
 
 ## Brand Design
-- **Colors**: Cream (#FAF7F2), Dark (#2C2C2C), Dark Green (#2D4A3E), Navy (#1E1B3A), Warm brown (#8B6F47), Gold CTA (#C9A84C), Gold accent (#D4A853)
-- **Fonts**: Playfair Display 700 (headings), Inter 400-700 (body/nav)
+- **Colors**: Purple (#2D1A40), Teal (#1E4A47), Blue-Gray (#DCE7F1), Beige (#F5F5F0)
+- **CTA Color**: Teal (#1E4A47) with white text
+- **Fonts**: Inter 700 (headings), Inter 400-700 (body/nav) — all Inter, no Playfair Display
 - **Logo**: `assets/disfruto-logo.png` — upload to Shopify admin theme editor as the logo
 - **Style**: Premium, editorial, minimal, large imagery, generous whitespace
 
 ## Navigation Structure
 - Menu: Unser Käse | So funktioniert's | Käsemacher | FAQs
-- Right: Login icon | Gold CTA "GENUSS SET WÄHLEN" | German flag
+- Right: Login icon | Teal CTA "GENUSS SET WÄHLEN" | German flag
+
+## Cheese Collection
+- Horizontally scrollable at all screen sizes (not grid)
+- Hover reveals Geschmacksprofil overlay (milk, texture, intensity dots, aging, aromas, pairing)
 
 ## Business Requirements
 - 1 subscription product (Käse Genuss Set)

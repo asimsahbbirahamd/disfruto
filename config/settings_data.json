@@ -13,61 +13,61 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#FAF7F2",
+          "background": "#F5F5F0",
           "background_gradient": "",
-          "text": "#2C2C2C",
-          "button": "#2C2C2C",
+          "text": "#2D1A40",
+          "button": "#1E4A47",
           "button_label": "#FFFFFF",
-          "secondary_button_label": "#2C2C2C",
-          "shadow": "#2C2C2C"
+          "secondary_button_label": "#2D1A40",
+          "shadow": "#2D1A40"
         }
       },
       "scheme-2": {
         "settings": {
-          "background": "#F5F1EB",
+          "background": "#DCE7F1",
           "background_gradient": "",
-          "text": "#2C2C2C",
-          "button": "#8B6F47",
+          "text": "#2D1A40",
+          "button": "#1E4A47",
           "button_label": "#FFFFFF",
-          "secondary_button_label": "#2C2C2C",
-          "shadow": "#2C2C2C"
+          "secondary_button_label": "#2D1A40",
+          "shadow": "#2D1A40"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#1E1B3A",
+          "background": "#2D1A40",
           "background_gradient": "",
           "text": "#FFFFFF",
-          "button": "#C9A84C",
-          "button_label": "#1E1B3A",
+          "button": "#1E4A47",
+          "button_label": "#FFFFFF",
           "secondary_button_label": "#FFFFFF",
-          "shadow": "#1E1B3A"
+          "shadow": "#2D1A40"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#2C2C2C",
+          "background": "#2D1A40",
           "background_gradient": "",
           "text": "#FFFFFF",
-          "button": "#C9A84C",
-          "button_label": "#2C2C2C",
+          "button": "#1E4A47",
+          "button_label": "#FFFFFF",
           "secondary_button_label": "#FFFFFF",
-          "shadow": "#2C2C2C"
+          "shadow": "#2D1A40"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#2D4A3E",
+          "background": "#1E4A47",
           "background_gradient": "",
           "text": "#FFFFFF",
           "button": "#FFFFFF",
-          "button_label": "#2D4A3E",
+          "button_label": "#1E4A47",
           "secondary_button_label": "#FFFFFF",
-          "shadow": "#2D4A3E"
+          "shadow": "#1E4A47"
         }
       }
     },
-    "type_header_font": "playfair_display_n7",
+    "type_header_font": "inter_n7",
     "heading_scale": 100,
     "type_body_font": "inter_n4",
     "body_scale": 100,

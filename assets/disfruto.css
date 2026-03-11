@@ -1,25 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --disfruto-cream: #FAF7F2;
-  --disfruto-dark: #2C2C2C;
-  --disfruto-dark-green: #2D4A3E;
-  --disfruto-navy: #1E1B3A;
-  --disfruto-warm: #8B6F47;
-  --disfruto-warm-light: #C4A882;
-  --disfruto-accent: #8B6F47;
-  --disfruto-accent-light: #F0E8DC;
-  --disfruto-gold: #D4A853;
-  --disfruto-cta-gold: #C9A84C;
+  --disfruto-cream: #F5F5F0;
+  --disfruto-dark: #2D1A40;
+  --disfruto-dark-green: #1E4A47;
+  --disfruto-navy: #2D1A40;
+  --disfruto-warm: #1E4A47;
+  --disfruto-warm-light: #2a6360;
+  --disfruto-accent: #1E4A47;
+  --disfruto-accent-light: #DCE7F1;
+  --disfruto-gold: #1E4A47;
+  --disfruto-cta-gold: #1E4A47;
+  --disfruto-teal: #1E4A47;
+  --disfruto-purple: #2D1A40;
+  --disfruto-blue-gray: #DCE7F1;
+  --disfruto-beige: #F5F5F0;
   --disfruto-text: #3A3A3A;
   --disfruto-text-light: #6B6B6B;
-  --disfruto-border: #E5DFD6;
+  --disfruto-border: #E0E0DA;
   --disfruto-white: #FFFFFF;
-  --disfruto-hero-bg: linear-gradient(135deg, #FAF7F2 0%, #F0EBE1 50%, #E8E0D4 100%);
-  --disfruto-section-bg: #F5F1EB;
+  --disfruto-hero-bg: linear-gradient(135deg, #F5F5F0 0%, #EDEDE8 50%, #E5E5DF 100%);
+  --disfruto-section-bg: #DCE7F1;
   --disfruto-radius: 8px;
   --disfruto-radius-lg: 16px;
-  --disfruto-font-heading: 'Playfair Display', Georgia, serif;
+  --disfruto-font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --disfruto-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --disfruto-transition: all 0.3s ease;
   --disfruto-shadow: 0 4px 24px rgba(0,0,0,0.06);
@@ -107,14 +111,14 @@
 }
 
 .disfruto-btn--gold {
-  background-color: var(--disfruto-cta-gold);
-  color: var(--disfruto-dark);
+  background-color: var(--disfruto-teal);
+  color: var(--disfruto-white);
 }
 
 .disfruto-btn--gold:hover {
-  background-color: #B8963F;
+  background-color: #163836;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(201,168,76,0.3);
+  box-shadow: 0 4px 16px rgba(30,74,71,0.3);
 }
 
 /* Hero Section */
@@ -448,10 +452,28 @@
   line-height: 1.6;
 }
 
+.disfruto-cheeses__slider-wrap {
+  overflow: hidden;
+}
+
+.disfruto-cheeses__slider-wrap .disfruto-container {
+  padding: 0;
+}
+
 .disfruto-cheeses__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 20px;
+  padding: 0 40px 20px;
+}
+
+.disfruto-cheeses__grid::-webkit-scrollbar {
+  display: none;
 }
 
 .disfruto-cheese-card {
@@ -460,10 +482,14 @@
   overflow: hidden;
   transition: var(--disfruto-transition);
   border: 1px solid var(--disfruto-border);
+  flex: 0 0 280px;
+  min-width: 280px;
+  scroll-snap-align: start;
+  position: relative;
 }
 
 .disfruto-cheese-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--disfruto-shadow-hover);
 }
 
@@ -471,6 +497,7 @@
   aspect-ratio: 1;
   background: var(--disfruto-cream);
   overflow: hidden;
+  position: relative;
 }
 
 .disfruto-cheese-card__image img {
@@ -482,6 +509,76 @@
 
 .disfruto-cheese-card:hover .disfruto-cheese-card__image img {
   transform: scale(1.06);
+}
+
+.disfruto-cheese-card__profile {
+  position: absolute;
+  inset: 0;
+  background: rgba(45,26,64,0.92);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.disfruto-cheese-card:hover .disfruto-cheese-card__profile {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.disfruto-cheese-card__profile-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin: 0 0 12px;
+}
+
+.disfruto-cheese-card__profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.disfruto-cheese-card__profile-row:last-child {
+  border-bottom: none;
+}
+
+.disfruto-cheese-card__profile-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+}
+
+.disfruto-cheese-card__profile-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.disfruto-cheese-card__profile-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.disfruto-cheese-card__profile-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+
+.disfruto-cheese-card__profile-dot--active {
+  background: var(--disfruto-teal);
+  background: #3dbdb5;
 }
 
 .disfruto-cheese-card__body {
@@ -539,29 +636,13 @@
   .disfruto-cheeses__subtitle {
     font-size: 14px;
   }
-  .disfruto-cheeses__slider-wrap {
-    overflow: hidden;
-  }
-  .disfruto-cheeses__slider-wrap .disfruto-container {
-    padding: 0;
-  }
   .disfruto-cheeses__grid {
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
     gap: 16px;
     padding: 0 24px 16px;
-  }
-  .disfruto-cheeses__grid::-webkit-scrollbar {
-    display: none;
   }
   .disfruto-cheese-card {
     flex: 0 0 260px;
     min-width: 260px;
-    scroll-snap-align: start;
   }
   .disfruto-cheese-card__body {
     padding: 16px;
@@ -706,7 +787,7 @@
 /* Why Disfruto — Editorial Layout */
 .disfruto-why {
   padding: 120px 0;
-  background: var(--disfruto-dark);
+  background: var(--disfruto-purple);
   color: var(--disfruto-white);
   overflow: hidden;
   position: relative;
@@ -719,7 +800,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at 15% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 15% 50%, rgba(30,74,71,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -790,7 +871,7 @@
   padding: 15px 32px;
   background: transparent;
   color: var(--disfruto-gold);
-  border: 1px solid rgba(201,168,76,0.35);
+  border: 1px solid rgba(30,74,71,0.35);
   border-radius: var(--disfruto-radius);
   font-size: 13px;
   font-weight: 600;
@@ -802,9 +883,9 @@
 }
 
 .disfruto-why .disfruto-btn--outline:hover {
-  background: rgba(201,168,76,0.1);
-  border-color: var(--disfruto-gold);
-  color: var(--disfruto-gold);
+  background: rgba(30,74,71,0.1);
+  border-color: var(--disfruto-teal);
+  color: var(--disfruto-teal);
   transform: translateY(-2px);
 }
 
@@ -859,7 +940,7 @@
   font-size: 48px;
   font-weight: 300;
   line-height: 1;
-  color: rgba(201,168,76,0.2);
+  color: rgba(30,74,71,0.2);
   flex-shrink: 0;
   min-width: 56px;
   transition: color 0.4s ease;
@@ -867,7 +948,7 @@
 }
 
 .disfruto-why__item:hover .disfruto-why__number {
-  color: rgba(201,168,76,0.45);
+  color: rgba(30,74,71,0.45);
 }
 
 .disfruto-why__item-content {
@@ -901,7 +982,7 @@
     padding: 80px 0;
   }
   .disfruto-why::before {
-    background: radial-gradient(ellipse at 50% 20%, rgba(201,168,76,0.04) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 50% 20%, rgba(30,74,71,0.06) 0%, transparent 60%);
   }
   .disfruto-why__layout {
     grid-template-columns: 1fr;
@@ -934,7 +1015,7 @@
     display: block;
     width: 48px;
     height: 1px;
-    background: rgba(201,168,76,0.3);
+    background: rgba(30,74,71,0.3);
     margin: 0 auto 8px;
   }
   .disfruto-why__item-text {
@@ -1331,8 +1412,8 @@ a.header__icon--account:focus {
   align-items: center;
   justify-content: center;
   padding: 10px 24px;
-  background: var(--disfruto-cta-gold);
-  color: var(--disfruto-dark) !important;
+  background: var(--disfruto-teal);
+  color: var(--disfruto-white) !important;
   font-family: var(--disfruto-font-body);
   font-size: 12px;
   font-weight: 700;
@@ -1350,12 +1431,12 @@ a.header__icon--account:focus {
 }
 
 .header__cta-button:hover {
-  background: #B8963F;
-  border-color: #B8963F;
+  background: #163836;
+  border-color: #163836;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(201,168,76,0.25);
+  box-shadow: 0 4px 12px rgba(30,74,71,0.25);
   text-decoration: none !important;
-  color: var(--disfruto-dark) !important;
+  color: var(--disfruto-white) !important;
 }
 
 .header__cta-button:active {
