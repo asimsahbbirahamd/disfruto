@@ -2399,14 +2399,21 @@ a.header__icon--account:focus {
   padding: 48px 0 64px;
 }
 
+.disfruto-sf .disfruto-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .disfruto-sf__title {
-  font-family: 'Inter', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--disfruto-dark);
-  text-align: center;
-  margin: 0 0 56px;
-  letter-spacing: -0.5px;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  color: var(--disfruto-dark) !important;
+  text-align: center !important;
+  margin: 0 0 56px !important;
+  letter-spacing: -0.5px !important;
+  padding: 0 !important;
 }
 
 .disfruto-sf__step {
@@ -2420,17 +2427,18 @@ a.header__icon--account:focus {
   margin-right: auto;
 }
 
-.disfruto-sf__step--reverse {
-  direction: rtl;
+.disfruto-sf__step--reverse .disfruto-sf__step-image {
+  order: 2;
 }
 
-.disfruto-sf__step--reverse > * {
-  direction: ltr;
+.disfruto-sf__step--reverse .disfruto-sf__step-content {
+  order: 1;
 }
 
 .disfruto-sf__step-image {
   border-radius: 20px;
   overflow: hidden;
+  order: 1;
 }
 
 .disfruto-sf__step-image img {
@@ -2438,42 +2446,55 @@ a.header__icon--account:focus {
   height: auto;
   display: block;
   border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
 }
 
 .disfruto-sf__step-content {
   padding: 8px 0;
+  order: 2;
+  text-align: left;
 }
 
 .disfruto-sf__step-number {
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   border-radius: 50%;
-  background: var(--disfruto-dark-green);
-  color: white;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  background: var(--disfruto-dark-green) !important;
+  color: white !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .disfruto-sf__step-heading {
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--disfruto-dark);
-  margin: 0 0 12px;
-  line-height: 1.25;
-  letter-spacing: -0.3px;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: var(--disfruto-dark) !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.3px !important;
+  text-align: left !important;
 }
 
 .disfruto-sf__step-text {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.7;
-  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  color: #555 !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
 @media (max-width: 767px) {
@@ -2482,27 +2503,33 @@ a.header__icon--account:focus {
     gap: 24px;
   }
 
-  .disfruto-sf__step--reverse {
-    direction: ltr;
+  .disfruto-sf__step--reverse .disfruto-sf__step-image,
+  .disfruto-sf__step--reverse .disfruto-sf__step-content {
+    order: unset;
   }
 
   .disfruto-sf__step-image {
     max-width: 480px;
+    order: unset;
+  }
+
+  .disfruto-sf__step-content {
+    order: unset;
   }
 
   .disfruto-sf__title {
-    font-size: 28px;
-    margin-bottom: 40px;
+    font-size: 28px !important;
+    margin-bottom: 40px !important;
   }
 }
 
 @media (max-width: 599px) {
   .disfruto-sf__title {
-    font-size: 24px;
+    font-size: 24px !important;
   }
 
   .disfruto-sf__step-heading {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .disfruto-sf {

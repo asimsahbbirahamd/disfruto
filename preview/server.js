@@ -1020,17 +1020,18 @@ function buildPageHtml(title, bodyContent) {
     @media (max-width: 767px) { .disfruto-uk__grid { grid-template-columns: 1fr; gap: 32px; } .disfruto-uk__left { max-width: 420px; margin: 0 auto; } .disfruto-uk__heading { font-size: 28px; } .disfruto-uk__subheading { font-size: 20px; } .disfruto-uk__cta-title { font-size: 28px; } .disfruto-uk__cta-banner { padding: 56px 24px; } .disfruto-unser-kaese { padding: 36px 0 40px; } }
     @media (max-width: 599px) { .disfruto-uk__stats { gap: 8px; } .disfruto-uk__stat { padding: 16px 10px; } .disfruto-uk__stat-value { font-size: 26px; } .disfruto-uk__price-amount { font-size: 30px; } .disfruto-uk__heading { font-size: 26px; } .disfruto-uk__subheading { font-size: 18px; } .disfruto-uk__cta-title { font-size: 24px; } .disfruto-unser-kaese { padding: 28px 0 32px; } }
     .disfruto-sf { padding: 48px 0 64px; }
-    .disfruto-sf__title { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; text-align: center; margin: 0 0 56px; letter-spacing: -0.5px; }
+    .disfruto-sf .disfruto-container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    .disfruto-sf__title { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 700; color: #2D1A40; text-align: center; margin: 0 0 56px; letter-spacing: -0.5px; padding: 0; }
     .disfruto-sf__step { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 48px; max-width: 960px; margin-left: auto; margin-right: auto; }
-    .disfruto-sf__step--reverse { direction: rtl; }
-    .disfruto-sf__step--reverse > * { direction: ltr; }
-    .disfruto-sf__step-image { border-radius: 20px; overflow: hidden; }
-    .disfruto-sf__step-image img { width: 100%; height: auto; display: block; border-radius: 20px; }
-    .disfruto-sf__step-content { padding: 8px 0; }
-    .disfruto-sf__step-number { width: 36px; height: 36px; border-radius: 50%; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-    .disfruto-sf__step-heading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 0 0 12px; line-height: 1.25; letter-spacing: -0.3px; }
-    .disfruto-sf__step-text { font-size: 15px; color: #555; line-height: 1.7; margin: 0; }
-    @media (max-width: 767px) { .disfruto-sf__step { grid-template-columns: 1fr; gap: 24px; } .disfruto-sf__step--reverse { direction: ltr; } .disfruto-sf__step-image { max-width: 480px; } .disfruto-sf__title { font-size: 28px; margin-bottom: 40px; } }
+    .disfruto-sf__step--reverse .disfruto-sf__step-image { order: 2; }
+    .disfruto-sf__step--reverse .disfruto-sf__step-content { order: 1; }
+    .disfruto-sf__step-image { border-radius: 20px; overflow: hidden; order: 1; }
+    .disfruto-sf__step-image img { width: 100%; height: auto; display: block; border-radius: 20px; object-fit: cover; aspect-ratio: 3 / 2; }
+    .disfruto-sf__step-content { padding: 8px 0; order: 2; text-align: left; }
+    .disfruto-sf__step-number { width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 50%; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 0 16px 0; padding: 0; line-height: 1; }
+    .disfruto-sf__step-heading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 0 0 12px 0; padding: 0; line-height: 1.25; letter-spacing: -0.3px; text-align: left; }
+    .disfruto-sf__step-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #555; line-height: 1.7; margin: 0; padding: 0; text-align: left; }
+    @media (max-width: 767px) { .disfruto-sf__step { grid-template-columns: 1fr; gap: 24px; } .disfruto-sf__step--reverse .disfruto-sf__step-image, .disfruto-sf__step--reverse .disfruto-sf__step-content { order: unset; } .disfruto-sf__step-image { max-width: 480px; order: unset; } .disfruto-sf__step-content { order: unset; } .disfruto-sf__title { font-size: 28px; margin-bottom: 40px; } }
     @media (max-width: 599px) { .disfruto-sf__title { font-size: 24px; } .disfruto-sf__step-heading { font-size: 20px; } .disfruto-sf { padding: 32px 0 48px; } }
     .preview-footer { background: #F5F5F0; border-top: 1px solid #E8E8E3; padding: 48px 24px 0; }
     .preview-footer__inner { max-width: 1200px; margin: 0 auto; }
@@ -1196,7 +1197,7 @@ const soFunktioniertsBody = `
 
       <div class="disfruto-sf__step">
         <div class="disfruto-sf__step-image">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80" alt="Schnelle Lieferung" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=400&fit=crop&q=80" alt="Schnelle Lieferung" loading="lazy">
         </div>
         <div class="disfruto-sf__step-content">
           <div class="disfruto-sf__step-number">3</div>
