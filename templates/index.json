@@ -256,6 +256,7 @@
         "tasting_profile_c4KJBA",
         "share_zwYAVc"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "cheese",
@@ -401,7 +402,6 @@
         "faq_6"
       ],
       "settings": {
-        "eyebrow": "Häufige Fragen",
         "heading": "Alles, was du wissen musst",
         "subheading": "Hier findest du Antworten auf die häufigsten Fragen rund um Disfruto"
       }
