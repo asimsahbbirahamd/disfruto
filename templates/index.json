@@ -68,13 +68,34 @@
     "disfruto_cheeses": {
       "type": "disfruto-cheese-grid",
       "blocks": {
+        "cheese_VgVwQ8": {
+          "type": "cheese",
+          "settings": {
+            "image": "shopify://shop_images/disfruto-hero.png",
+            "name": "Käse Name",
+            "description": "Beschreibung des Käses",
+            "tag": "",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Cremig",
+            "profile_intensity": 3,
+            "profile_aging": "8 Wochen",
+            "profile_aromas": "Nussig, mild",
+            "profile_pairing": "Weißwein, Brot"
+          }
+        },
         "cheese_1": {
           "type": "cheese",
           "settings": {
             "image": "shopify://shop_images/disfruto-cheese-1.png",
             "name": "Deichkäse Alt",
             "description": "Kräftiger Charakter mit nussigen Noten, 12 Monate gereift an der Nordseeküste.",
-            "tag": "Hartkäse"
+            "tag": "Hartkäse",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Cremig",
+            "profile_intensity": 3,
+            "profile_aging": "8 Wochen",
+            "profile_aromas": "Nussig, mild",
+            "profile_pairing": "Weißwein, Brot"
           }
         },
         "cheese_2": {
@@ -83,7 +104,13 @@
             "image": "shopify://shop_images/disfruto-cheese-2.png",
             "name": "Friesisch Blue",
             "description": "Cremiger Blauschimmelkäse mit milder Würze aus friesischer Tradition.",
-            "tag": "Blauschimmel"
+            "tag": "Blauschimmel",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Cremig",
+            "profile_intensity": 3,
+            "profile_aging": "8 Wochen",
+            "profile_aromas": "Nussig, mild",
+            "profile_pairing": "Weißwein, Brot"
           }
         },
         "cheese_3": {
@@ -92,7 +119,13 @@
             "image": "shopify://shop_images/disfruto-cheese-3.png",
             "name": "Grosser Husumer",
             "description": "Vollmundiger Schnittkäse mit aromatischer Reife und butterweicher Textur.",
-            "tag": "Schnittkäse"
+            "tag": "Schnittkäse",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Cremig",
+            "profile_intensity": 3,
+            "profile_aging": "8 Wochen",
+            "profile_aromas": "Nussig, mild",
+            "profile_pairing": "Weißwein, Brot"
           }
         },
         "cheese_4": {
@@ -101,11 +134,18 @@
             "image": "shopify://shop_images/disfruto-cheese-4.png",
             "name": "Hofkäse",
             "description": "Traditionell hergestellter Hofkäse mit zarter Rinde und mildem Geschmack.",
-            "tag": "Weichkäse"
+            "tag": "Weichkäse",
+            "profile_milk": "Kuhmilch",
+            "profile_texture": "Cremig",
+            "profile_intensity": 3,
+            "profile_aging": "8 Wochen",
+            "profile_aromas": "Nussig, mild",
+            "profile_pairing": "Weißwein, Brot"
           }
         }
       },
       "block_order": [
+        "cheese_VgVwQ8",
         "cheese_1",
         "cheese_2",
         "cheese_3",
