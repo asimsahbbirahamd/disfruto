@@ -1028,8 +1028,9 @@ function buildPageHtml(title, bodyContent) {
     .disfruto-sf__step-image { border-radius: 20px; overflow: hidden; order: 1; }
     .disfruto-sf__step-image img { width: 100%; height: auto; display: block; border-radius: 20px; object-fit: cover; aspect-ratio: 3 / 2; }
     .disfruto-sf__step-content { padding: 8px 0; order: 2; text-align: left; }
-    .disfruto-sf__step-number { width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 50%; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 0 16px 0; padding: 0; line-height: 1; }
-    .disfruto-sf__step-heading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 0 0 12px 0; padding: 0; line-height: 1.25; letter-spacing: -0.3px; text-align: left; }
+    .disfruto-sf__step-header { display: flex; align-items: center; gap: 14px; margin: 0 0 12px 0; }
+    .disfruto-sf__step-number { width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 50%; background: #1E4A47; color: white; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; line-height: 1; flex-shrink: 0; }
+    .disfruto-sf__step-heading { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #2D1A40; margin: 0; padding: 0; line-height: 1.25; letter-spacing: -0.3px; text-align: left; }
     .disfruto-sf__step-text { font-family: 'Inter', sans-serif; font-size: 15px; color: #555; line-height: 1.7; margin: 0; padding: 0; text-align: left; }
     @media (max-width: 767px) { .disfruto-sf__step { grid-template-columns: 1fr; gap: 24px; } .disfruto-sf__step--reverse .disfruto-sf__step-image, .disfruto-sf__step--reverse .disfruto-sf__step-content { order: unset; } .disfruto-sf__step-image { max-width: 480px; order: unset; } .disfruto-sf__step-content { order: unset; } .disfruto-sf__title { font-size: 28px; margin-bottom: 40px; } }
     @media (max-width: 599px) { .disfruto-sf__title { font-size: 24px; } .disfruto-sf__step-heading { font-size: 20px; } .disfruto-sf { padding: 32px 0 48px; } }
@@ -1178,8 +1179,10 @@ const soFunktioniertsBody = `
           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80" alt="Genuss Set auswählen" loading="lazy">
         </div>
         <div class="disfruto-sf__step-content">
-          <div class="disfruto-sf__step-number">1</div>
-          <h3 class="disfruto-sf__step-heading">Dein Genuss Set auswählen</h3>
+          <div class="disfruto-sf__step-header">
+            <div class="disfruto-sf__step-number">1</div>
+            <h3 class="disfruto-sf__step-heading">Dein Genuss Set auswählen</h3>
+          </div>
           <p class="disfruto-sf__step-text">Wähle deinen Lieblingsgeschmack, bestimme das Lieferintervall und entscheide dich für ein Zeitfenster, das perfekt in deinen Tag passt. Um den Rest kümmern wir uns für Dich!</p>
         </div>
       </div>
@@ -1189,8 +1192,10 @@ const soFunktioniertsBody = `
           <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&h=400&fit=crop&q=80" alt="Frisch verpackt" loading="lazy">
         </div>
         <div class="disfruto-sf__step-content">
-          <div class="disfruto-sf__step-number">2</div>
-          <h3 class="disfruto-sf__step-heading">Frisch für Dich verpackt</h3>
+          <div class="disfruto-sf__step-header">
+            <div class="disfruto-sf__step-number">2</div>
+            <h3 class="disfruto-sf__step-heading">Frisch für Dich verpackt</h3>
+          </div>
           <p class="disfruto-sf__step-text">Deine Käsesorten werden frisch zugeschnitten, einzeln handverpackt und liebevoll zu einer Auswahl zusammengestellt. Bei Qualität machen wir keine Kompromisse!</p>
         </div>
       </div>
@@ -1200,8 +1205,10 @@ const soFunktioniertsBody = `
           <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=400&fit=crop&q=80" alt="Schnelle Lieferung" loading="lazy">
         </div>
         <div class="disfruto-sf__step-content">
-          <div class="disfruto-sf__step-number">3</div>
-          <h3 class="disfruto-sf__step-heading">Schnelle & sichere Lieferung</h3>
+          <div class="disfruto-sf__step-header">
+            <div class="disfruto-sf__step-number">3</div>
+            <h3 class="disfruto-sf__step-heading">Schnelle & sichere Lieferung</h3>
+          </div>
           <p class="disfruto-sf__step-text">Innerhalb deines gewählten Lieferfensters bringt unser Kurierpartner deine Box direkt zu dir nach Hause. Zwischen Abholung und Zustellung liegen weniger als 60 Minuten. Dank isolierter Kühltaschen bleibt dein Käse auf dem ganzen Weg bei perfekter Temperatur.</p>
         </div>
       </div>
@@ -1211,8 +1218,10 @@ const soFunktioniertsBody = `
           <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop&q=80" alt="Genießen und entdecken" loading="lazy">
         </div>
         <div class="disfruto-sf__step-content">
-          <div class="disfruto-sf__step-number">4</div>
-          <h3 class="disfruto-sf__step-heading">Genießen & entdecken</h3>
+          <div class="disfruto-sf__step-header">
+            <div class="disfruto-sf__step-number">4</div>
+            <h3 class="disfruto-sf__step-heading">Genießen & entdecken</h3>
+          </div>
           <p class="disfruto-sf__step-text">Ob gemütlicher Abend, Dinner mit Freunden oder entspannter Sonntagsbrunch: Deine Käseauswahl ist sofort bereit zum Genießen. Über den QR-Code erfährst du zudem die Geschichten hinter jedem Stück – von der Herkunft bis zur kleinen Besonderheit jedes einzelnen Käses.</p>
         </div>
       </div>

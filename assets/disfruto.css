@@ -2456,6 +2456,13 @@ a.header__icon--account:focus {
   text-align: left;
 }
 
+.disfruto-sf__step-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 12px 0;
+}
+
 .disfruto-sf__step-number {
   width: 36px;
   height: 36px;
@@ -2470,9 +2477,10 @@ a.header__icon--account:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 16px 0;
+  margin: 0;
   padding: 0;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .disfruto-sf__step-heading {
@@ -2480,7 +2488,7 @@ a.header__icon--account:focus {
   font-size: 24px !important;
   font-weight: 700 !important;
   color: var(--disfruto-dark) !important;
-  margin: 0 0 12px 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
   line-height: 1.25 !important;
   letter-spacing: -0.3px !important;
