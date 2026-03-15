@@ -34,7 +34,14 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
+        },
+        "seal_subscriptions_subscription_widget_F7qKmW": {
+          "type": "shopify://apps/seal-subscriptions/blocks/subscription-widget/13b25004-a140-4ab7-b5fe-29918f759699",
+          "settings": {
+            "product": "{{product}}"
+          }
         },
         "subscription_info_xczqjP": {
           "type": "subscription_info",
@@ -95,12 +102,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "seal_subscriptions_subscription_widget_F7qKmW": {
-          "type": "shopify://apps/seal-subscriptions/blocks/subscription-widget/13b25004-a140-4ab7-b5fe-29918f759699",
-          "settings": {
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -108,6 +109,7 @@
         "vendor",
         "title",
         "price",
+        "seal_subscriptions_subscription_widget_F7qKmW",
         "subscription_info_xczqjP",
         "delivery_info_8wQAFf",
         "variant_picker",
@@ -115,8 +117,7 @@
         "buy_buttons",
         "description",
         "tasting_profile_qhTKVp",
-        "share",
-        "seal_subscriptions_subscription_widget_F7qKmW"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
